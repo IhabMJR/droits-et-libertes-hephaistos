@@ -1,7 +1,6 @@
-# Projet-Web
-## Ligues des droits et libertés
+# Ligues des droits et libertés
 <br>
-Héphaïstos
+**Héphaïstos**
 <br><br>
 Michaël Un Dupré, intégrateur, développeur front-end, project owner et scrum master
 <br>
