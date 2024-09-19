@@ -1,7 +1,36 @@
+@use "./partials-scss/variables";
+
 @mixin gros-titre {
-    font-family: "Tex Gyre Adventor Bold";
-    font-weight: bold;
-    font-size: 96px;
-    text-transform: uppercase;
-    color: #000;
-  }
+  font-family: "Tex Gyre Adventor Bold";
+  font-weight: bold;
+  font-size: 96px;
+  text-transform: uppercase;
+  color: #000;
+  letter-spacing: -5%;
+}
+
+@mixin petit-titre {
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 48px;
+  color: #000;
+}
+
+@mixin petit-titre-bold {
+  font-family: "Tex Gyre Adventor Bold";
+  font-weight: bold;
+  font-size: 48px;
+  color: #000;
+}
+
+@mixin contenu {
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+  color: #000;
+  line-height: 40px;
+}
+
+@mixin lien {
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+  color: variables.$rouge;
+}
