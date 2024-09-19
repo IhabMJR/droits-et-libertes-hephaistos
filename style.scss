@@ -1,2 +1,15 @@
+/*--- Importation des partials ---*/
 @use "./partials-scss/variables";
 @use "./partials-scss/mixins";
+
+/*--- Importation des fonts ---*/
+@font-face {
+  font-family: "TeX Gyre Adventor Regular";
+  src: url("./assets/fonts/texgyreadventor-regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "TeX Gyre Adventor Bold";
+  font-weight: bold;
+  src: url("./assets/fonts/texgyreadventor-bold.otf") format("opentype");
+}
