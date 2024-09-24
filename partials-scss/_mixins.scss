@@ -1,12 +1,40 @@
-@use "./partials-scss/variables";
+@use "variables";
 
+// --- Media queries ---
+$phone: 500px;
+$tablet: 880px;
+$desktop: 1400px;
+
+@mixin phone {
+  @media only screen and (min-width: 0) and (max-width: $phone) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: $phone) and (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: $desktop) {
+    @content;
+  }
+}
+
+// --- Texte ---
 @mixin gros-titre {
   font-family: "Tex Gyre Adventor Bold";
   font-weight: bold;
-  font-size: 96px;
   text-transform: uppercase;
   color: #000;
-  letter-spacing: -5%;
+  font-size: 96px;
+  line-height: 110px;
+  @include phone {
+    font-size: 72px;
+    line-height: 65px;
+  }
 }
 
 @mixin petit-titre {

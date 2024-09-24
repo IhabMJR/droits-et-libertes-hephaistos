@@ -1,26 +1,20 @@
+@charset "UTF-8";
 /*--- Importation des partials ---*/
-@use "partials-scss/variables";
-@use "partials-scss/mixins";
-@use "sass:color";
-
 /*--- Importation des fonts ---*/
 @font-face {
   font-family: "TeX Gyre Adventor Regular";
   src: url("./assets/fonts/texgyreadventor-regular.otf") format("opentype");
 }
-
 @font-face {
   font-family: "TeX Gyre Adventor Bold";
   font-weight: bold;
   src: url("./assets/fonts/texgyreadventor-bold.otf") format("opentype");
 }
-
 * {
   margin: 0;
 }
 
 /*------*/
-
 /*--- Début section héro ---*/
 .hero {
   overflow: hidden;
@@ -36,12 +30,16 @@
   background-image: url("./assets/images/brush_stroke.png");
   background-size: cover;
   background-repeat: no-repeat;
-  @include mixins.phone {
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .revue {
     width: 250px;
     height: 250px;
     bottom: 320px;
   }
-  @include mixins.tablet {
+}
+@media only screen and (min-width: 500px) and (max-width: 880px) {
+  .revue {
     bottom: 500px;
   }
 }
@@ -50,9 +48,11 @@
   width: 200px;
   top: 50px;
   left: 140px;
-  border: 3px solid variables.$rouge;
+  border: 3px solid #B80820;
   position: absolute;
-  @include mixins.phone {
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .livre {
     width: 100px;
     left: 80px;
   }
@@ -63,7 +63,9 @@
   top: 160px;
   left: 370px;
   position: absolute;
-  @include mixins.phone {
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .btn-livre {
     width: 45px;
     left: 190px;
     top: 90px;
@@ -77,8 +79,9 @@
 .swiper-slide img {
   width: 100vw;
   height: 100vh;
-  object-fit: cover;
-  filter: grayscale(100) contrast(70%) brightness(0.40);
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: grayscale(100) contrast(70%) brightness(0.4);
 }
 
 .swiper {
@@ -91,21 +94,36 @@
 }
 
 .swiper-pagination-bullet-active {
-  background-color: variables.$argent;
+  background-color: #A9A9A9;
 }
+
 .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
 }
 
 .hero .titre h1 {
-  @include mixins.gros-titre;
+  font-family: "Tex Gyre Adventor Bold";
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 96px;
+  line-height: 110px;
   padding-bottom: 5px;
   color: #fff;
 }
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .hero .titre h1 {
+    font-size: 72px;
+    line-height: 65px;
+  }
+}
 
 .hero .titre p {
-  @include mixins.contenu;
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+  color: #000;
+  line-height: 40px;
   position: absolute;
   color: #fff;
   border-top: 2.5px solid #fff;
@@ -113,7 +131,7 @@
 }
 
 .rouge {
-  color: variables.$rouge;
+  color: #B80820;
 }
 
 .hero .titre {
@@ -132,4 +150,4 @@
     bottom: 5vh;
   }
 }
-/*--- Fin section héro ---*/
+/*--- Fin section héro ---*//*# sourceMappingURL=style.css.map */

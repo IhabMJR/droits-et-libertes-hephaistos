@@ -1,75 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ligue des droits</title>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <nav id="navbar1" class="navbar navbar-light navbar-expand-lg fixed-top">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#top" class="nav-link">
-                <img src="./assets/logo/logo.png" class="logo" />
-              </a>
-    
-              <button
-                class="navbar-toggler"
-                data-bs-toggle="collapse"
-                data-bs-target="#mainNav"
-                aria-controls="mainNav"
-                aria-expanded="false"
-                aria-label="Affichage/masquage de la navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-    
-              <div id="mainNav" class="collapse navbar-collapse">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a href="#nouvelles" class="nav-link">Nouvelles</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#luttes" class="nav-link">Luttes</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#equipe" class="nav-link">Équipe</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#a-propos" class="nav-link">À propos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#nous-joindre" class="nav-link">Nous Joindre</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#faq" class="nav-link">FAQ</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-    </header>
-    <div>
-        <p>
-            Héphaïstos<br>
-            la ligue des droits et libertés<br>
-            https://liguedesdroits.ca/<br>
-            https://github.com/RandomizedRaptor/droits-et-libertes-hephaistos<br>
-            Michaël Un Dupré, intégrateur, développeur front-end, project owner et scrum master<br>
-            Justine Rousseau, intégrateur, développeur front-end, designer et assurance qualité<br>
-            Ihab Mouhajer, intégrateur, développeur front-end, développeur back-end et devOp
-        </p>
-    </div>
-    <footer class="footer">
-        <div class="grid">
-            <p class="text-footer"></p>
-            <p></p>
-            <p></p>
+      <!-- Navbar -->
+      <nav id="navbar1" class="navbar navbar-dark navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#top" class="nav-link">
+            <img src="./assets/images/ldl-logo.png" class="logo" />
+          </a>
+
+          <button
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Affichage/masquage de la navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div id="mainNav" class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a href="#nouvelles" class="nav-link">Nouvelles</a>
+              </li>
+              <li class="nav-item">
+                <a href="#luttes" class="nav-link">Luttes</a>
+              </li>
+              <li class="nav-item">
+                <a href="#equipe" class="nav-link">Équipe</a>
+              </li>
+              <li class="nav-item">
+                <a href="#a-propos" class="nav-link">À propos</a>
+              </li>
+              <li class="nav-item">
+                <a href="#nous-joindre" class="nav-link">Nous Joindre</a>
+              </li>
+              <li class="nav-item">
+                <a href="#faq" class="nav-link">FAQ</a>
+              </li>
+            </ul>
+          </div>
         </div>
-</footer>
-</body>
+      </nav>
+
+      <!-- Section hero -->
+      <div class="hero">
+        <!-- Swiper -->
+        <div class="swiper">
+          <div class="titre">
+            <h1>
+              Ligue des <span class="rouge">droits</span> et
+              <span class="rouge">libertés</span>
+            </h1>
+            <p>
+              Nous visons à faire connaître, à défendre et à promouvoir
+              l’universalité, l’indivisibilité et l’interdépendance des droits
+              reconnus dans la Charte internationale des droits de l’Homme.
+            </p>
+          </div>
+          <div class="revue">
+            <img class="livre" src="./assets/images/livre.png">
+            <a href="#"><img class="btn-livre" src="./assets/images/btn.png"></a>
+          </div>
+          <!-- Slides -->
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./assets/images/swiper_manifestation.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/swiper_immigration.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/swiper_police.jpg" />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+      <!-- Actualités -->
+    </header>
+    <!--
+    <div>
+      <p>
+        Héphaïstos<br />
+        la ligue des droits et libertés<br />
+        https://liguedesdroits.ca/<br />
+        https://github.com/RandomizedRaptor/droits-et-libertes-hephaistos<br />
+        Michaël Un Dupré, intégrateur, développeur front-end, project owner et
+        scrum master<br />
+        Justine Rousseau, intégrateur, développeur front-end, designer et
+        assurance qualité<br />
+        Ihab Mouhajer, intégrateur, développeur front-end, développeur back-end
+        et devOp
+      </p>
+    </div>-->
+    <footer class="footer">
+      <div class="grid">
+        <p class="text-footer"></p>
+        <p></p>
+        <p></p>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
 </html>
