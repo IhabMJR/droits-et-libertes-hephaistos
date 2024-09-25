@@ -133,3 +133,50 @@
   }
 }
 /*--- Fin section héro ---*/
+
+
+/*--- Début section footer*/
+
+.footer {
+	background-color: #0F0F0F;
+	border: solid #0F0F0F;
+	border-radius: 5px;
+	border-top-left-radius: 50px;
+	border-top-right-radius: 50px;
+	width: 100vw;
+	max-width: 100%;
+	height: 20vh;
+}
+.grid {
+	display: grid;
+	grid-template-columns: 0.5fr 3fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+	gap: 5px;
+	margin-top: 50px;
+}
+.item1 {
+	grid-column: 1;
+	grid-row: 1 / 4;
+}
+.item2 {
+	grid-column: 2;
+	grid-row: 1 / 1;
+}
+.item5 {
+	grid-row-end: 5;
+	grid-column-start: 2;
+}
+.item6 {
+	grid-row-end: 6;
+	grid-column-start: 2;
+}
+.logo-footer {
+	margin: auto;
+}
+.text-adresse {
+	color: #fff;
+}
+.text-contact {
+	color: #fff;
+}
+/*--- Fin section footer*/
