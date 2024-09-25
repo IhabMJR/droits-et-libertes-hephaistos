@@ -21,6 +21,66 @@
 
 /*------*/
 
+/*--- Début section navbar ---*/
+.navbar {
+  padding: 20px 25px;
+}
+
+.navbar-toggler {
+  height: 60px;
+}
+
+.toggler-icon {
+  background-image: url("./assets/images/hamburger_menu.png");
+  border: none;
+}
+
+.navbar-brand {
+  @include mixins.tablet {
+    display: none;
+  }
+}
+
+.nav-ligne {
+  margin: 0 20px 0 20px;
+  @include mixins.tablet {
+    display: none;
+  }
+}
+
+.logo {
+  height: 60px;
+}
+
+.nav-link {
+  margin: 0 20px 0 20px;
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+}
+
+.don {
+  padding: 10px 25px;
+  margin: 0 20px 0 20px;
+  background-color: rgba(0, 0, 0, 0);
+  color: variables.$nuage;
+  border: solid variables.$rouge;
+  border-radius: 20px;
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+  @include mixins.phone {
+    display: none;
+  }
+}
+
+#dropdownMenuButton {
+  background-color: rgba(0, 0, 0, 0);
+  color: variables.$nuage;
+  border: none;
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+}
+/*--- Fin section navbar ---*/
+
 /*--- Début section héro ---*/
 .hero {
   overflow: hidden;

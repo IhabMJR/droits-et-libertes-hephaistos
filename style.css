@@ -15,6 +15,70 @@
 }
 
 /*------*/
+/*--- Début section navbar ---*/
+.navbar {
+  padding: 20px 25px;
+}
+
+.navbar-toggler {
+  height: 60px;
+}
+
+.toggler-icon {
+  background-image: url("./assets/images/hamburger_menu.png");
+  border: none;
+}
+
+@media only screen and (min-width: 500px) and (max-width: 880px) {
+  .navbar-brand {
+    display: none;
+  }
+}
+
+.nav-ligne {
+  margin: 0 20px 0 20px;
+}
+@media only screen and (min-width: 500px) and (max-width: 880px) {
+  .nav-ligne {
+    display: none;
+  }
+}
+
+.logo {
+  height: 60px;
+}
+
+.nav-link {
+  margin: 0 20px 0 20px;
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+}
+
+.don {
+  padding: 10px 25px;
+  margin: 0 20px 0 20px;
+  background-color: rgba(0, 0, 0, 0);
+  color: #EBEBEB;
+  border: solid #B80820;
+  border-radius: 20px;
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .don {
+    display: none;
+  }
+}
+
+#dropdownMenuButton {
+  background-color: rgba(0, 0, 0, 0);
+  color: #EBEBEB;
+  border: none;
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+}
+
+/*--- Fin section navbar ---*/
 /*--- Début section héro ---*/
 .hero {
   overflow: hidden;
