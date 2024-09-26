@@ -62,3 +62,9 @@ $desktop: 1400px;
   font-size: 24px;
   color: variables.$rouge;
 }
+
+@mixin text-footer {
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+  color: #fff;
+}
