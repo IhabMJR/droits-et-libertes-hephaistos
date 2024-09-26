@@ -236,6 +236,12 @@
   max-width: 100%;
   height: 100%;
 }
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .footer {
+    margin: auto;
+  }
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -243,6 +249,12 @@
   gap: 5px;
   margin-top: 50px;
 }
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .grid {
+    margin: 10px 50px;
+  }
+}
+
 .grid-icon {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
@@ -285,6 +297,13 @@
   margin: 100px 20px;
   width: 10vw;
 }
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .logo-partenaire {
+    width: 4vw;
+    margin: 20px 20px;
+  }
+}
+
 .partenaire1 {
   margin-left: 20vw;
 }
@@ -305,12 +324,24 @@
   font-size: 24px;
   color: #fff;
 }
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .text-adresse {
+    font-size: 12px;
+    margin: 0px;
+  }
+}
 
 .text-contact {
   color: #fff;
   font-family: "Tex Gyre Adventor Regular";
   font-size: 24px;
   color: #fff;
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .text-contact {
+    font-size: 12px;
+    margin: 0px;
+  }
 }
 
 .icon-group {
@@ -329,6 +360,12 @@
   font-size: 24px;
   color: #fff;
 }
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .copyright {
+    font-size: 12px;
+  }
+}
+
 .btn {
   color: #fff;
   border: solid;
@@ -344,6 +381,12 @@
   font-size: 24px;
   color: #fff;
 }
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .btn {
+    font-size: 12px;
+  }
+}
+
 .btn:hover {
   color: #EBEBEB;
   border-color: #ECDDDD;
