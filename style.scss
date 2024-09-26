@@ -280,7 +280,7 @@ width: 5vw;
 .btn{
   color: #fff;
   border: solid;
-  width: 9vw;
+  width: 17vw;
   height: 4vw;
   border-radius: 1vw;
   border-width: 0.5vw;
@@ -297,5 +297,21 @@ width: 5vw;
   grid-column-start: 4;
   grid-row-start: 3;
   width: 7vw;
+}
+
+@media (max-width: 768px) {
+  .btn {
+    width: 20vw;
+    height: 6vw;
+    border-radius: 1vw;
+    border-width: 0.5vw;
+  }
+  .logo-partenaire{
+    margin: 50px 20px;
+    width: 5vw;
+  }
+  .partenaire1 {
+    margin-left: 20vw;
+  }
 }
 /*--- Fin section footer*/
