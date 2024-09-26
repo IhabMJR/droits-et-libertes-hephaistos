@@ -21,10 +21,29 @@
 
 /*--- Début section navbar ---*/
 .navbar {
+<<<<<<< Updated upstream
   top: 25px;
   left: 5vw;
   .navbar-toggler {
     height: 60px;
+=======
+  padding-top: 25px;
+  left: 5vw;
+}
+
+.navbar-toggler {
+  height: 60px;
+}
+
+.toggler-icon {
+  background-image: url("./assets/images/hamburger_menu.png");
+  border: none;
+}
+
+.navbar-brand {
+  @include mixins.tablet {
+    display: none;
+>>>>>>> Stashed changes
   }
   .toggler-icon {
     background-image: url("./assets/images/hamburger_menu.png");

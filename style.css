@@ -16,7 +16,11 @@
 
 /*--- Début section navbar ---*/
 .navbar {
+<<<<<<< Updated upstream
   top: 25px;
+=======
+  padding-top: 25px;
+>>>>>>> Stashed changes
   left: 5vw;
 }
 .navbar .navbar-toggler {
