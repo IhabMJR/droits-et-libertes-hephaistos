@@ -15,19 +15,22 @@
 }
 
 /*--- Début section navbar ---*/
+.container-fluid {
+  max-width: 1800px;
+  padding: 0 5vw 0 5vw;
+  margin: 0 auto;
+  position: relative;
+}
+
 .navbar {
-<<<<<<< Updated upstream
   top: 25px;
-=======
-  padding-top: 25px;
->>>>>>> Stashed changes
-  left: 5vw;
 }
 .navbar .navbar-toggler {
   height: 60px;
 }
-.navbar .toggler-icon {
+.navbar .navbar-toggler .toggler-icon {
   background-image: url("./assets/images/hamburger_menu.png");
+  border: none;
 }
 @media only screen and (min-width: 500px) and (max-width: 880px) {
   .navbar .navbar-brand {
@@ -39,7 +42,7 @@
     display: none;
   }
 }
-.navbar .navbar-brand .logo {
+.navbar .navbar-brand img {
   height: 60px;
 }
 .navbar .nav-ligne {
@@ -61,38 +64,63 @@
   font-size: 24px;
   color: #000;
   line-height: 40px;
+  margin: 0 10px 0 10px;
+  font-size: 20px;
   color: #fff;
 }
 .navbar .nav-link:hover {
   color: #B80820;
 }
-@media screen and (max-width: 1670px) {
-  .navbar .nav-link {
-    margin: 0 10px 0 10px;
-    font-size: 20px;
-  }
-}
 .navbar .don {
-  padding: 10px 25px;
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+  color: #000;
+  line-height: 40px;
+  padding: 5px 20px;
+  font-size: 20px;
   background-color: rgba(0, 0, 0, 0);
   color: #fff;
   border: solid #B80820;
   border-radius: 20px;
-  font-family: "Tex Gyre Adventor Regular";
-  font-size: 24px;
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .navbar .don {
     display: none;
   }
 }
+.navbar .don:hover {
+  background-color: rgba(1, 1, 1, 0.5);
+}
 .navbar #dropdownMenuButton {
-  background-color: rgba(0, 0, 0, 0);
-  color: #EBEBEB;
-  border: none;
-  text-align: start;
   font-family: "Tex Gyre Adventor Regular";
   font-size: 24px;
+  color: #000;
+  line-height: 40px;
+  color: #fff;
+  margin-left: 10px;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  text-align: start;
+  width: 0;
+}
+.navbar .dropdown-menu {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+.navbar .dropdown-item {
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+  color: #000;
+  line-height: 40px;
+  color: #fff;
+  font-size: 20px;
+  padding-left: 22px;
+  margin-top: -20px;
+}
+.navbar .dropdown-item:hover {
+  background-color: rgba(0, 0, 0, 0);
+  color: #B80820;
 }
 
 /*--- Fin section navbar ---*/
@@ -112,7 +140,7 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-@media screen and (max-width: 1270px) {
+@media screen and (max-width: 1370px) {
   .revue {
     bottom: 400px;
   }
@@ -166,6 +194,8 @@
   max-width: 100%;
   max-height: 100%;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 .swiper .swiper-slide img {
   width: 100vw;
@@ -184,23 +214,21 @@
   background-color: #A9A9A9;
 }
 
-.hero .titre {
+.conteneur {
+  width: 1550px;
   bottom: 25vh;
-  left: 5vw;
   position: absolute;
-  max-width: 70%;
   z-index: 2;
-  max-width: 850px;
 }
-@media only screen and (min-width: 500px) and (max-width: 880px) {
-  .hero .titre {
-    bottom: 5vh;
+@media screen and (max-width: 1750px) {
+  .conteneur {
+    width: 90vw;
   }
 }
-@media only screen and (min-width: 0) and (max-width: 500px) {
-  .hero .titre {
-    bottom: 5vh;
-  }
+
+.hero .titre {
+  left: 0;
+  max-width: 950px;
 }
 .hero .titre h1 {
   font-family: "Tex Gyre Adventor Bold";
@@ -220,6 +248,16 @@
 }
 .hero .titre h1 .rouge {
   color: #B80820;
+}
+@media only screen and (min-width: 500px) and (max-width: 880px) {
+  .hero .titre h1 {
+    margin-bottom: -180px;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .hero .titre h1 {
+    margin-bottom: -140px;
+  }
 }
 .hero .titre p {
   font-family: "Tex Gyre Adventor Regular";

@@ -20,33 +20,22 @@
 }
 
 /*--- Début section navbar ---*/
+.container-fluid {
+  max-width: 1800px;
+  padding: 0 5vw 0 5vw;
+  margin: 0 auto;
+  position: relative;
+}
+
 .navbar {
-<<<<<<< Updated upstream
   top: 25px;
-  left: 5vw;
+
   .navbar-toggler {
     height: 60px;
-=======
-  padding-top: 25px;
-  left: 5vw;
-}
-
-.navbar-toggler {
-  height: 60px;
-}
-
-.toggler-icon {
-  background-image: url("./assets/images/hamburger_menu.png");
-  border: none;
-}
-
-.navbar-brand {
-  @include mixins.tablet {
-    display: none;
->>>>>>> Stashed changes
-  }
-  .toggler-icon {
-    background-image: url("./assets/images/hamburger_menu.png");
+    .toggler-icon {
+      background-image: url("./assets/images/hamburger_menu.png");
+      border: none;
+    }
   }
   .navbar-brand {
     @include mixins.tablet {
@@ -55,7 +44,7 @@
     @include mixins.tablet {
       display: none;
     }
-    .logo {
+    img {
       height: 60px;
     }
   }
@@ -71,35 +60,54 @@
   .nav-link {
     margin: 0 20px 0 20px;
     @include mixins.contenu;
+    margin: 0 10px 0 10px;
+    font-size: 20px;
     color: #fff;
     &:hover {
       color: variables.$rouge;
     }
-    @media screen and (max-width: 1670px) {
-      margin: 0 10px 0 10px;
-      font-size: 20px;
-    }
   }
   .don {
-    padding: 10px 25px;
+    @include mixins.contenu;
+    padding: 5px 20px;
+    font-size: 20px;
     background-color: rgba(0, 0, 0, 0);
     color: #fff;
     border: solid variables.$rouge;
     border-radius: 20px;
-    font-family: "Tex Gyre Adventor Regular";
-    font-size: 24px;
     @include mixins.phone {
       display: none;
     }
+    &:hover {
+      background-color: rgba(1, 1, 1, 0.5);
+    }
   }
   #dropdownMenuButton {
+    @include mixins.contenu;
+    color: #fff;
+    margin-left: 10px;
+    font-size: 20px;
     background-color: rgba(0, 0, 0, 0);
-    color: variables.$nuage;
     border: none;
     text-align: start;
-    font-family: "Tex Gyre Adventor Regular";
-    font-size: 24px;
+    width: 0;
   }
+
+  .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+  }
+  .dropdown-item {
+    @include mixins.contenu;
+    color: #fff;
+    font-size: 20px;
+    padding-left: 22px;
+    margin-top: -20px;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0);
+      color: variables.$rouge;
+    }
+  } 
 }
 /*--- Fin section navbar ---*/
 
@@ -119,7 +127,7 @@
   background-image: url("./assets/images/brush_stroke.png");
   background-size: cover;
   background-repeat: no-repeat;
-  @media screen and (max-width: 1270px) {
+  @media screen and (max-width: 1370px) {
     bottom: 400px;
   }
   @include mixins.phone {
@@ -165,6 +173,8 @@
   max-width: 100%;
   max-height: 100%;
   position: relative;
+  display: flex;
+  justify-content: center;
   .swiper-slide img {
     width: 100vw;
     height: 100vh;
@@ -183,25 +193,31 @@
 }
 
 // Titre
-.hero .titre {
+.conteneur {
+  width: 1550px;
   bottom: 25vh;
-  left: 5vw;
   position: absolute;
-  max-width: 70%;
   z-index: 2;
-  max-width: 850px;
-  @include mixins.tablet {
-    bottom: 5vh;
+  @media screen and (max-width: 1750px) {
+    width: 90vw;
   }
-  @include mixins.phone {
-    bottom: 5vh;
-  }
+}
+
+.hero .titre {
+  left: 0;
+  max-width: 950px;
   h1 {
     @include mixins.gros-titre;
     padding-bottom: 10px;
     color: #fff;
     .rouge {
       color: variables.$rouge;
+    }
+    @include mixins.tablet {
+      margin-bottom: -180px;
+    }
+    @include mixins.phone {
+      margin-bottom: -140px;
     }
   }
   p {
@@ -280,7 +296,7 @@
   margin: 100px 20px;
   width: 10vw;
   @include mixins.phone {
-    display:none;
+    display: none;
   }
 }
 .partenaire1 {
