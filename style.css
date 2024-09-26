@@ -249,6 +249,12 @@
   max-width: 100%;
   height: 100%;
 }
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .footer {
+    margin: auto;
+  }
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -256,6 +262,13 @@
   gap: 5px;
   margin-top: 50px;
 }
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .grid {
+    margin: 10px 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 .grid-icon {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
@@ -298,6 +311,12 @@
   margin: 100px 20px;
   width: 10vw;
 }
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .logo-partenaire {
+    display: none;
+  }
+}
+
 .partenaire1 {
   margin-left: 20vw;
 }
@@ -308,22 +327,43 @@
   height: 0.1vh;
   margin: auto;
 }
+
 .logo-footer {
   margin: auto;
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .logo-footer {
+    margin: 0px;
+    width: 10vw;
+    grid-column-start: 1;
+    grid-row-start: 0;
+  }
 }
 
 .text-adresse {
   color: #fff;
   font-family: "Tex Gyre Adventor Regular";
-  font-size: 24px;
+  font-size: 20px;
   color: #fff;
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .text-adresse {
+    font-size: 12px;
+    margin: 0px;
+  }
 }
 
 .text-contact {
   color: #fff;
   font-family: "Tex Gyre Adventor Regular";
-  font-size: 24px;
+  font-size: 20px;
   color: #fff;
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .text-contact {
+    font-size: 12px;
+    margin: 10px;
+  }
 }
 
 .icon-group {
@@ -339,24 +379,37 @@
 .copyright {
   grid-column-end: 3;
   font-family: "Tex Gyre Adventor Regular";
-  font-size: 24px;
+  font-size: 20px;
   color: #fff;
 }
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .copyright {
+    font-size: 12px;
+  }
+}
+
 .btn {
   color: #fff;
   border: solid;
   width: 17vw;
   height: -4vw;
   border-radius: 1vw;
-  border-width: 0.5vw;
   border-color: #B80820;
   margin: auto;
   grid-column-start: 4;
   grid-row-start: 2;
   font-family: "Tex Gyre Adventor Regular";
-  font-size: 24px;
+  font-size: 20px;
   color: #fff;
 }
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .btn {
+    font-size: 12px;
+    grid-column-start: 2;
+    grid-row-start: 6;
+  }
+}
+
 .btn:hover {
   color: #EBEBEB;
   border-color: #ECDDDD;
@@ -366,6 +419,11 @@
   grid-column-start: 4;
   grid-row-start: 3;
   width: 7vw;
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .arrow {
+    display: none;
+  }
 }
 
 /*--- Fin section footer*//*# sourceMappingURL=style.css.map */

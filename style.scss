@@ -211,7 +211,9 @@
   width: 100vw;
   max-width: 100%;
   height: 100%;
-  @include mixins.phone;
+  @include mixins.phone {
+    margin: auto;
+  }
 }
 .grid {
   display: grid;
@@ -219,7 +221,10 @@
   grid-template-rows: 1fr;
   gap: 5px;
   margin-top: 50px;
-  @include mixins.phone;
+  @include mixins.phone {
+    margin: 10px 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 .grid-icon {
   display: grid;
@@ -255,7 +260,9 @@
 .logo-partenaire {
   margin: 100px 20px;
   width: 10vw;
-  @include mixins.phone;
+  @include mixins.phone {
+    display:none;
+  }
 }
 .partenaire1 {
   margin-left: 20vw;
@@ -265,18 +272,31 @@
   width: 75vw;
   height: 0.1vh;
   margin: auto;
-  @include mixins.phone;
 }
 .logo-footer {
   margin: auto;
+  @include mixins.phone {
+    margin: 0px;
+    width: 10vw;
+    grid-column-start: 1;
+    grid-row-start: 0;
+  }
 }
 .text-adresse {
   color: #fff;
   @include mixins.text-footer;
+  @include mixins.phone {
+    font-size: 12px;
+    margin: 0px;
+  }
 }
 .text-contact {
   color: #fff;
   @include mixins.text-footer;
+  @include mixins.phone {
+    font-size: 12px;
+    margin: 10px;
+  }
 }
 .icon-group {
   grid-column-start: 4;
@@ -288,7 +308,9 @@
 }
 .copyright {
   grid-column-end: 3;
-  @include mixins.phone;
+  @include mixins.phone {
+    font-size: 12px;
+  }
   @include mixins.text-footer;
 }
 .btn {
@@ -297,13 +319,16 @@
   width: 17vw;
   height: -4vw;
   border-radius: 1vw;
-  border-width: 0.5vw;
   border-color: variables.$rouge;
   margin: auto;
   grid-column-start: 4;
   grid-row-start: 2;
-  @include mixins.phone;
   @include mixins.text-footer;
+  @include mixins.phone {
+    font-size: 12px;
+    grid-column-start: 2;
+    grid-row-start: 6;
+  }
 }
 .btn:hover {
   color: variables.$nuage;
@@ -313,5 +338,8 @@
   grid-column-start: 4;
   grid-row-start: 3;
   width: 7vw;
+  @include mixins.phone {
+    display: none;
+  }
 }
 /*--- Fin section footer*/
