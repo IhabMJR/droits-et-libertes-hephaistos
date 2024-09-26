@@ -79,7 +79,7 @@
 }
 
 /*--- Fin section navbar ---*/
-/*--- Début section héro ---*/
+/*-------------------- Début section héro --------------------*/
 .hero {
   overflow: hidden;
 }
@@ -95,6 +95,11 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+@media screen and (max-width: 1270px) {
+  .revue {
+    bottom: 400px;
+  }
+}
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .revue {
     width: 250px;
@@ -104,7 +109,7 @@
 }
 @media only screen and (min-width: 500px) and (max-width: 880px) {
   .revue {
-    bottom: 500px;
+    bottom: 400px;
   }
 }
 .revue .image {
@@ -175,6 +180,11 @@
     bottom: 5vh;
   }
 }
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .hero .titre {
+    bottom: 5vh;
+  }
+}
 .hero .titre h1 {
   font-family: "Tex Gyre Adventor Bold";
   font-weight: bold;
@@ -209,8 +219,13 @@
     display: none;
   }
 }
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .hero .titre p {
+    display: none;
+  }
+}
 
-/*--- Fin section héro ---*/
+/*-------------------- Fin section héro --------------------*/
 /*--- Début section footer*/
 .footer {
   background-color: #0f0f0f;

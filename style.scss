@@ -81,7 +81,7 @@
 }
 /*--- Fin section navbar ---*/
 
-/*--- Début section héro ---*/
+/*-------------------- Début section héro --------------------*/
 .hero {
   overflow: hidden;
 }
@@ -97,13 +97,16 @@
   background-image: url("./assets/images/brush_stroke.png");
   background-size: cover;
   background-repeat: no-repeat;
+  @media screen and (max-width: 1270px) {
+    bottom: 400px;
+  }
   @include mixins.phone {
     width: 250px;
     height: 250px;
     bottom: 320px;
   }
   @include mixins.tablet {
-    bottom: 500px;
+    bottom: 400px;
   }
   .image {
     width: 200px;
@@ -168,6 +171,9 @@
   @include mixins.tablet {
     bottom: 5vh;
   }
+  @include mixins.phone {
+    bottom: 5vh;
+  }
   h1 {
     @include mixins.gros-titre;
     padding-bottom: 10px;
@@ -185,9 +191,12 @@
     @include mixins.tablet {
       display: none;
     }
+    @include mixins.phone {
+      display: none;
+    }
   }
 }
-/*--- Fin section héro ---*/
+/*-------------------- Fin section héro --------------------*/
 
 /*--- Début section footer*/
 
