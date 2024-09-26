@@ -14,66 +14,79 @@
   margin: 0;
 }
 
-/*------*/
 /*--- Début section navbar ---*/
 .navbar {
-  padding: 20px 25px;
+  top: 25px;
+  left: 5vw;
 }
-
-.navbar-toggler {
+.navbar .navbar-toggler {
   height: 60px;
 }
-
-.toggler-icon {
+.navbar .toggler-icon {
   background-image: url("./assets/images/hamburger_menu.png");
-  border: none;
 }
-
 @media only screen and (min-width: 500px) and (max-width: 880px) {
-  .navbar-brand {
+  .navbar .navbar-brand {
     display: none;
   }
 }
-
-.nav-ligne {
+@media only screen and (min-width: 500px) and (max-width: 880px) {
+  .navbar .navbar-brand {
+    display: none;
+  }
+}
+.navbar .navbar-brand .logo {
+  height: 60px;
+}
+.navbar .nav-ligne {
   margin: 0 20px 0 20px;
 }
 @media only screen and (min-width: 500px) and (max-width: 880px) {
-  .nav-ligne {
+  .navbar .nav-ligne {
     display: none;
   }
 }
-
-.logo {
-  height: 60px;
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .navbar .nav-ligne {
+    display: none;
+  }
 }
-
-.nav-link {
+.navbar .nav-link {
   margin: 0 20px 0 20px;
   font-family: "Tex Gyre Adventor Regular";
   font-size: 24px;
+  color: #000;
+  line-height: 40px;
+  color: #fff;
 }
-
-.don {
+.navbar .nav-link:hover {
+  color: #B80820;
+}
+@media screen and (max-width: 1670px) {
+  .navbar .nav-link {
+    margin: 0 10px 0 10px;
+    font-size: 20px;
+  }
+}
+.navbar .don {
   padding: 10px 25px;
-  margin: 0 20px 0 20px;
   background-color: rgba(0, 0, 0, 0);
-  color: #EBEBEB;
+  color: #fff;
   border: solid #B80820;
   border-radius: 20px;
   font-family: "Tex Gyre Adventor Regular";
   font-size: 24px;
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
-  .don {
+  .navbar .don {
     display: none;
   }
 }
-
-#dropdownMenuButton {
+.navbar #dropdownMenuButton {
   background-color: rgba(0, 0, 0, 0);
   color: #EBEBEB;
   border: none;
+  text-align: start;
   font-family: "Tex Gyre Adventor Regular";
   font-size: 24px;
 }

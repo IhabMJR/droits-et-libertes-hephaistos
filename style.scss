@@ -19,65 +19,68 @@
   margin: 0;
 }
 
-/*------*/
-
 /*--- Début section navbar ---*/
 .navbar {
-  padding: 20px 25px;
-}
-
-.navbar-toggler {
-  height: 60px;
-}
-
-.toggler-icon {
-  background-image: url("./assets/images/hamburger_menu.png");
-  border: none;
-}
-
-.navbar-brand {
-  @include mixins.tablet {
-    display: none;
+  top: 25px;
+  left: 5vw;
+  .navbar-toggler {
+    height: 60px;
   }
-}
-
-.nav-ligne {
-  margin: 0 20px 0 20px;
-  @include mixins.tablet {
-    display: none;
+  .toggler-icon {
+    background-image: url("./assets/images/hamburger_menu.png");
   }
-}
-
-.logo {
-  height: 60px;
-}
-
-.nav-link {
-  margin: 0 20px 0 20px;
-  font-family: "Tex Gyre Adventor Regular";
-  font-size: 24px;
-}
-
-.don {
-  padding: 10px 25px;
-  margin: 0 20px 0 20px;
-  background-color: rgba(0, 0, 0, 0);
-  color: variables.$nuage;
-  border: solid variables.$rouge;
-  border-radius: 20px;
-  font-family: "Tex Gyre Adventor Regular";
-  font-size: 24px;
-  @include mixins.phone {
-    display: none;
+  .navbar-brand {
+    @include mixins.tablet {
+      display: none;
+    }
+    @include mixins.tablet {
+      display: none;
+    }
+    .logo {
+      height: 60px;
+    }
   }
-}
-
-#dropdownMenuButton {
-  background-color: rgba(0, 0, 0, 0);
-  color: variables.$nuage;
-  border: none;
-  font-family: "Tex Gyre Adventor Regular";
-  font-size: 24px;
+  .nav-ligne {
+    margin: 0 20px 0 20px;
+    @include mixins.tablet {
+      display: none;
+    }
+    @include mixins.phone {
+      display: none;
+    }
+  }
+  .nav-link {
+    margin: 0 20px 0 20px;
+    @include mixins.contenu;
+    color: #fff;
+    &:hover {
+      color: variables.$rouge;
+    }
+    @media screen and (max-width: 1670px) {
+      margin: 0 10px 0 10px;
+      font-size: 20px;
+    }
+  }
+  .don {
+    padding: 10px 25px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+    border: solid variables.$rouge;
+    border-radius: 20px;
+    font-family: "Tex Gyre Adventor Regular";
+    font-size: 24px;
+    @include mixins.phone {
+      display: none;
+    }
+  }
+  #dropdownMenuButton {
+    background-color: rgba(0, 0, 0, 0);
+    color: variables.$nuage;
+    border: none;
+    text-align: start;
+    font-family: "Tex Gyre Adventor Regular";
+    font-size: 24px;
+  }
 }
 /*--- Fin section navbar ---*/
 
