@@ -252,6 +252,7 @@
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .grid {
     margin: 10px 50px;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -299,8 +300,7 @@
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .logo-partenaire {
-    width: 4vw;
-    margin: 20px 20px;
+    display: none;
   }
 }
 
@@ -314,14 +314,23 @@
   height: 0.1vh;
   margin: auto;
 }
+
 .logo-footer {
   margin: auto;
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .logo-footer {
+    margin: 0px;
+    width: 10vw;
+    grid-column-start: 1;
+    grid-row-start: 0;
+  }
 }
 
 .text-adresse {
   color: #fff;
   font-family: "Tex Gyre Adventor Regular";
-  font-size: 24px;
+  font-size: 20px;
   color: #fff;
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
@@ -334,13 +343,13 @@
 .text-contact {
   color: #fff;
   font-family: "Tex Gyre Adventor Regular";
-  font-size: 24px;
+  font-size: 20px;
   color: #fff;
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .text-contact {
     font-size: 12px;
-    margin: 0px;
+    margin: 10px;
   }
 }
 
@@ -357,7 +366,7 @@
 .copyright {
   grid-column-end: 3;
   font-family: "Tex Gyre Adventor Regular";
-  font-size: 24px;
+  font-size: 20px;
   color: #fff;
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
@@ -372,18 +381,19 @@
   width: 17vw;
   height: -4vw;
   border-radius: 1vw;
-  border-width: 0.5vw;
   border-color: #B80820;
   margin: auto;
   grid-column-start: 4;
   grid-row-start: 2;
   font-family: "Tex Gyre Adventor Regular";
-  font-size: 24px;
+  font-size: 20px;
   color: #fff;
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .btn {
     font-size: 12px;
+    grid-column-start: 2;
+    grid-row-start: 6;
   }
 }
 
@@ -396,6 +406,11 @@
   grid-column-start: 4;
   grid-row-start: 3;
   width: 7vw;
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .arrow {
+    display: none;
+  }
 }
 
 /*--- Fin section footer*//*# sourceMappingURL=style.css.map */
