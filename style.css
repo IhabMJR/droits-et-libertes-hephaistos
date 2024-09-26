@@ -107,8 +107,7 @@
     bottom: 500px;
   }
 }
-
-.livre {
+.revue .image {
   width: 200px;
   top: 50px;
   left: 140px;
@@ -116,36 +115,26 @@
   position: absolute;
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
-  .livre {
+  .revue .image {
     width: 100px;
     left: 80px;
   }
 }
-
-.btn-livre {
+.revue .btn-revue {
   width: 60px;
   top: 160px;
   left: 370px;
   position: absolute;
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
-  .btn-livre {
+  .revue .btn-revue {
     width: 45px;
     left: 190px;
     top: 90px;
   }
 }
-
-.btn-livre:hover {
+.revue .btn-revue:hover {
   filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
-}
-
-.swiper-slide img {
-  width: 100vw;
-  height: 100vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-  filter: grayscale(100) contrast(70%) brightness(0.4);
 }
 
 .swiper {
@@ -156,9 +145,12 @@
   max-height: 100%;
   position: relative;
 }
-
-.swiper-pagination-bullet-active {
-  background-color: #A9A9A9;
+.swiper .swiper-slide img {
+  width: 100vw;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: grayscale(100) contrast(70%) brightness(0.4);
 }
 
 .swiper-pagination-bullet {
@@ -166,6 +158,23 @@
   height: 10px;
 }
 
+.swiper-pagination-bullet-active {
+  background-color: #A9A9A9;
+}
+
+.hero .titre {
+  bottom: 25vh;
+  left: 5vw;
+  position: absolute;
+  max-width: 70%;
+  z-index: 2;
+  max-width: 850px;
+}
+@media only screen and (min-width: 500px) and (max-width: 880px) {
+  .hero .titre {
+    bottom: 5vh;
+  }
+}
 .hero .titre h1 {
   font-family: "Tex Gyre Adventor Bold";
   font-weight: bold;
@@ -173,7 +182,7 @@
   color: #000;
   font-size: 96px;
   line-height: 110px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   color: #fff;
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
@@ -182,7 +191,9 @@
     line-height: 65px;
   }
 }
-
+.hero .titre h1 .rouge {
+  color: #B80820;
+}
 .hero .titre p {
   font-family: "Tex Gyre Adventor Regular";
   font-size: 24px;
@@ -193,32 +204,17 @@
   border-top: 2.5px solid #fff;
   padding-top: 15px;
 }
-
-.rouge {
-  color: #B80820;
-}
-
-.hero .titre {
-  bottom: 18vh;
-  left: 5vw;
-  position: absolute;
-  max-width: 70%;
-  z-index: 2;
-}
-
-@media (max-width: 768px) {
+@media only screen and (min-width: 500px) and (max-width: 880px) {
   .hero .titre p {
     display: none;
   }
-  .hero .titre {
-    bottom: 5vh;
-  }
 }
+
 /*--- Fin section héro ---*/
 /*--- Début section footer*/
 .footer {
-  background-color: #0F0F0F;
-  border: solid #0F0F0F;
+  background-color: #0f0f0f;
+  border: solid #0f0f0f;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   width: 100vw;
