@@ -281,9 +281,9 @@ width: 5vw;
   color: #fff;
   border: solid;
   width: 9vw;
-  height: 3vw;
-  border-radius: 10px;
-  border-width: 3px;
+  height: 4vw;
+  border-radius: 1vw;
+  border-width: 0.5vw;
   border-color: variables.$rouge;
   margin: auto;
   grid-column-start: 4;
@@ -294,9 +294,8 @@ width: 5vw;
   border-color: variables.$rose;
 }
 .arrow{
-  position: absolute;
-  width: 10vw;
-  right: 33vw;
-  bottom: 1vh;
+  grid-column-start: 4;
+  grid-row-start: 3;
+  width: 7vw;
 }
 /*--- Fin section footer*/
