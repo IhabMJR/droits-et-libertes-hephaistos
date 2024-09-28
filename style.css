@@ -307,7 +307,7 @@
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .grid {
     margin: 10px 50px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
   }
 }
 
@@ -319,34 +319,86 @@
 }
 
 .item1 {
+  grid-column-start: 2;
   grid-row-end: 1;
   grid-row: 1/4;
 }
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .item1 {
+    font-size: 12px;
+    margin: 0px;
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+}
 
 .item2 {
+  grid-column-start: 3;
   grid-row-end: 2;
   grid-row: 1/1;
 }
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .item2 {
+    font-size: 12px;
+    margin: 0px;
+    grid-column-start: 2;
+    grid-row-end: 2;
+  }
+}
 
 .item3 {
+  grid-column-start: 3;
   grid-row-end: 3;
   grid-row: 2;
 }
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .item3 {
+    font-size: 12px;
+    margin: 0px;
+    grid-column-start: 2;
+    grid-row-end: 3;
+  }
+}
 
 .item4 {
+  grid-column-start: 3;
   grid-row-end: 4;
   grid-row: 3;
   margin-top: 50px;
 }
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .item4 {
+    font-size: 12px;
+    margin: 0px;
+    grid-column-start: 2;
+    grid-row-start: 4;
+  }
+}
 
 .item5 {
+  grid-column-start: 3;
   grid-row-end: 5;
-  grid-column-start: 2;
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .item5 {
+    font-size: 12px;
+    margin: 0px;
+    grid-column-start: 2;
+    grid-row-start: 5;
+  }
 }
 
 .item6 {
+  grid-column-start: 3;
   grid-row-end: 6;
-  grid-column-start: 2;
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .item6 {
+    font-size: 12px;
+    margin: 0px;
+    grid-column-start: 2;
+    grid-row-start: 6;
+  }
 }
 
 .logo-partenaire {
@@ -365,20 +417,26 @@
 
 .ligne {
   background-color: #fff;
-  width: 75vw;
+  width: 70vw;
   height: 0.1vh;
   margin: auto;
+  grid-row-end: 7;
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .ligne {
+    display: none;
+  }
 }
 
 .logo-footer {
-  margin: auto;
+  width: 10vw;
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .logo-footer {
     margin: 0px;
     width: 10vw;
-    grid-column-start: 1;
-    grid-row-start: 0;
   }
 }
 
@@ -404,51 +462,71 @@
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .text-contact {
     font-size: 12px;
-    margin: 10px;
   }
 }
 
-.icon-group {
-  grid-column-start: 4;
-}
-
 .icon {
-  grid-row-end: 4;
-  grid-column-start: 4;
   width: 5vw;
+  grid-row-start: 7;
+  grid-column-start: 4;
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .icon {
+    width: 15vw;
+  }
 }
 
-.copyright {
+.icon1 {
+  margin-left: 58vw;
+}
+
+.icon5 {
+  margin-right: 0px;
+}
+
+.text-copyright {
+  margin-top: 20px;
+  grid-row-end: 8;
   grid-column-end: 3;
   font-family: "Tex Gyre Adventor Regular";
   font-size: 20px;
   color: #fff;
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
-  .copyright {
+  .text-copyright {
+    font-size: 10px;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 500px) and (min-width: 0) and (max-width: 500px) {
+  .text-copyright {
     font-size: 12px;
+    margin: 0px;
+    grid-column-start: 2;
+    grid-row-start: 9;
   }
 }
 
 .btn {
   color: #fff;
   border: solid;
-  width: 17vw;
+  width: -5vw;
   height: -4vw;
-  border-radius: 1vw;
+  border-radius: 0.5vw;
   border-color: #B80820;
-  margin: auto;
-  grid-column-start: 4;
-  grid-row-start: 2;
+  grid-column-end: 5;
+  grid-row-end: 3;
+  margin-left: auto;
   font-family: "Tex Gyre Adventor Regular";
   font-size: 20px;
   color: #fff;
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .btn {
-    font-size: 12px;
-    grid-column-start: 2;
-    grid-row-start: 6;
+    font-size: 10px;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    width: 20vw;
+    display: none;
   }
 }
 
@@ -461,6 +539,7 @@
   grid-column-start: 4;
   grid-row-start: 3;
   width: 7vw;
+  margin-left: 12vw;
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .arrow {
