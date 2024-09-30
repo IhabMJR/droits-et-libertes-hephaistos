@@ -28,16 +28,21 @@
 }
 
 .navbar {
-  top: 25px;
+  padding: 25px 0;
+  transition: all 0.4s;
 
-  .navbar-toggler {
+  &-scrolled {
+    background-color: #000000;
+  }
+
+  &-toggler {
     height: 60px;
     .toggler-icon {
       background-image: url("./assets/images/hamburger_menu.png");
       border: none;
     }
   }
-  .navbar-brand {
+  &-brand {
     @include mixins.tablet {
       display: none;
     }
@@ -109,6 +114,7 @@
     }
   } 
 }
+
 /*--- Fin section navbar ---*/
 
 /*-------------------- Début section héro --------------------*/

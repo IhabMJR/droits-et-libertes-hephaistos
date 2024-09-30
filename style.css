@@ -23,26 +23,30 @@
 }
 
 .navbar {
-  top: 25px;
+  padding: 25px 0;
+  transition: all 0.4s;
 }
-.navbar .navbar-toggler {
+.navbar-scrolled {
+  background-color: #000000;
+}
+.navbar-toggler {
   height: 60px;
 }
-.navbar .navbar-toggler .toggler-icon {
+.navbar-toggler .toggler-icon {
   background-image: url("./assets/images/hamburger_menu.png");
   border: none;
 }
 @media only screen and (min-width: 500px) and (max-width: 880px) {
-  .navbar .navbar-brand {
+  .navbar-brand {
     display: none;
   }
 }
 @media only screen and (min-width: 500px) and (max-width: 880px) {
-  .navbar .navbar-brand {
+  .navbar-brand {
     display: none;
   }
 }
-.navbar .navbar-brand img {
+.navbar-brand img {
   height: 60px;
 }
 .navbar .nav-ligne {
