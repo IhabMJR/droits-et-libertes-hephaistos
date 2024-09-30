@@ -1,0 +1,127 @@
+/*--- Importation des partials ---*/
+@use "../mixins";
+@use "../variables";
+@use "sass:color";
+
+.hero {
+    overflow: hidden;
+  }
+  
+  // Revue
+  .revue {
+    position: absolute;
+    bottom: 200px;
+    right: 0;
+    width: 460px;
+    height: 400px;
+    z-index: 1000;
+    background-image: url("./assets/images/brush_stroke.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media screen and (max-width: 1370px) {
+      bottom: 400px;
+    }
+    @include mixins.phone {
+      width: 250px;
+      height: 250px;
+      bottom: 320px;
+    }
+    @include mixins.tablet {
+      bottom: 400px;
+    }
+    .image {
+      width: 200px;
+      top: 50px;
+      left: 140px;
+      border: 3px solid variables.$rouge;
+      position: absolute;
+      @include mixins.phone {
+        width: 100px;
+        left: 80px;
+      }
+    }
+    .btn-revue {
+      width: 60px;
+      top: 160px;
+      left: 370px;
+      position: absolute;
+      @include mixins.phone {
+        width: 45px;
+        left: 190px;
+        top: 90px;
+      }
+      &:hover {
+        filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
+      }
+    }
+  }
+  
+  // Swiper
+  .swiper {
+    border-radius: 0 0 80px 80px;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    .swiper-slide img {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      filter: grayscale(100) contrast(70%) brightness(0.4);
+    }
+  }
+  
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background-color: variables.$argent;
+  }
+  
+  // Titre
+  .conteneur {
+    width: 1550px;
+    bottom: 25vh;
+    position: absolute;
+    z-index: 2;
+    @media screen and (max-width: 1750px) {
+      width: 90vw;
+    }
+  }
+  
+  .hero .titre {
+    left: 0;
+    max-width: 950px;
+    h1 {
+      @include mixins.gros-titre;
+      padding-bottom: 10px;
+      color: #fff;
+      .rouge {
+        color: variables.$rouge;
+      }
+      @include mixins.tablet {
+        margin-bottom: -180px;
+      }
+      @include mixins.phone {
+        margin-bottom: -140px;
+      }
+    }
+    p {
+      @include mixins.contenu;
+      position: absolute;
+      color: #fff;
+      border-top: 2.5px solid #fff;
+      padding-top: 15px;
+      @include mixins.tablet {
+        display: none;
+      }
+      @include mixins.phone {
+        display: none;
+      }
+    }
+  }

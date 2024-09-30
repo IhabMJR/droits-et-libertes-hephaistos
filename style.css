@@ -1,134 +1,7 @@
 @charset "UTF-8";
+/*--- Importation des partials générales ---*/
+/*--- Importation des partials composantes ---*/
 /*--- Importation des partials ---*/
-/*--- Importation des fonts ---*/
-@font-face {
-  font-family: "TeX Gyre Adventor Regular";
-  src: url("./assets/fonts/texgyreadventor-regular.otf") format("opentype");
-}
-@font-face {
-  font-family: "TeX Gyre Adventor Bold";
-  font-weight: bold;
-  src: url("./assets/fonts/texgyreadventor-bold.otf") format("opentype");
-}
-* {
-  margin: 0;
-}
-
-/*--- Début section navbar ---*/
-.container-fluid {
-  max-width: 1800px;
-  padding: 0 5vw 0 5vw;
-  margin: 0 auto;
-  position: relative;
-}
-
-.navbar {
-  padding: 25px 0;
-  transition: all 0.4s;
-}
-.navbar-scrolled {
-  background-color: #000000;
-}
-.navbar-toggler {
-  height: 60px;
-}
-.navbar-toggler .toggler-icon {
-  background-image: url("./assets/images/hamburger_menu.png");
-  border: none;
-}
-@media only screen and (min-width: 500px) and (max-width: 880px) {
-  .navbar-brand {
-    display: none;
-  }
-}
-@media only screen and (min-width: 500px) and (max-width: 880px) {
-  .navbar-brand {
-    display: none;
-  }
-}
-.navbar-brand img {
-  height: 60px;
-}
-.navbar .nav-ligne {
-  margin: 0 20px 0 20px;
-}
-@media only screen and (min-width: 500px) and (max-width: 880px) {
-  .navbar .nav-ligne {
-    display: none;
-  }
-}
-@media only screen and (min-width: 0) and (max-width: 500px) {
-  .navbar .nav-ligne {
-    display: none;
-  }
-}
-.navbar .nav-link {
-  margin: 0 20px 0 20px;
-  font-family: "Tex Gyre Adventor Regular";
-  font-size: 24px;
-  color: #000;
-  line-height: 40px;
-  margin: 0 10px 0 10px;
-  font-size: 20px;
-  color: #fff;
-}
-.navbar .nav-link:hover {
-  color: #B80820;
-}
-.navbar .don {
-  font-family: "Tex Gyre Adventor Regular";
-  font-size: 24px;
-  color: #000;
-  line-height: 40px;
-  padding: 5px 20px;
-  font-size: 20px;
-  background-color: rgba(0, 0, 0, 0);
-  color: #fff;
-  border: solid #B80820;
-  border-radius: 20px;
-}
-@media only screen and (min-width: 0) and (max-width: 500px) {
-  .navbar .don {
-    display: none;
-  }
-}
-.navbar .don:hover {
-  background-color: rgba(1, 1, 1, 0.5);
-}
-.navbar #dropdownMenuButton {
-  font-family: "Tex Gyre Adventor Regular";
-  font-size: 24px;
-  color: #000;
-  line-height: 40px;
-  color: #fff;
-  margin-left: 10px;
-  font-size: 20px;
-  background-color: rgba(0, 0, 0, 0);
-  border: none;
-  text-align: start;
-  width: 0;
-}
-.navbar .dropdown-menu {
-  background-color: rgba(0, 0, 0, 0);
-  border: none;
-}
-.navbar .dropdown-item {
-  font-family: "Tex Gyre Adventor Regular";
-  font-size: 24px;
-  color: #000;
-  line-height: 40px;
-  color: #fff;
-  font-size: 20px;
-  padding-left: 22px;
-  margin-top: -20px;
-}
-.navbar .dropdown-item:hover {
-  background-color: rgba(0, 0, 0, 0);
-  color: #B80820;
-}
-
-/*--- Fin section navbar ---*/
-/*-------------------- Début section héro --------------------*/
 .hero {
   overflow: hidden;
 }
@@ -284,8 +157,120 @@
   }
 }
 
-/*-------------------- Fin section héro --------------------*/
-/*--- Début section footer*/
+/*--- Importation des partials ---*/
+.container-fluid {
+  max-width: 1800px;
+  padding: 0 5vw 0 5vw;
+  margin: 0 auto;
+  position: relative;
+}
+
+.navbar {
+  padding: 25px 0;
+  transition: all 0.4s;
+}
+.navbar-scrolled {
+  background-color: #000000;
+}
+.navbar-toggler {
+  height: 60px;
+}
+.navbar-toggler .toggler-icon {
+  background-image: url("./assets/images/hamburger_menu.png");
+  border: none;
+}
+@media only screen and (min-width: 500px) and (max-width: 880px) {
+  .navbar-brand {
+    display: none;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 880px) {
+  .navbar-brand {
+    display: none;
+  }
+}
+.navbar-brand img {
+  height: 60px;
+}
+.navbar .nav-ligne {
+  margin: 0 20px 0 20px;
+}
+@media only screen and (min-width: 500px) and (max-width: 880px) {
+  .navbar .nav-ligne {
+    display: none;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .navbar .nav-ligne {
+    display: none;
+  }
+}
+.navbar .nav-link {
+  margin: 0 20px 0 20px;
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+  color: #000;
+  line-height: 40px;
+  margin: 0 10px 0 10px;
+  font-size: 20px;
+  color: #fff;
+}
+.navbar .nav-link:hover {
+  color: #B80820;
+}
+.navbar .don {
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+  color: #000;
+  line-height: 40px;
+  padding: 5px 20px;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0);
+  color: #fff;
+  border: solid #B80820;
+  border-radius: 20px;
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .navbar .don {
+    display: none;
+  }
+}
+.navbar .don:hover {
+  background-color: rgba(1, 1, 1, 0.5);
+}
+.navbar #dropdownMenuButton {
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+  color: #000;
+  line-height: 40px;
+  color: #fff;
+  margin-left: 10px;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  text-align: start;
+  width: 0;
+}
+.navbar .dropdown-menu {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+.navbar .dropdown-item {
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+  color: #000;
+  line-height: 40px;
+  color: #fff;
+  font-size: 20px;
+  padding-left: 22px;
+  margin-top: -20px;
+}
+.navbar .dropdown-item:hover {
+  background-color: rgba(0, 0, 0, 0);
+  color: #B80820;
+}
+
+/*--- Importation des partials ---*/
 .footer {
   background-color: #0f0f0f;
   border: solid #0f0f0f;
@@ -551,4 +536,145 @@
   }
 }
 
-/*--- Fin section footer*//*# sourceMappingURL=style.css.map */
+/*--- Importation des partials ---*/
+.contenant {
+  background-image: url("./assets/images/world_map.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  background-position: 0 -10px;
+}
+
+h2 {
+  font-family: "Tex Gyre Adventor Bold";
+  font-weight: bold;
+  font-size: 48px;
+  color: #000;
+  position: relative;
+  display: block;
+  margin: 100px auto 20px auto;
+  width: 400px;
+  height: 100px;
+}
+h2:after {
+  content: url("./assets/images/ligne_sous_actualites.png");
+  position: relative;
+  bottom: 30px;
+}
+
+.actualites {
+  overflow: hidden;
+  text-align: center;
+  width: 100vw;
+  max-width: 1550px;
+  height: auto;
+}
+.actualites__cartes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  -moz-column-gap: 3vh;
+       column-gap: 3vh;
+  padding: 0 20px;
+}
+.actualites__cartes .carte {
+  background-color: red;
+  height: 60vh;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  position: relative;
+  -webkit-backdrop-filter: grayscale(100) contrast(70%) brightness(0.4);
+          backdrop-filter: grayscale(100) contrast(70%) brightness(0.4);
+}
+.actualites__cartes .carte__titre {
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+  color: #000;
+  line-height: 40px;
+  margin-top: 20px;
+  width: auto;
+  font-size: 18px;
+  color: #fff;
+  text-align: start;
+  padding: 0 30px;
+  letter-spacing: 0.8px;
+}
+.actualites__cartes .carte__titre h3 {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 40px;
+}
+.actualites__cartes .carte__titre p {
+  border-radius: 25px;
+}
+.actualites__cartes .carte__titre p span {
+  background-color: rgba(136, 136, 136, 0.4);
+  border-radius: 25px;
+  padding: 5px 15px;
+}
+.actualites__cartes .carte__details {
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+  color: #000;
+  line-height: 40px;
+  position: absolute;
+  width: 100%;
+  color: #fff;
+  font-size: 24px;
+  text-align: start;
+  bottom: 0;
+  margin: 15px 30px;
+}
+.actualites__cartes .carte .btn-nouvelle {
+  width: 3vw;
+  right: 0;
+  bottom: 0;
+  margin: 30px;
+  position: absolute;
+}
+.actualites__cartes .carte:nth-child(1) {
+  background-image: url("./assets/images/nouvelle_armes_israel.png");
+}
+.actualites__cartes .carte:nth-child(2) {
+  background-image: url("./assets/images/nouvelle_armes_israel.png");
+}
+.actualites__cartes .carte:nth-child(3) {
+  background-image: url("./assets/images/nouvelle_armes_israel.png");
+}
+.actualites__cartes .carte:hover {
+  filter: none;
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.toutes-nouvelles {
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+  color: #000;
+  line-height: 40px;
+  font-size: 2.5vh;
+  padding: 2.5vh;
+  margin: 45px 0 100px 0;
+  background-color: rgba(0, 0, 0, 0);
+  border: solid #B80820 6px;
+  border-radius: 45px;
+}
+.toutes-nouvelles:hover {
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.3);
+}
+
+/*--- Importation des fonts ---*/
+@font-face {
+  font-family: "TeX Gyre Adventor Regular";
+  src: url("./assets/fonts/texgyreadventor-regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "TeX Gyre Adventor Bold";
+  font-weight: bold;
+  src: url("./assets/fonts/texgyreadventor-bold.otf") format("opentype");
+}
+* {
+  margin: 0;
+}/*# sourceMappingURL=style.css.map */

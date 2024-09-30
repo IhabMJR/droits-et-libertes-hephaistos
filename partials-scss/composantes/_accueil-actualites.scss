@@ -1,0 +1,118 @@
+/*--- Importation des partials ---*/
+@use "../mixins";
+@use "../variables";
+@use "sass:color";
+
+.contenant {
+  background-image: url("./assets/images/world_map.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  background-position: 0 -10px;
+}
+
+h2 {
+  @include mixins.petit-titre-bold;
+  position: relative;
+  display: block;
+  margin: 100px auto 20px auto;
+  width: 400px;
+  height: 100px;
+  &:after {
+    content: url("./assets/images/ligne_sous_actualites.png");
+    position: relative;
+    bottom: 30px;
+  }
+}
+
+.actualites {
+    overflow: hidden;
+  text-align: center;
+  width: 100vw;
+  max-width: 1550px;
+  height: auto;
+  &__cartes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 3vh;
+    padding: 0 20px;
+    .carte {
+      background-color: red;
+      height: 60vh;
+      border-radius: 20px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50%;
+      position: relative;
+      backdrop-filter: grayscale(100) contrast(70%) brightness(0.4);
+      &__titre {
+        @include mixins.contenu;
+        margin-top: 20px;
+        width: auto;
+        font-size: 18px;
+        color: #fff;
+        text-align: start;
+        padding: 0 30px;
+        letter-spacing: 0.8px;
+        h3 {
+          font-size: 32px;
+          font-weight: bold;
+          line-height: 40px;
+        }
+        p {
+          border-radius: 25px;
+          span {
+            background-color: rgba(136, 136, 136, 0.4);
+            border-radius: 25px;
+            padding: 5px 15px;
+          }
+        }
+      }
+      &__details {
+        @include mixins.contenu;
+        position: absolute;
+        width: 100%;
+        color: #fff;
+        font-size:24px;
+        text-align: start;
+        bottom: 0;
+        margin: 15px 30px;
+      }
+      .btn-nouvelle {
+        width: 3vw;
+        right: 0;
+        bottom: 0;
+        margin: 30px;
+        position: absolute;
+    }
+      &:nth-child(1) {
+        background-image: url("./assets/images/nouvelle_armes_israel.png");
+      }
+      &:nth-child(2) {
+        background-image: url("./assets/images/nouvelle_armes_israel.png");
+      }
+      &:nth-child(3) {
+        background-image: url("./assets/images/nouvelle_armes_israel.png");
+      }
+      &:hover {
+        filter: none;
+        transform: scale(1.02);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.toutes-nouvelles {
+  @include mixins.contenu;
+  font-size: 2.5vh;
+  padding: 2.5vh;
+  margin: 45px 0 100px 0;
+  background-color: rgba(0, 0, 0, 0);
+  border: solid variables.$rouge 6px;
+  border-radius: 45px;
+  &:hover {
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.3);
+  }
+}
