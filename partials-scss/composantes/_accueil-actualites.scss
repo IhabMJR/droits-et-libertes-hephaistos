@@ -4,6 +4,7 @@
 @use "sass:color";
 
 .contenant {
+  overflow-x: hidden;
   background-image: url("./assets/images/world_map.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -27,16 +28,32 @@ h2 {
 }
 
 .actualites {
-    overflow: hidden;
+  overflow: hidden;
   text-align: center;
   width: 100vw;
   max-width: 1550px;
+  min-width: 1200px;
   height: auto;
+  @media screen and (max-width: 1300px) {
+    column-gap: 2px;
+    max-width: auto;
+    min-width: 0;
+  }
   &__cartes {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 3vh;
-    padding: 0 20px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    @media screen and (max-width: 1300px) {
+      overflow-x: scroll;
+    }
+    .scroll {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 3vh;
+      padding: 0 20px;
+      @media screen and (max-width: 1300px) {
+        column-gap: 15px;
+      }
+    }
     .carte {
       background-color: red;
       height: 60vh;
@@ -46,6 +63,9 @@ h2 {
       background-position: 50%;
       position: relative;
       backdrop-filter: grayscale(100) contrast(70%) brightness(0.4);
+      @media screen and (max-width: 1300px) {
+        width: 400px;
+      }
       &__titre {
         @include mixins.contenu;
         margin-top: 20px;
@@ -59,6 +79,9 @@ h2 {
           font-size: 32px;
           font-weight: bold;
           line-height: 40px;
+          @media screen and (max-width: 1200px) {
+            font-size: 28px;
+          }
         }
         p {
           border-radius: 25px;
@@ -80,7 +103,7 @@ h2 {
         margin: 15px 30px;
       }
       .btn-nouvelle {
-        width: 3vw;
+        width: 2.5vw;
         right: 0;
         bottom: 0;
         margin: 30px;

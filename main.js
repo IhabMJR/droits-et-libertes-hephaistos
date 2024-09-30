@@ -20,5 +20,3 @@ const swiper = new Swiper(".swiper", {
     type: "bullets",
   },
 });
-
-//--- Navbar scroll ---

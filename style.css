@@ -538,6 +538,7 @@
 
 /*--- Importation des partials ---*/
 .contenant {
+  overflow-x: hidden;
   background-image: url("./assets/images/world_map.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -568,14 +569,38 @@ h2:after {
   text-align: center;
   width: 100vw;
   max-width: 1550px;
+  min-width: 1200px;
   height: auto;
 }
+@media screen and (max-width: 1300px) {
+  .actualites {
+    -moz-column-gap: 2px;
+         column-gap: 2px;
+    max-width: auto;
+    min-width: 0;
+  }
+}
 .actualites__cartes {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+@media screen and (max-width: 1300px) {
+  .actualites__cartes {
+    overflow-x: scroll;
+  }
+}
+.actualites__cartes .scroll {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   -moz-column-gap: 3vh;
        column-gap: 3vh;
   padding: 0 20px;
+}
+@media screen and (max-width: 1300px) {
+  .actualites__cartes .scroll {
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
 }
 .actualites__cartes .carte {
   background-color: red;
@@ -587,6 +612,11 @@ h2:after {
   position: relative;
   -webkit-backdrop-filter: grayscale(100) contrast(70%) brightness(0.4);
           backdrop-filter: grayscale(100) contrast(70%) brightness(0.4);
+}
+@media screen and (max-width: 1300px) {
+  .actualites__cartes .carte {
+    width: 400px;
+  }
 }
 .actualites__cartes .carte__titre {
   font-family: "Tex Gyre Adventor Regular";
@@ -605,6 +635,11 @@ h2:after {
   font-size: 32px;
   font-weight: bold;
   line-height: 40px;
+}
+@media screen and (max-width: 1200px) {
+  .actualites__cartes .carte__titre h3 {
+    font-size: 28px;
+  }
 }
 .actualites__cartes .carte__titre p {
   border-radius: 25px;
@@ -628,7 +663,7 @@ h2:after {
   margin: 15px 30px;
 }
 .actualites__cartes .carte .btn-nouvelle {
-  width: 3vw;
+  width: 2.5vw;
   right: 0;
   bottom: 0;
   margin: 30px;
