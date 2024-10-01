@@ -179,12 +179,12 @@
   background-image: url("./assets/images/hamburger_menu.png");
   border: none;
 }
-@media only screen and (min-width: 500px) and (max-width: 880px) {
+@media only screen and (min-width: 1150px) and (max-width: 880px) {
   .navbar-brand {
     display: none;
   }
 }
-@media only screen and (min-width: 500px) and (max-width: 880px) {
+@media only screen and (min-width: 1150px) and (max-width: 880px) {
   .navbar-brand {
     display: none;
   }
@@ -754,6 +754,78 @@ h2:after {
 }
 .toutes-nouvelles:hover {
   box-shadow: 0 0 18px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 1300px) {
+  .Luttes {
+    -moz-column-gap: 2px;
+         column-gap: 2px;
+    max-width: auto;
+    min-width: 0;
+  }
+}
+
+.img_lutte {
+  width: 50%;
+  height: auto;
+  margin: 0;
+}
+
+.Luttes_cartes {
+  display: flex;
+  height: auto;
+  background-color: #EBEBEB;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  -webkit-backdrop-filter: grayscale(100) contrast(70%) brightness(0.4);
+          backdrop-filter: grayscale(100) contrast(70%) brightness(0.4);
+}
+@media screen and (max-width: 1300px) {
+  .Luttes_cartes {
+    flex-direction: column;
+    width: 400px;
+  }
+}
+
+.text_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  width: 50%;
+}
+
+.titre_lutte {
+  font-family: "Tex Gyre Adventor";
+  font-size: 48px;
+  color: #000;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.titre_lutte2 {
+  font-family: "Tex Gyre Adventor Bold";
+  font-weight: bold;
+  font-size: 48px;
+  color: #000;
+  margin: 0;
+}
+
+.text_lutte {
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+  color: #000;
+  line-height: 40px;
+  margin: 0;
+}
+
+.link_lutte {
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+  color: #B80820;
+  margin: 0;
 }
 
 /*--- Importation des fonts ---*/
