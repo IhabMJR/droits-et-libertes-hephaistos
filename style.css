@@ -770,6 +770,14 @@ h2:after {
     min-width: 0;
   }
 }
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .Luttes {
+    -moz-column-gap: 2px;
+         column-gap: 2px;
+    max-width: auto;
+    min-width: 0;
+  }
+}
 
 .img_lutte {
   width: 50%;
@@ -777,6 +785,12 @@ h2:after {
   margin: 0;
 }
 @media screen and (max-width: 1300px) {
+  .img_lutte {
+    width: 25vw;
+    display: none;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
   .img_lutte {
     width: 25vw;
     display: none;
@@ -791,6 +805,11 @@ h2:after {
     display: flex;
   }
 }
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .img_lutte_tablette {
+    display: flex;
+  }
+}
 
 .Luttes_cartes {
   display: flex;
@@ -798,7 +817,6 @@ h2:after {
   background-color: #EBEBEB;
   border-radius: 70px;
   position: relative;
-  overflow: hidden;
   text-align: left;
   -webkit-backdrop-filter: grayscale(100) contrast(70%) brightness(0.4);
           backdrop-filter: grayscale(100) contrast(70%) brightness(0.4);
@@ -807,6 +825,13 @@ h2:after {
   .Luttes_cartes {
     flex-direction: column;
     width: 400px;
+    margin: 40px auto;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .Luttes_cartes {
+    flex-direction: column;
+    width: 70vw;
     margin: 40px auto;
   }
 }
@@ -833,6 +858,11 @@ h2:after {
     font-size: 34px;
   }
 }
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .titre_lutte {
+    font-size: 24px;
+  }
+}
 
 .titre_lutte2 {
   font-family: "Tex Gyre Adventor Bold";
@@ -847,6 +877,11 @@ h2:after {
   .titre_lutte2 {
     font-size: 34px;
     margin-bottom: 10px;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .titre_lutte2 {
+    font-size: 24px;
   }
 }
 
@@ -866,6 +901,14 @@ h2:after {
     max-width: 350px;
   }
 }
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .text_lutte {
+    font-size: 14px;
+    width: -20vw;
+    min-width: 250px;
+    max-width: 300px;
+  }
+}
 
 .link_lutte {
   font-family: "Tex Gyre Adventor Regular";
@@ -876,6 +919,11 @@ h2:after {
 @media screen and (max-width: 1300px) {
   .link_lutte {
     font-size: 18px;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .link_lutte {
+    font-size: 14px;
   }
 }
 
@@ -889,12 +937,39 @@ h2:after {
   bottom: 0px;
   left: 20vw;
 }
+@media screen and (max-width: 1300px) {
+  .btn-next {
+    width: 200px;
+    left: 45vw;
+    bottom: 20vw;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .btn-next {
+    width: 70px;
+    bottom: 0px;
+    left: 65vw;
+  }
+}
 
 .btn-right {
   rotate: 180deg;
   position: absolute;
   bottom: 0px;
   left: 12vw;
+}
+@media screen and (max-width: 1300px) {
+  .btn-right {
+    left: -27vw;
+    bottom: 20vw;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .btn-right {
+    width: 70px;
+    bottom: 0px;
+    left: -10vw;
+  }
 }
 
 /*--- Importation des fonts ---*/
