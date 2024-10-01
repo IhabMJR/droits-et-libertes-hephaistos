@@ -1,0 +1,17 @@
+@use "../mixins";
+@use "../variables";
+@use "sass:color";
+
+.actualites {
+    overflow: hidden;
+    text-align: center;
+    width: 100vw;
+    max-width: 1550px;
+    min-width: 1200px;
+    height: auto;
+    @media screen and (max-width: 1300px) {
+      column-gap: 2px;
+      max-width: auto;
+      min-width: 0;
+    }
+}
