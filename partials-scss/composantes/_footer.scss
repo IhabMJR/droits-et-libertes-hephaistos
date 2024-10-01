@@ -22,8 +22,10 @@
     gap: 5px;
     margin-top: 50px;
     @include mixins.phone {
-      margin: 10px 50px;
+      margin: 10px 30px;
       grid-template-columns: 1fr 2fr;
+      grid-template-rows: 1fr;
+      gap: 10px;
     }
   }
   .grid-icon {
@@ -36,12 +38,6 @@
     grid-column-start: 2;
     grid-row-end: 1;
     grid-row: 1 / 4;
-    @include mixins.phone {
-      font-size: 12px;
-      margin: 0px;
-      grid-column-start: 1;
-      grid-row-start: 1;
-    }
   }
   .item2 {
     grid-column-start: 3;
@@ -51,7 +47,7 @@
       font-size: 12px;
       margin: 0px;
       grid-column-start: 2;
-      grid-row-end: 2;
+      grid-row-end: 1;
     }
   }
   .item3 {
@@ -62,7 +58,7 @@
       font-size: 12px;
       margin: 0px;
       grid-column-start: 2;
-      grid-row-end: 3;
+      grid-row-end: 2;
     }
   }
   .item4 {
@@ -74,7 +70,7 @@
       font-size: 12px;
       margin: 0px;
       grid-column-start: 2;
-      grid-row-start: 4;
+      grid-row-end: 3;
     }
   }
   .item5 {
@@ -84,7 +80,7 @@
       font-size: 12px;
       margin: 0px;
       grid-column-start: 2;
-      grid-row-start: 5;
+      grid-row-end: 5;
     }
   }
   .item6 {
@@ -94,15 +90,12 @@
       font-size: 12px;
       margin: 0px;
       grid-column-start: 2;
-      grid-row-start: 6;
+      grid-row-end: 6;
     }
   }
   .logo-partenaire {
     margin: 100px 20px;
     width: 10vw;
-    @include mixins.phone {
-      display:none;
-    }
   }
   .partenaire1 {
     margin-left: 20vw;
@@ -123,7 +116,9 @@
     width: 10vw;
     @include mixins.phone {
       margin: 0px;
-      width: 10vw;
+      width: 16vw;
+      grid-column-start: 2;
+      grid-row-end: -7;
     }
   }
   .text-adresse {
@@ -141,22 +136,75 @@
       font-size: 12px;
     }
   }
+
+  .grid_icon{
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr 1fr 1fr 1fr 1fr 1.7fr;
+    @include mixins.phone {
+      width: 35px;
+      grid-template-rows: 1fr 1fr;
+      margin-left: 50px;
+      position: absolute;
+      top: 205%;
+      gap: 10px;
+    }
+  }
+
   .icon {
-    width: 5vw;
-    grid-row-start: 7;
-    grid-column-start: 4;
-  
+    width: 10vw;
+    margin: auto;
+    grid-column-start: 2;
      @include mixins.phone {
-      width: 15vw;
+      width: 35px;
+      grid-row-start: 1;
+      margin: auto;
     }
   }
    
   .icon1 {
-    margin-left: 58vw;
+    grid-column-start: 3;
+    @include mixins.phone {
+      width: 35px;
+      grid-column-start: 1;
+      grid-row-start: 1;
+    }
   }
   
+  .icon2 {
+    grid-column-start: 4;
+    @include mixins.phone {
+      width: 35px;
+      grid-column-start: 1;
+      grid-row-start: 2;
+    }
+  }
+
+  .icon3 {
+    grid-column-start: 5;
+    @include mixins.phone {
+      width: 35px;
+      grid-column-start: 1;
+      grid-row-start: 3;
+    }
+  }
+
+  .icon4 {
+    grid-column-start: 6;
+    @include mixins.phone {
+      width: 35px;
+      grid-column-start: 1;
+      grid-row-start: 4;
+    }
+  }
+
   .icon5 {
     margin-right: 0px;
+    grid-column-start: 7;
+    @include mixins.phone {
+      width: 35px;
+      grid-column-start: 1;
+      grid-row-start: 5;
+    }
   }
   .text-copyright {
     margin-top: 20px;
@@ -186,10 +234,10 @@
     @include mixins.text-footer;
     @include mixins.phone {
       font-size: 10px;
-      grid-column-start: 1;
-      grid-row-start: 1;
-      width: 20vw;
-      display: none;
+      grid-column-start: 2;
+      grid-row-end: 7;
+      width: 50vw;
+      margin-left: 0px;
     }
   }
   .btn:hover {
