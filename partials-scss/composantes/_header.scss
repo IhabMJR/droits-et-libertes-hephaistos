@@ -26,10 +26,10 @@
       }
     }
     &-brand {
-      @include mixins.tablet {
+      @include mixins.tablet-navbar {
         display: none;
       }
-      @include mixins.tablet {
+      @include mixins.tablet-navbar {
         display: none;
       }
       img {
