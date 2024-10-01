@@ -14,13 +14,24 @@
     width: 50%;
     height: auto; 
     margin: 0;
+    @media screen and (max-width: 1300px) {
+        width: 25vw;
+        display: none;
+      }
+}
+
+.img_lutte_tablette{
+    display: none;
+    @media screen and (max-width: 1300px) {
+        display: flex;
+      }
 }
 
 .Luttes_cartes {
     display: flex;
     height: auto;
     background-color: variables.$nuage;
-    border-radius: 20px;
+    border-radius: 70px;
     position: relative;
     overflow: hidden;
     text-align: left;
@@ -29,6 +40,7 @@
     @media screen and (max-width: 1300px) {
         flex-direction: column;
         width: 400px;
+        margin: 40px auto;
     }
 }
 
@@ -38,25 +50,65 @@
     justify-content: center;
     padding: 20px; 
     width: 50%; 
+    position: relative;
 }
 
 .titre_lutte {
     @include mixins.petit-titre;
     margin: 0;
-    line-height: 1.5;
+    line-height: 1;
+    margin-left: 20px;
+    @media screen and (max-width: 1300px) {
+        font-size: 34px;
+      }
 }
 
 .titre_lutte2 {
     @include mixins.petit-titre-bold;
     margin: 0;
+    margin-bottom: 100px;
+    margin-left: 20px;
+    @media screen and (max-width: 1300px) {
+        font-size: 34px;
+        margin-bottom: 10px;
+      }
 }
 
 .text_lutte {
     @include mixins.contenu;
-    margin: 0;
+    margin-left: 20px;
+    width: 40vw;
+    @media screen and (max-width: 1300px) {
+        font-size: 18px;
+        width: -20vw;
+        min-width: 290px;
+        max-width: 350px;
+
+      }
 }
 
 .link_lutte {
     @include mixins.lien;
-    margin: 0;
+    margin-left: 20px;
+    @media screen and (max-width: 1300px) {
+        font-size: 18px;
+      }
+}
+
+.btn-container{
+    position: relative;
+}
+
+.btn-next{
+    width: 5vw;
+    position: absolute;
+    bottom: 0px;
+    left: 20vw;
+}
+
+.btn-right{
+    rotate: 180deg;
+    position: absolute;
+    bottom: 0px;
+    left:12vw;
 }
