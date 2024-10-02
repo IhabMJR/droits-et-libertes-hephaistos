@@ -901,19 +901,18 @@
   margin-bottom: 120px;
 }
 
-.contenant {
+.contenant_temoignages {
   overflow-x: hidden;
   display: flex;
   justify-content: center;
 }
 
 .temoignages {
-  overflow: hidden;
-  text-align: center;
   width: 100vw;
   max-width: 1550px;
   min-width: 1200px;
   height: auto;
+  margin-bottom: 200px;
 }
 @media screen and (max-width: 1300px) {
   .temoignages {
@@ -931,7 +930,6 @@
   text-align: left;
   position: relative;
   display: block;
-  margin-left: 200px;
   width: 350px;
 }
 .temoignages__sous-titre {
@@ -993,46 +991,56 @@
   position: relative;
   display: block;
   margin-left: 200px;
-  width: 500px;*/
+  width: 500px;
+  width: 500px;
+  margin-bottom: 150px;*/
 
 .temoignages__sous-titre .text-rouge {
   color: #B80820;
 }
-.temoignages .carte {
+.temoignages .temoignages__cartes {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.temoignages .temoignages__cartes .carte {
+  position: relative;
   background-color: #A9A9A9;
   height: 400px;
   border-radius: 80px;
+  padding: 30px;
   position: relative;
 }
 @media screen and (max-width: 1300px) {
-  .temoignages .carte {
+  .temoignages .temoignages__cartes .carte {
     width: 400px;
   }
 }
-.temoignages .carte__titre {
+.temoignages .temoignages__cartes .carte__titre {
   font-family: "Tex Gyre Adventor Regular";
   font-size: 24px;
   color: #000;
   line-height: 40px;
+  bottom: 0;
   margin-top: 20px;
   width: auto;
   font-size: 18px;
-  color: #fff;
+  color: #000;
   text-align: start;
   padding: 0 30px;
   letter-spacing: 0.8px;
 }
-.temoignages .carte__titre h3 {
+.temoignages .temoignages__cartes .carte__titre h3 {
   font-size: 32px;
   font-weight: bold;
   line-height: 40px;
 }
 @media screen and (max-width: 1200px) {
-  .temoignages .carte__titre h3 {
+  .temoignages .temoignages__cartes .carte__titre h3 {
     font-size: 28px;
   }
 }
-.temoignages .carte__description {
+.temoignages .temoignages__cartes .carte__description {
   font-family: "Tex Gyre Adventor Regular";
   font-size: 24px;
   color: #000;
