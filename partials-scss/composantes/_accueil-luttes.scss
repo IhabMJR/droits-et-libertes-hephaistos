@@ -30,7 +30,6 @@
   border-radius: 70px;
   position: relative;
   text-align: left;
-  backdrop-filter: grayscale(100) contrast(70%) brightness(0.4);
 
   @include mixins.tablet {
     flex-direction: column;

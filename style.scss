@@ -9,7 +9,8 @@
 @use "partials-scss/composantes/footer";
 @use "partials-scss/composantes/accueil-actualites";
 @use "partials-scss/composantes/accueil-luttes";
-@use "partials-scss/composantes/accueil-temoignages"
+@use "partials-scss/composantes/accueil-temoignages";
+@use "partials-scss/composantes/accueil-dons";
 
 /*--- Importation des fonts ---*/
 @font-face {
@@ -29,4 +30,8 @@
 
 body {
   background-color: #F4F4F4;
+}
+
+.rouge {
+  color: variables.$rouge;
 }

@@ -788,8 +788,6 @@
   border-radius: 70px;
   position: relative;
   text-align: left;
-  -webkit-backdrop-filter: grayscale(100) contrast(70%) brightness(0.4);
-          backdrop-filter: grayscale(100) contrast(70%) brightness(0.4);
 }
 @media only screen and (min-width: 500px) and (max-width: 880px) {
   .luttes_cartes {
@@ -888,6 +886,73 @@
   margin-right: 20px;
 }
 
+/*--- Importation des partials ---*/
+.dons {
+  position: relative;
+  width: 100vw;
+  max-width: 1550px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 70px;
+  padding: 100px;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background-color: #ECDDDD;
+  margin-bottom: 120px;
+  font-family: "Tex Gyre Adventor Bold";
+  font-weight: bold;
+  font-size: 48px;
+  color: #000;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 150px;
+  z-index: -2;
+}
+.dons__texte {
+  width: 50%;
+  font-size: 48px;
+}
+.dons__texte:after {
+  content: url("/assets/images/dessin_trois_lignes.png");
+  top: 100px;
+  position: absolute;
+  left: 40%;
+}
+.dons__btn {
+  width: 50%;
+  text-align: center;
+}
+.dons__btn button {
+  background-color: #B80820;
+  border: none;
+  padding: 30px 90px 30px 90px;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 56px;
+  border-radius: 70px;
+  white-space: nowrap;
+}
+.dons__btn button:hover {
+  background-color: #000;
+}
+.dons__btn button:before {
+  content: url("/assets/images/dessin_vague.png");
+  top: 40%;
+  position: absolute;
+  right: 35%;
+  z-index: -1;
+}
+@media only screen and (min-width: 500px) and (max-width: 880px) {
+  .dons {
+    flex-direction: column;
+    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
 /*--- Importation des fonts ---*/
 @font-face {
   font-family: "TeX Gyre Adventor Regular";
@@ -904,4 +969,8 @@
 
 body {
   background-color: #F4F4F4;
+}
+
+.rouge {
+  color: #B80820;
 }/*# sourceMappingURL=style.css.map */
