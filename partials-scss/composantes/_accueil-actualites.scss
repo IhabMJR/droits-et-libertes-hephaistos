@@ -13,7 +13,7 @@
   background-position: 0 -10px;
 }
 
-h2 {
+.titre_actualites {
   @include mixins.petit-titre-bold;
   position: relative;
   display: block;
