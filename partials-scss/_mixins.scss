@@ -67,6 +67,11 @@ $desktop: 1400px;
   font-family: "Tex Gyre Adventor Regular";
   font-size: 24px;
   color: variables.$rouge;
+  &:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
 }
 
 @mixin text-footer {

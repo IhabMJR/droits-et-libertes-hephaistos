@@ -8,7 +8,8 @@
 @use "partials-scss/composantes/header";
 @use "partials-scss/composantes/footer";
 @use "partials-scss/composantes/accueil-actualites";
-@use "partials-scss/composantes/acceuil-luttes";
+@use "partials-scss/composantes/accueil-luttes";
+@use "partials-scss/composantes/accueil-temoignages";
 
 /*--- Importation des fonts ---*/
 @font-face {
@@ -24,4 +25,8 @@
 
 * {
   margin: 0;
+}
+
+body {
+  background-color: #F4F4F4;
 }

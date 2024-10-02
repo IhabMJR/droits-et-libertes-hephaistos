@@ -1,0 +1,80 @@
+/*--- Importation des partials ---*/
+@use "../mixins";
+@use "../variables";
+
+.contenant {
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.temoignages {
+  overflow: hidden;
+  text-align: center;
+  width: 100vw;
+  max-width: 1550px;
+  min-width: 1200px;
+  height: auto;
+  @media screen and (max-width: 1300px) {
+    column-gap: 2px;
+    max-width: auto;
+    min-width: 0;
+  }
+  &__titre {
+    @include mixins.petit-titre;
+    font-weight: normal;
+    text-align: left;
+    position: relative;
+    display: block;
+    margin-left: 200px;
+    width: 350px;
+  }
+  &__sous-titre {
+    @include mixins.petit-titre-bold;
+    text-align: left;
+    position: relative;
+    display: block;
+    margin-left: 200px;
+    width: 500px;
+    .text-rouge {
+      color: variables.$rouge;
+    }
+  }
+  .carte {
+    background-color: variables.$argent;
+    height: 400px;
+    border-radius: 80px;
+    position: relative;
+    @media screen and (max-width: 1300px) {
+      width: 400px;
+    }
+    &__titre {
+      @include mixins.contenu;
+      margin-top: 20px;
+      width: auto;
+      font-size: 18px;
+      color: #fff;
+      text-align: start;
+      padding: 0 30px;
+      letter-spacing: 0.8px;
+      h3 {
+        font-size: 32px;
+        font-weight: bold;
+        line-height: 40px;
+        @media screen and (max-width: 1200px) {
+          font-size: 28px;
+        }
+      }
+    }
+    &__description {
+        @include mixins.contenu;
+        margin-top: 20px;
+        width: auto;
+        font-size: 18px;
+        color: #000;
+        text-align: start;
+        padding: 0 30px;
+        letter-spacing: 0.8px;
+    }
+  }
+}
