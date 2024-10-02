@@ -600,10 +600,10 @@
   overflow-x: hidden;
   background-image: url("./assets/images/world_map.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 1500px;
   display: flex;
   justify-content: center;
-  background-position: 0 -10px;
+  background-position: center;
 }
 
 .titre_actualites {
@@ -759,12 +759,9 @@
   display: flex;
   justify-content: center;
   margin-bottom: 100px;
-}
-@media only screen and (min-width: 500px) and (max-width: 880px) {
-  .contenant_lutte {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
+  max-width: 1550px;
+  margin: 0 auto;
+  margin-bottom: 120px;
 }
 
 .img_lutte {
@@ -780,6 +777,12 @@
     border-radius: 70px 70px 0 0;
   }
 }
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .img_lutte {
+    width: 100%;
+    border-radius: 70px 70px 0 0;
+  }
+}
 
 .luttes_cartes {
   display: flex;
@@ -790,6 +793,12 @@
   text-align: left;
 }
 @media only screen and (min-width: 500px) and (max-width: 880px) {
+  .luttes_cartes {
+    flex-direction: column;
+    width: 100vw;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
   .luttes_cartes {
     flex-direction: column;
     width: 100vw;
@@ -814,6 +823,11 @@
     background-image: none;
   }
 }
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .text_container {
+    background-image: none;
+  }
+}
 
 .titre_lutte {
   font-family: "Tex Gyre Adventor";
@@ -821,6 +835,11 @@
   color: #000;
 }
 @media only screen and (min-width: 500px) and (max-width: 880px) {
+  .titre_lutte {
+    font-size: 34px;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
   .titre_lutte {
     font-size: 34px;
   }
@@ -833,6 +852,11 @@
   color: #000;
 }
 @media only screen and (min-width: 500px) and (max-width: 880px) {
+  .titre_lutte2 {
+    font-size: 34px;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
   .titre_lutte2 {
     font-size: 34px;
   }
@@ -870,11 +894,23 @@
     bottom: -35px;
   }
 }
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .btn_container {
+    display: flex;
+    bottom: -35px;
+  }
+}
 
 .btn-next {
   width: 80px;
 }
 @media only screen and (min-width: 500px) and (max-width: 880px) {
+  .btn-next {
+    display: flex;
+    width: 70px;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
   .btn-next {
     display: flex;
     width: 70px;
@@ -985,7 +1021,7 @@
 
 .dons {
   position: relative;
-  width: 100vw;
+  width: 100%;
   max-width: 1550px;
   height: auto;
   margin: 0 auto;
@@ -1010,6 +1046,17 @@
   width: 50%;
   font-size: 48px;
 }
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .dons__texte {
+    font-size: 38px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .dons__texte {
+    width: 100%;
+  }
+}
 .dons__texte:after {
   content: url("/assets/images/dessin_trois_lignes.png");
   top: 100px;
@@ -1020,15 +1067,19 @@
   width: 50%;
   text-align: center;
 }
+@media screen and (max-width: 1080px) {
+  .dons__btn {
+    width: 100%;
+  }
+}
 .dons__btn button {
   background-color: #B80820;
   border: none;
-  padding: 30px 90px 30px 90px;
+  padding: 40px;
   text-transform: uppercase;
   color: #fff;
-  font-size: 56px;
+  font-size: 54px;
   border-radius: 70px;
-  white-space: nowrap;
 }
 .dons__btn button:hover {
   background-color: #000;
@@ -1037,15 +1088,31 @@
   content: url("/assets/images/dessin_vague.png");
   top: 40%;
   position: absolute;
-  right: 35%;
+  right: 450px;
   z-index: -1;
 }
-@media only screen and (min-width: 500px) and (max-width: 880px) {
+@media screen and (max-width: 1080px) {
+  .dons__btn button:before {
+    top: 60%;
+    right: 55%;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .dons__btn button {
+    font-size: 38px;
+    padding: 25px;
+  }
+}
+@media screen and (max-width: 1080px) {
   .dons {
     flex-direction: column;
-    padding: 0;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 70px;
+    gap: 15px;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .dons {
+    padding: 35px;
   }
 }
 
@@ -1069,4 +1136,8 @@ body {
 
 .rouge {
   color: #B80820;
+}
+
+.contenu {
+  margin: 25px;
 }/*# sourceMappingURL=style.css.map */

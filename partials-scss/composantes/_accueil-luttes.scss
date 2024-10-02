@@ -6,10 +6,9 @@
   display: flex;
   justify-content: center;
   margin-bottom: 100px;
-  @include mixins.tablet {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
+  max-width: 1550px;
+  margin: 0 auto;
+  margin-bottom: 120px;
 }
 
 .img_lutte {
@@ -18,6 +17,10 @@
   height: auto;
   border-radius: 70px 0 0 70px;
   @include mixins.tablet {
+    width: 100%;
+    border-radius: 70px 70px 0 0;
+  }
+  @include mixins.phone {
     width: 100%;
     border-radius: 70px 70px 0 0;
   }
@@ -32,6 +35,10 @@
   text-align: left;
 
   @include mixins.tablet {
+    flex-direction: column;
+    width: 100vw;
+  }
+  @include mixins.phone {
     flex-direction: column;
     width: 100vw;
   }
@@ -52,6 +59,9 @@
   @include mixins.tablet {
     background-image: none;
   }
+  @include mixins.phone {
+    background-image: none;
+  }
 }
 
 .titre_lutte {
@@ -59,11 +69,17 @@
   @include mixins.tablet {
     font-size: 34px;
   }
+  @include mixins.phone {
+    font-size: 34px;
+  }
 }
 
 .titre_lutte2 {
   @include mixins.petit-titre-bold;
   @include mixins.tablet {
+    font-size: 34px;
+  }
+  @include mixins.phone {
     font-size: 34px;
   }
 }
@@ -87,11 +103,19 @@
     display: flex;
     bottom: -35px;
   }
+  @include mixins.phone {
+    display: flex;
+    bottom: -35px;
+  }
 }
 
 .btn-next {
   width: 80px;
   @include mixins.tablet {
+    display: flex;
+    width: 70px;
+  }
+  @include mixins.phone {
     display: flex;
     width: 70px;
   }

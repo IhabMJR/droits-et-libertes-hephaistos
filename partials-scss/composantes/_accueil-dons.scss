@@ -3,62 +3,86 @@
 @use "sass:color";
 
 .dons {
-    position: relative;
-    width: 100vw;
-    max-width: 1550px;
-    height: auto;
-    margin: 0 auto;
-    border-radius: 70px;
-    padding: 100px;
-    padding-top: 150px;
-    padding-bottom: 150px;
-    background-color: variables.$rose;
-    margin-bottom: 120px;
-    @include mixins.petit-titre-bold;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 150px;
-    z-index: -2;
-    &__texte {
-        width: 50%;
-        font-size: 48px;
-        &:after {
-            content: url("/assets/images/dessin_trois_lignes.png");
-            top: 100px;
-            position: absolute;
-            left: 40%;
-        }
+  position: relative;
+  width: 100%;
+  max-width: 1550px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 70px;
+  padding: 100px;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background-color: variables.$rose;
+  margin-bottom: 120px;
+  @include mixins.petit-titre-bold;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 150px;
+  z-index: -2;
+
+  &__texte {
+    width: 50%;
+    font-size: 48px;
+    @include mixins.phone {
+      font-size: 38px;
+      text-align: center;
     }
-    &__btn {
-        width: 50%;
-        text-align: center;
-        button {
-            background-color: variables.$rouge;
-            border: none;
-            padding: 30px 90px 30px 90px;
-            text-transform: uppercase;
-            color: #fff;
-            font-size: 56px;
-            border-radius: 70px;
-            white-space: nowrap;
-            &:hover {
-                background-color: #000;
-            }
-            &:before {
-                content: url("/assets/images/dessin_vague.png");
-                top: 40%;
-                position: absolute;
-                right: 35%;
-                z-index: -1;
-            }
-        }
+    @media screen and (max-width: 1080px) {
+      width: 100%;
     }
-    @include mixins.tablet {
-        flex-direction: column;
-        padding: 0;
-        padding-top: 20px;
-        padding-bottom: 20px;
+    &:after {
+      content: url("/assets/images/dessin_trois_lignes.png");
+      top: 100px;
+      position: absolute;
+      left: 40%;
+    }
+  }
+
+  &__btn {
+    width: 50%;
+    text-align: center;
+
+    @media screen and (max-width: 1080px) {
+      width: 100%;
+    }
+
+    button {
+      background-color: variables.$rouge;
+      border: none;
+      padding: 40px;
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 54px;
+      border-radius: 70px;
+      &:hover {
+        background-color: #000;
       }
+      &:before {
+        content: url("/assets/images/dessin_vague.png");
+        top: 40%;
+        position: absolute;
+        right: 450px;
+        z-index: -1;
+        @media screen and (max-width: 1080px) {
+            top: 60%;
+            right: 55%;
+          }
+      }
+      @include mixins.phone {
+        font-size: 38px;
+        padding: 25px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1080px) {
+    flex-direction: column;
+    padding: 70px;
+    gap: 15px;
+  }
+  @include mixins.phone {
+    padding: 35px;
+  }
 }
