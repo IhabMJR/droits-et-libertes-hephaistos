@@ -1,6 +1,7 @@
 /*--- Importation des partials ---*/
 @use "../mixins";
 @use "../variables";
+@use "sass:color";
 
 .contenant_temoignages {
   overflow-x: hidden;
@@ -33,7 +34,7 @@
     position: relative;
     display: block;
     width: 500px;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
     .text-rouge {
       color: variables.$rouge;
     }
@@ -54,10 +55,8 @@
       }
       &__titre {
         @include mixins.contenu;
-        bottom: 0;
-        margin-top: 20px;
+        margin-top: 30px;
         width: auto;
-        font-size: 18px;
         color: #000;
         text-align: start;
         padding: 0 30px;
@@ -66,20 +65,19 @@
           font-size: 32px;
           font-weight: bold;
           line-height: 40px;
-          @media screen and (max-width: 1200px) {
-            font-size: 28px;
-          }
         }
       }
       &__description {
         @include mixins.contenu;
-        margin-top: 20px;
         width: auto;
-        font-size: 18px;
+        font-size: 32px;
         color: #000;
-        text-align: start;
         padding: 0 30px;
         letter-spacing: 0.8px;
+        line-height: 2;
+      }
+      &:nth-child(2) {
+        background: color.adjust(variables.$argent, $lightness:15%);
       }
     }
   }

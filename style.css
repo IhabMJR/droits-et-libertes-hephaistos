@@ -927,7 +927,7 @@
   position: relative;
   display: block;
   width: 500px;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
 }
 .temoignages__sous-titre .text-rouge {
   color: #B80820;
@@ -955,10 +955,8 @@
   font-size: 24px;
   color: #000;
   line-height: 40px;
-  bottom: 0;
-  margin-top: 20px;
+  margin-top: 30px;
   width: auto;
-  font-size: 18px;
   color: #000;
   text-align: start;
   padding: 0 30px;
@@ -969,23 +967,20 @@
   font-weight: bold;
   line-height: 40px;
 }
-@media screen and (max-width: 1200px) {
-  .temoignages .temoignages__cartes .carte__titre h3 {
-    font-size: 28px;
-  }
-}
 .temoignages .temoignages__cartes .carte__description {
   font-family: "Tex Gyre Adventor Regular";
   font-size: 24px;
   color: #000;
   line-height: 40px;
-  margin-top: 20px;
   width: auto;
-  font-size: 18px;
+  font-size: 32px;
   color: #000;
-  text-align: start;
   padding: 0 30px;
   letter-spacing: 0.8px;
+  line-height: 2;
+}
+.temoignages .temoignages__cartes .carte:nth-child(2) {
+  background: #cfcfcf;
 }
 
 .dons {
