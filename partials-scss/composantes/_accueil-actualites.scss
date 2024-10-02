@@ -40,9 +40,7 @@ h2 {
     min-width: 0;
   }
   &__cartes {
-    overflow-y: hidden;
-    overflow-x: hidden;
-    @media screen and (max-width: 1300px) {
+    @media screen and (max-width: 1200px) {
       overflow-x: scroll;
     }
     .scroll {
@@ -56,7 +54,7 @@ h2 {
     }
     .carte {
       background-color: red;
-      height: 60vh;
+      height: 700px;
       border-radius: 20px;
       background-repeat: no-repeat;
       background-size: cover;
@@ -103,7 +101,7 @@ h2 {
         margin: 15px 30px;
       }
       .btn-nouvelle {
-        width: 2.5vw;
+        width: 50px;
         right: 0;
         bottom: 0;
         margin: 30px;
@@ -120,7 +118,7 @@ h2 {
       }
       &:hover {
         filter: none;
-        transform: scale(1.02);
+        /*transform: scale(1.02);*/
         cursor: pointer;
       }
     }
@@ -129,12 +127,12 @@ h2 {
 
 .toutes-nouvelles {
   @include mixins.contenu;
-  font-size: 2.5vh;
-  padding: 2.5vh;
+  font-size: 34px;
+  padding: 20px 40px 20px 40px;
   margin: 45px 0 100px 0;
   background-color: rgba(0, 0, 0, 0);
-  border: solid variables.$rouge 6px;
-  border-radius: 45px;
+  border: solid variables.$rouge 4px;
+  border-radius: 40px;
   &:hover {
     box-shadow: 0 0 18px rgba(0, 0, 0, 0.3);
   }
