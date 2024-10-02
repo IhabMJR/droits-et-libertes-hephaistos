@@ -888,6 +888,102 @@
   margin-right: 20px;
 }
 
+/*--- Importation des partials ---*/
+.contenant {
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.temoignages {
+  overflow: hidden;
+  text-align: center;
+  width: 100vw;
+  max-width: 1550px;
+  min-width: 1200px;
+  height: auto;
+}
+@media screen and (max-width: 1300px) {
+  .temoignages {
+    -moz-column-gap: 2px;
+         column-gap: 2px;
+    max-width: auto;
+    min-width: 0;
+  }
+}
+.temoignages__titre {
+  font-family: "Tex Gyre Adventor";
+  font-size: 48px;
+  color: #000;
+  font-weight: normal;
+  text-align: left;
+  position: relative;
+  display: block;
+  margin-left: 200px;
+  width: 350px;
+}
+.temoignages__sous-titre {
+  font-family: "Tex Gyre Adventor Bold";
+  font-weight: bold;
+  font-size: 48px;
+  color: #000;
+  text-align: left;
+  position: relative;
+  display: block;
+  margin-left: 200px;
+  width: 500px;
+}
+.temoignages__sous-titre .text-rouge {
+  color: #B80820;
+}
+.temoignages .carte {
+  background-color: #A9A9A9;
+  height: 400px;
+  border-radius: 80px;
+  position: relative;
+}
+@media screen and (max-width: 1300px) {
+  .temoignages .carte {
+    width: 400px;
+  }
+}
+.temoignages .carte__titre {
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+  color: #000;
+  line-height: 40px;
+  margin-top: 20px;
+  width: auto;
+  font-size: 18px;
+  color: #fff;
+  text-align: start;
+  padding: 0 30px;
+  letter-spacing: 0.8px;
+}
+.temoignages .carte__titre h3 {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 40px;
+}
+@media screen and (max-width: 1200px) {
+  .temoignages .carte__titre h3 {
+    font-size: 28px;
+  }
+}
+.temoignages .carte__description {
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+  color: #000;
+  line-height: 40px;
+  margin-top: 20px;
+  width: auto;
+  font-size: 18px;
+  color: #000;
+  text-align: start;
+  padding: 0 30px;
+  letter-spacing: 0.8px;
+}
+
 /*--- Importation des fonts ---*/
 @font-face {
   font-family: "TeX Gyre Adventor Regular";
