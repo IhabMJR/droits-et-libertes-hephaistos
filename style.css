@@ -804,7 +804,17 @@ h2:after {
   justify-content: center;
   padding: 50px;
   width: 100%;
+  height: 100%;
   position: relative;
+  background-image: url("./assets/images/fond_lutte_actualite.png");
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: bottom left;
+}
+@media only screen and (min-width: 500px) and (max-width: 880px) {
+  .text_container {
+    background-image: none;
+  }
 }
 
 .titre_lutte {
