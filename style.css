@@ -846,6 +846,7 @@ h2:after {
   color: #000;
   line-height: 40px;
   width: 100%;
+  max-width: 600px;
   margin: 30px 0 30px 0;
 }
 
