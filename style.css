@@ -606,7 +606,7 @@
   background-position: 0 -10px;
 }
 
-h2 {
+.titre_actualites {
   font-family: "Tex Gyre Adventor Bold";
   font-weight: bold;
   font-size: 48px;
@@ -617,7 +617,7 @@ h2 {
   width: 400px;
   height: 100px;
 }
-h2:after {
+.titre_actualites:after {
   content: url("./assets/images/ligne_sous_actualites.png");
   position: relative;
   bottom: 30px;
