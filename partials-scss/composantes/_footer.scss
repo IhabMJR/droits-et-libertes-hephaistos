@@ -159,6 +159,7 @@
   .icon {
     width: 10vw;
     margin: auto;
+    max-width: 1000px;
     grid-column-start: 2;
      @include mixins.phone {
       width: 35px;
