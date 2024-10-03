@@ -25,6 +25,13 @@
   &__texte {
     width: 50%;
     font-size: 48px;
+    position: relative;
+    &:after {
+        content: url("/assets/images/dessin_trois_lignes.png");
+        position: absolute;
+        top: -50px;
+        right: 0;
+      }
     @include mixins.phone {
       font-size: 38px;
       text-align: center;
@@ -32,17 +39,24 @@
     @media screen and (max-width: 1080px) {
       width: 100%;
     }
-    &:after {
-      content: url("/assets/images/dessin_trois_lignes.png");
-      top: 100px;
-      position: absolute;
-      left: 40%;
-    }
   }
 
   &__btn {
     width: 50%;
     text-align: center;
+    position: relative;
+    &:before {
+        content: url("/assets/images/dessin_vague.png");
+        position: absolute;
+        left: 0;
+        z-index: -1;
+        @media screen and (max-width: 1080px) {
+            left: 150px;
+        }
+        @include mixins.phone {
+            left: -60px
+          }
+    }
 
     @media screen and (max-width: 1080px) {
       width: 100%;
@@ -58,17 +72,6 @@
       border-radius: 70px;
       &:hover {
         background-color: #000;
-      }
-      &:before {
-        content: url("/assets/images/dessin_vague.png");
-        top: 40%;
-        position: absolute;
-        right: 450px;
-        z-index: -1;
-        @media screen and (max-width: 1080px) {
-            top: 60%;
-            right: 55%;
-          }
       }
       @include mixins.phone {
         font-size: 38px;

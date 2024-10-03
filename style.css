@@ -1045,6 +1045,13 @@
 .dons__texte {
   width: 50%;
   font-size: 48px;
+  position: relative;
+}
+.dons__texte:after {
+  content: url("/assets/images/dessin_trois_lignes.png");
+  position: absolute;
+  top: -50px;
+  right: 0;
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .dons__texte {
@@ -1057,15 +1064,26 @@
     width: 100%;
   }
 }
-.dons__texte:after {
-  content: url("/assets/images/dessin_trois_lignes.png");
-  top: 100px;
-  position: absolute;
-  left: 40%;
-}
 .dons__btn {
   width: 50%;
   text-align: center;
+  position: relative;
+}
+.dons__btn:before {
+  content: url("/assets/images/dessin_vague.png");
+  position: absolute;
+  left: 0;
+  z-index: -1;
+}
+@media screen and (max-width: 1080px) {
+  .dons__btn:before {
+    left: 150px;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .dons__btn:before {
+    left: -60px;
+  }
 }
 @media screen and (max-width: 1080px) {
   .dons__btn {
@@ -1083,19 +1101,6 @@
 }
 .dons__btn button:hover {
   background-color: #000;
-}
-.dons__btn button:before {
-  content: url("/assets/images/dessin_vague.png");
-  top: 40%;
-  position: absolute;
-  right: 450px;
-  z-index: -1;
-}
-@media screen and (max-width: 1080px) {
-  .dons__btn button:before {
-    top: 60%;
-    right: 55%;
-  }
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .dons__btn button {
