@@ -2,6 +2,10 @@
 @use "../variables";
 @use "sass:color";
 
+.bande_dons {
+  width: 100vw;
+}
+
 .dons {
   position: relative;
   width: 100%;
