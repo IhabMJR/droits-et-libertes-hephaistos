@@ -19,7 +19,7 @@
   }
   .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 5px;
     margin-top: 50px;
@@ -42,11 +42,22 @@
     grid-column-start: 2;
     grid-row-end: 1;
     grid-row: 1 / 4;
+    @include mixins.tablet {
+      margin: auto;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 4;
+    }
   }
   .item2 {
     grid-column-start: 3;
     grid-row-end: 2;
     grid-row: 1 / 1;
+    @include mixins.tablet {
+      grid-column-start: 3;
+      grid-column-end: 5;
+    }
     @include mixins.phone {
       font-size: 12px;
       margin: 0px;
@@ -70,6 +81,9 @@
     grid-row-end: 4;
     grid-row: 3;
     margin-top: 50px;
+    @include mixins.tablet {
+      margin: auto 0px;
+    }
     @include mixins.phone {
       font-size: 12px;
       margin: 0px;
@@ -108,16 +122,18 @@
     background-color: #fff;
     width: 70vw;
     height: 0.1vh;
-    margin: auto;
     grid-row-end: 7;
     grid-column-start: 2;
-    grid-column-end: 5;
+    grid-column-end: 6;
     @include mixins.phone {
       display: none;
     }
   }
   .logo-footer {
     width: 10vw;
+    @include mixins.tablet {
+      width: 16vw;
+    }
     @include mixins.phone {
       margin: 0px;
       width: 16vw;
@@ -134,6 +150,9 @@
       font-size: 12px;
       margin: 0px;
     }
+    @include mixins.tablet {
+      font-size: 12px;
+     }
   }
   .text-contact {
     color: #fff;
@@ -141,28 +160,33 @@
     @include mixins.phone {
       font-size: 12px;
     }
+    @include mixins.tablet {
+      font-size: 12px;
+     }
   }
 
   .grid_icon{
     display: grid;
     grid-template-columns: 4fr 1fr 1fr 1fr 1fr 1fr 1fr 1.7fr;
     @include mixins.phone {
-      width: 100px;
       grid-template-rows: 1fr 1fr;
       margin-left: 50px;
       gap: 10px;
       position: absolute;
-      top: 20vw;
+      top: 2vw;
+    }
+    @include mixins.tablet {
+      gap: 30px;
+      margin-right: 10vw;
     }
   }
 
   .icon {
     width: 10vw;
     margin: auto;
-    max-width: 1000px;
+    max-width: 70px;
     grid-column-start: 2;
      @include mixins.phone {
-      width: 35px;
       grid-row-start: 1;
       margin: auto;
     }
@@ -171,7 +195,7 @@
   .icon1 {
     grid-column-start: 3;
     @include mixins.phone {
-      width: 35px;
+      width: 50px;
       grid-column-start: 1;
       grid-row-start: 1;
     }
@@ -180,7 +204,7 @@
   .icon2 {
     grid-column-start: 4;
     @include mixins.phone {
-      width: 35px;
+      width: 50px;
       grid-column-start: 1;
       grid-row-start: 2;
     }
@@ -189,26 +213,26 @@
   .icon3 {
     grid-column-start: 5;
     @include mixins.phone {
-      width: 35px;
+      width: 50px;
       grid-column-start: 1;
       grid-row-start: 3;
     }
   }
 
   .icon4 {
+    width: 60px;
     grid-column-start: 6;
     @include mixins.phone {
-      width: 35px;
+      width: 50px;
       grid-column-start: 1;
       grid-row-start: 4;
     }
   }
 
   .icon5 {
-    margin-right: 0px;
     grid-column-start: 7;
     @include mixins.phone {
-      width: 35px;
+      width: 50px;
       grid-column-start: 1;
       grid-row-start: 5;
     }
@@ -216,17 +240,18 @@
   .text-copyright {
     margin-top: 20px;
     grid-row-end: 8;
-    grid-column-end: 3;
-    @include mixins.phone {
-      font-size: 10px;
+    grid-column-start: 2;
+    grid-column-end: 4;
       @include mixins.phone {
         font-size: 12px;
         margin: 0px;
         grid-column-start: 2;
         grid-row-start: 9;
       }
-    }
     @include mixins.text-footer;
+    @include mixins.tablet {
+      font-size: 12px;
+     }
   }
   .btn {
     color: #fff;
@@ -240,11 +265,18 @@
     margin-left: auto;
     @include mixins.text-footer;
     @include mixins.phone {
+      border-radius: 5vw;
       font-size: 10px;
       grid-column-start: 2;
       grid-row-end: 7;
-      width: 50vw;
+      width: 30vw;
       margin-left: 0px;
+    }
+    @include mixins.tablet {
+      grid-column-start: 4;
+      grid-column-end: 6;
+      margin: auto;
+      border-radius: 4vw;
     }
   }
   .btn:hover {
@@ -256,7 +288,9 @@
     grid-row-start: 3;
     width: 7vw;
     margin-left: 12vw;
-   
+    @include mixins.tablet {
+      margin: auto 0px;
+    }
     @include mixins.phone {
       display: none;
     }
