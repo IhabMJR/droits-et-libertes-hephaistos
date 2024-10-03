@@ -285,11 +285,15 @@
   }
   .arrow {
     grid-column-start: 4;
-    grid-row-start: 3;
+    grid-row-start: 2; 
+    grid-row-end: 4;
     width: 7vw;
-    margin-left: 12vw;
+    margin-left: 2vw;
+    margin-top: 2vw;
     @include mixins.tablet {
       margin: auto 0px;
+      grid-row-start: 3; 
+      grid-row-end: 4;
     }
     @include mixins.phone {
       display: none;
