@@ -26,6 +26,7 @@
     position: relative;
     display: block;
     width: 350px;
+    margin-left: 30px;
     @include mixins.tablet {
       text-align: center;
       margin: auto;
@@ -43,6 +44,7 @@
     display: block;
     width: 500px;
     margin-bottom: 100px;
+    margin-left: 30px;
     @include mixins.tablet {
       text-align: center;
       width: 300px;
