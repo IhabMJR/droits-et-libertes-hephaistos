@@ -77,6 +77,18 @@
       @include mixins.phone {
         width: 300px;
       }
+      &__quotation{
+        position: absolute;
+        width: 100px;
+        top: -50px;
+        @include mixins.tablet {
+          top: -40px;
+        }
+        @include mixins.phone {
+          width: 50px;
+          top: -20px;
+        }
+      }
       &__titre {
         @include mixins.contenu;
         margin-top: 30px;

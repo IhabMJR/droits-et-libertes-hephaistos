@@ -1078,6 +1078,22 @@
     width: 300px;
   }
 }
+.temoignages .temoignages__cartes .carte__quotation {
+  position: absolute;
+  width: 100px;
+  top: -50px;
+}
+@media only screen and (min-width: 500px) and (max-width: 880px) {
+  .temoignages .temoignages__cartes .carte__quotation {
+    top: -40px;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .temoignages .temoignages__cartes .carte__quotation {
+    width: 50px;
+    top: -20px;
+  }
+}
 .temoignages .temoignages__cartes .carte__titre {
   font-family: "Tex Gyre Adventor Regular";
   font-size: 24px;
