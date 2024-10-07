@@ -895,7 +895,7 @@
 }
 
 .titre_lutte {
-  font-family: "Tex Gyre Adventor";
+  font-family: "Tex Gyre Adventor Regular";
   font-size: 48px;
   color: #000;
 }
@@ -1008,7 +1008,7 @@
   }
 }
 .temoignages__titre {
-  font-family: "Tex Gyre Adventor";
+  font-family: "Tex Gyre Adventor Regular";
   font-size: 48px;
   color: #000;
   font-weight: normal;
@@ -1151,6 +1151,7 @@
 
 .bande_dons {
   width: 100vw;
+  max-width: 100%;
 }
 
 .dons {
