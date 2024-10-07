@@ -33,7 +33,6 @@
   width: 100vw;
   max-width: 1550px;
   min-width: 1200px;
-  height: auto;
   @media screen and (max-width: 1300px) {
     column-gap: 2px;
     max-width: auto;
@@ -54,7 +53,7 @@
     }
     .carte {
       background-color: red;
-      height: 700px;
+      height: 550px;
       border-radius: 20px;
       background-repeat: no-repeat;
       background-size: cover;
@@ -74,7 +73,7 @@
         padding: 0 30px;
         letter-spacing: 0.8px;
         h3 {
-          font-size: 32px;
+          font-size: 28px;
           font-weight: bold;
           line-height: 40px;
           @media screen and (max-width: 1200px) {
