@@ -63,6 +63,9 @@
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
+    @include mixins.tablet {
+      overflow-x: scroll;
+    }
     .carte {
       position: relative;
       background-color: variables.$argent;

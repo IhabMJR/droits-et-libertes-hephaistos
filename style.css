@@ -1065,6 +1065,11 @@
   gap: 20px;
   grid-template-columns: repeat(3, 1fr);
 }
+@media only screen and (min-width: 500px) and (max-width: 880px) {
+  .temoignages .temoignages__cartes {
+    overflow-x: scroll;
+  }
+}
 .temoignages .temoignages__cartes .carte {
   position: relative;
   background-color: #A9A9A9;
