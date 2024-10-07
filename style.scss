@@ -11,6 +11,7 @@
 @use "partials-scss/composantes/accueil-luttes";
 @use "partials-scss/composantes/accueil-temoignages";
 @use "partials-scss/composantes/accueil-dons";
+@use "partials-scss/composantes/page-une-nouvelle";
 
 /*--- Importation des fonts ---*/
 @font-face {
@@ -38,4 +39,12 @@ body {
 
 .contenu {
   margin: 35px;
+}
+
+.navbar-autre-page {
+  background-color: #000;
+}
+
+a {
+  @include mixins.lien;
 }
