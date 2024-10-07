@@ -4,7 +4,17 @@
 
 .bande_dons {
   width: 100vw;
+  margin: 0 auto;
+  @include mixins.phone {
+    width: 200vw;
+  }
+}
+
+.contenant_bande_dons {
   max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .dons {
@@ -28,51 +38,61 @@
 
   &__texte {
     width: 50%;
-    font-size: 48px;
+    font-size: 42px;
     position: relative;
     &:after {
-        content: url("/assets/images/dessin_trois_lignes.png");
-        position: absolute;
-        top: -50px;
-        right: 0;
-      }
+      content: url("/assets/images/dessin_trois_lignes.png");
+      position: absolute;
+      top: -50px;
+      right: 0;
+    }
     @include mixins.phone {
-      font-size: 38px;
+      font-size: 32px;
       text-align: center;
     }
     @media screen and (max-width: 1080px) {
       width: 100%;
+      font-size: 32px;
     }
   }
 
   &__btn {
-    width: 50%;
+    margin-top: -190px;
+    height: 350px;
+    width: 400px;
     text-align: center;
     position: relative;
+    z-index: 5;
     &:before {
-        content: url("/assets/images/dessin_vague.png");
-        position: absolute;
-        left: 0;
-        z-index: -1;
-        @media screen and (max-width: 1080px) {
-            left: 150px;
-        }
-        @include mixins.phone {
-            left: -60px
-          }
-    }
-
-    @media screen and (max-width: 1080px) {
-      width: 100%;
+      content: url("/assets/images/dessin_vague.png");
+      position: relative;
+      top: 225px;
+      left: -180px;
+      z-index: -5;
+      @include mixins.phone {
+        left: -150px;
+      }
+      /*@media screen and (max-width: 1430px) {
+        left: -40px;
+      }
+      @media screen and (max-width: 1080px) {
+        left: 60px;
+      }
+      @include mixins.phone {
+        left: -60px;
+      }
+      @include mixins.tablet {
+        left: -60px;
+      }*/
     }
 
     button {
       background-color: variables.$rouge;
       border: none;
-      padding: 40px;
+      padding: 35px;
       text-transform: uppercase;
       color: #fff;
-      font-size: 54px;
+      font-size: 42px;
       border-radius: 70px;
       &:hover {
         background-color: #000;

@@ -940,7 +940,7 @@
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .text_lutte {
-    line-height: 32px;
+    line-height: 38px;
     margin: 20px 0 20px 0;
   }
 }
@@ -1155,7 +1155,19 @@
 
 .bande_dons {
   width: 100vw;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .bande_dons {
+    width: 200vw;
+  }
+}
+
+.contenant_bande_dons {
   max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .dons {
@@ -1182,7 +1194,7 @@
 }
 .dons__texte {
   width: 50%;
-  font-size: 48px;
+  font-size: 42px;
   position: relative;
 }
 .dons__texte:after {
@@ -1193,48 +1205,55 @@
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .dons__texte {
-    font-size: 38px;
+    font-size: 32px;
     text-align: center;
   }
 }
 @media screen and (max-width: 1080px) {
   .dons__texte {
     width: 100%;
+    font-size: 32px;
   }
 }
 .dons__btn {
-  width: 50%;
+  margin-top: -190px;
+  height: 350px;
+  width: 400px;
   text-align: center;
   position: relative;
+  z-index: 5;
 }
 .dons__btn:before {
   content: url("/assets/images/dessin_vague.png");
-  position: absolute;
-  left: 0;
-  z-index: -1;
-}
-@media screen and (max-width: 1080px) {
-  .dons__btn:before {
-    left: 150px;
+  position: relative;
+  top: 225px;
+  left: -180px;
+  z-index: -5;
+  /*@media screen and (max-width: 1430px) {
+    left: -40px;
   }
+  @media screen and (max-width: 1080px) {
+    left: 60px;
+  }
+  @include mixins.phone {
+    left: -60px;
+  }
+  @include mixins.tablet {
+    left: -60px;
+  }*/
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .dons__btn:before {
-    left: -60px;
-  }
-}
-@media screen and (max-width: 1080px) {
-  .dons__btn {
-    width: 100%;
+    left: -150px;
   }
 }
 .dons__btn button {
   background-color: #B80820;
   border: none;
-  padding: 40px;
+  padding: 35px;
   text-transform: uppercase;
   color: #fff;
-  font-size: 54px;
+  font-size: 42px;
   border-radius: 70px;
 }
 .dons__btn button:hover {
