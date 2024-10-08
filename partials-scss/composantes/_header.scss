@@ -8,7 +8,9 @@
   padding: 0 5vw 0 5vw;
   margin: 0 auto;
   position: relative;
-  height: 100px;
+  @include mixins.xl {
+    height: auto;
+  }
 }
 
 .navbar {
@@ -59,7 +61,6 @@
     }
   }
   .nav-link {
-    margin: 0 20px 0 20px;
     @include mixins.contenu;
     margin: 0 10px 0 10px;
     font-size: 20px;
@@ -68,6 +69,7 @@
       color: variables.$rouge;
     }
   }
+  
   .don {
     @include mixins.contenu;
     padding: 5px 20px;
