@@ -11,14 +11,14 @@ $desktop: 1400px;
   }
 }
 
-@mixin tablet-navbar {
-  @media only screen and (min-width: 1150px) and (max-width: $tablet) {
+@mixin tablet {
+  @media only screen and (min-width: $phone) and (max-width: $tablet) {
     @content;
   }
 }
 
-@mixin tablet {
-  @media only screen and (min-width: $phone) and (max-width: $tablet) {
+@mixin xl {
+  @media only screen and (min-width: $phone) and (max-width: 1200px) {
     @content;
   }
 }

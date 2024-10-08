@@ -175,14 +175,27 @@
 }
 .navbar-toggler {
   height: 60px;
+  border: none;
 }
 .navbar-toggler .toggler-icon {
   background-image: url("./assets/images/hamburger_menu.png");
-  border: none;
+}
+.navbar-toggler:focus, .navbar-toggler:active {
   outline: none;
   box-shadow: none;
+  border: none;
 }
-@media only screen and (min-width: 1150px) and (max-width: 880px) {
+@media only screen and (min-width: 500px) and (max-width: 1200px) {
+  .navbar-brand {
+    display: none;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 880px) {
+  .navbar-brand {
+    display: none;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
   .navbar-brand {
     display: none;
   }
@@ -192,6 +205,11 @@
 }
 .navbar .nav-ligne {
   margin: 0 20px 0 20px;
+}
+@media only screen and (min-width: 500px) and (max-width: 1200px) {
+  .navbar .nav-ligne {
+    display: none;
+  }
 }
 @media only screen and (min-width: 500px) and (max-width: 880px) {
   .navbar .nav-ligne {
@@ -247,7 +265,6 @@
   background-color: rgba(0, 0, 0, 0);
   border: none;
   text-align: start;
-  width: 0;
 }
 .navbar .dropdown-menu {
   background-color: rgba(0, 0, 0, 0);
@@ -617,7 +634,7 @@
   }
 }
 
-.btn {
+.btn-don-footer {
   display: flex;
   color: #fff;
   border: solid;
@@ -633,7 +650,7 @@
   color: #fff;
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
-  .btn {
+  .btn-don-footer {
     border-radius: 5vw;
     font-size: 10px;
     width: 30vw;
@@ -642,7 +659,7 @@
   }
 }
 @media only screen and (min-width: 500px) and (max-width: 880px) {
-  .btn {
+  .btn-don-footer {
     width: 30vw;
     max-width: 22vw;
     height: 7vw;

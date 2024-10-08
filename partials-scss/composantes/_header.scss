@@ -4,96 +4,108 @@
 @use "sass:color";
 
 .container-fluid {
-    max-width: 1800px;
-    padding: 0 5vw 0 5vw;
-    margin: 0 auto;
-    position: relative;
-    height: 100px;
+  max-width: 1800px;
+  padding: 0 5vw 0 5vw;
+  margin: 0 auto;
+  position: relative;
+  height: 100px;
+}
+
+.navbar {
+  padding: 25px 0;
+  transition: all 0.4s;
+
+  &-scrolled {
+    background-color: #000000;
   }
-  
-  .navbar {
-    padding: 25px 0;
-    transition: all 0.4s;
-  
-    &-scrolled {
-      background-color: #000000;
+
+  &-toggler {
+    height: 60px;
+    border: none;
+    .toggler-icon {
+      background-image: url("./assets/images/hamburger_menu.png");
     }
-  
-    &-toggler {
+    &:focus,
+    &:active {
+      outline: none;
+      box-shadow: none;
+      border: none;
+    }
+  }
+  &-brand {
+    @include mixins.xl {
+      display: none;
+    }
+    @include mixins.tablet {
+      display: none;
+    }
+    @include mixins.phone {
+      display: none;
+    }
+    img {
       height: 60px;
-      .toggler-icon {
-        background-image: url("./assets/images/hamburger_menu.png");
-        border: none;
-        outline: none;
-        box-shadow: none;
-      }
     }
-    &-brand {
-      @include mixins.tablet-navbar {
-        display: none;
-      }
-      img {
-        height: 60px;
-      }
-    }
-    .nav-ligne {
-      margin: 0 20px 0 20px;
-      @include mixins.tablet {
-        display: none;
-      }
-      @include mixins.phone {
-        display: none;
-      }
-    }
-    .nav-link {
-      margin: 0 20px 0 20px;
-      @include mixins.contenu;
-      margin: 0 10px 0 10px;
-      font-size: 20px;
-      color: #fff;
-      &:hover {
-        color: variables.$rouge;
-      }
-    }
-    .don {
-      @include mixins.contenu;
-      padding: 5px 20px;
-      font-size: 20px;
-      background-color: rgba(0, 0, 0, 0);
-      color: #fff;
-      border: solid variables.$rouge;
-      border-radius: 20px;
-      @include mixins.phone {
-        display: none;
-      }
-      &:hover {
-        background-color: rgba(1, 1, 1, 0.5);
-      }
-    }
-    #dropdownMenuButton {
-      @include mixins.contenu;
-      color: #fff;
-      margin-left: 10px;
-      font-size: 20px;
-      background-color: rgba(0, 0, 0, 0);
-      border: none;
-      text-align: start;
-      width: 0;
-    }
-  
-    .dropdown-menu {
-      background-color: rgba(0, 0, 0, 0);
-      border: none;
-    }
-    .dropdown-item {
-      @include mixins.contenu;
-      color: #fff;
-      font-size: 20px;
-      padding-left: 22px;
-      margin-top: -20px;
-      &:hover {
-        background-color: rgba(0, 0, 0, 0);
-        color: variables.$rouge;
-      }
-    } 
   }
+  .nav-ligne {
+    margin: 0 20px 0 20px;
+    @include mixins.xl {
+      display: none;
+    }
+    @include mixins.tablet {
+      display: none;
+    }
+    @include mixins.phone {
+      display: none;
+    }
+  }
+  .nav-link {
+    margin: 0 20px 0 20px;
+    @include mixins.contenu;
+    margin: 0 10px 0 10px;
+    font-size: 20px;
+    color: #fff;
+    &:hover {
+      color: variables.$rouge;
+    }
+  }
+  .don {
+    @include mixins.contenu;
+    padding: 5px 20px;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+    border: solid variables.$rouge;
+    border-radius: 20px;
+    @include mixins.phone {
+      display: none;
+    }
+    &:hover {
+      background-color: rgba(1, 1, 1, 0.5);
+    }
+  }
+  #dropdownMenuButton {
+    @include mixins.contenu;
+    color: #fff;
+    margin-left: 10px;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    text-align: start;
+  }
+
+  .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+  }
+  .dropdown-item {
+    @include mixins.contenu;
+    color: #fff;
+    font-size: 20px;
+    padding-left: 22px;
+    margin-top: -20px;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0);
+      color: variables.$rouge;
+    }
+  }
+}
