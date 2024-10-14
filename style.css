@@ -1288,6 +1288,7 @@
   text-align: left;
   position: relative;
   display: block;
+  margin-left: 25px;
   width: auto;
 }
 @media only screen and (min-width: 500px) and (max-width: 880px) {
@@ -1313,6 +1314,7 @@
   display: block;
   width: 500px;
   margin-bottom: 100px;
+  margin-left: 25px;
 }
 @media only screen and (min-width: 500px) and (max-width: 880px) {
   .temoignages__sous-titre {
