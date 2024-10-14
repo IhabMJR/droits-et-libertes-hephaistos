@@ -599,6 +599,13 @@
   align-items: start;
   margin-top: 5vw;
 }
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .overall-container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+}
 
 .grid {
   display: flex;
@@ -608,7 +615,7 @@
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .grid {
-    margin: 10px 30px;
+    margin: auto;
     position: relative;
   }
 }
@@ -620,8 +627,8 @@
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .grid-2 {
-    margin: 10px 30px;
     position: relative;
+    margin: 10vw auto;
   }
 }
 
@@ -632,15 +639,19 @@
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .grid-3 {
-    margin: 10px 30px;
+    margin: auto;
     position: relative;
   }
 }
 
+.text-don-footer {
+  margin: auto;
+}
+
 .btn-don-footer {
   display: flex;
-  color: #fff;
   border: solid;
+  background-color: #0f0f0f;
   width: 20vw;
   height: 5vw;
   max-width: 17vw;
@@ -654,10 +665,12 @@
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .btn-don-footer {
-    border-radius: 5vw;
+    border-radius: 15px;
     font-size: 10px;
     width: 30vw;
     height: 7vw;
+    min-width: 200px;
+    min-height: 50px;
     margin-left: 0px;
   }
 }
@@ -667,12 +680,12 @@
     max-width: 22vw;
     height: 7vw;
     margin: auto;
-    border-radius: 4vw;
+    border-radius: 15px;
     font-size: 14px;
   }
 }
 
-.btn:hover {
+.btn-don-footer:hover {
   color: #EBEBEB;
   border-color: #ECDDDD;
 }
@@ -680,7 +693,7 @@
 .arrow {
   display: flex;
   width: 10vw;
-  margin-left: auto;
+  margin: 0px auto;
 }
 @media only screen and (min-width: 500px) and (max-width: 880px) {
   .arrow {
@@ -705,11 +718,10 @@
     margin: auto;
   }
 }
-
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .item2 {
     font-size: 12px;
-    margin: 0px;
+    margin-top: 100px;
   }
 }
 
@@ -731,27 +743,18 @@
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .item4 {
     font-size: 12px;
-    margin: 0px;
-    grid-column-start: 2;
-    grid-row-end: 3;
   }
 }
 
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .item5 {
     font-size: 12px;
-    margin: 0px;
-    grid-column-start: 2;
-    grid-row-end: 5;
   }
 }
 
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .item6 {
     font-size: 12px;
-    margin: 0px;
-    grid-column-start: 2;
-    grid-row-end: 6;
   }
 }
 
@@ -826,17 +829,14 @@
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .grid_icon {
-    grid-template-rows: 1fr 1fr;
-    margin-left: 50px;
-    gap: 10px;
-    position: absolute;
-    top: 2vw;
+    flex-direction: column;
+    margin: 0px;
   }
 }
 @media only screen and (min-width: 500px) and (max-width: 880px) {
   .grid_icon {
-    gap: 30px;
-    margin-right: 10vw;
+    gap: 10px;
+    margin: 4px;
   }
 }
 
@@ -847,51 +847,55 @@
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .icon {
-    grid-row-start: 1;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 40px;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 880px) {
+  .icon {
+    width: 7vw;
+    margin: 0px auto;
   }
 }
 
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .icon1 {
     width: 50px;
-    grid-column-start: 1;
-    grid-row-start: 1;
+    position: absolute;
+    top: 40px;
   }
 }
 
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .icon2 {
     width: 50px;
-    grid-column-start: 1;
-    grid-row-start: 2;
+    position: absolute;
+    top: 140px;
   }
 }
 
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .icon3 {
     width: 50px;
-    grid-column-start: 1;
-    grid-row-start: 3;
+    position: absolute;
+    top: 240px;
   }
 }
 
-.icon4 {
-  width: 60px;
-}
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .icon4 {
     width: 50px;
-    grid-column-start: 1;
-    grid-row-start: 4;
+    position: absolute;
+    top: 340px;
   }
 }
 
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .icon5 {
     width: 50px;
-    grid-column-start: 1;
-    grid-row-start: 5;
+    position: absolute;
+    top: 440px;
   }
 }
 
@@ -905,9 +909,7 @@
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .text-copyright {
     font-size: 12px;
-    margin: 0px;
-    grid-column-start: 2;
-    grid-row-start: 9;
+    margin: 20px 140px;
   }
 }
 @media only screen and (min-width: 500px) and (max-width: 880px) {
