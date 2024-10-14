@@ -64,7 +64,7 @@
   filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
 }
 
-.swiper {
+.swiper-hero {
   height: 100vh;
   width: 100vw;
   max-width: 100%;
@@ -73,7 +73,7 @@
   display: flex;
   justify-content: center;
 }
-.swiper .swiper-slide img {
+.swiper-hero .swiper-slide img {
   width: 100vw;
   height: 100vh;
   -o-object-fit: cover;

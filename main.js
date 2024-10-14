@@ -10,7 +10,7 @@ window.addEventListener('scroll', () => {
 });
 
 //--- Hero Swiper ---
-const swiper = new Swiper(".swiper", {
+const swiper = new Swiper(".swiper-hero", {
   speed: 400,
   autoplay: {
     delay: 3000,
@@ -18,5 +18,13 @@ const swiper = new Swiper(".swiper", {
   pagination: {
     el: ".swiper-pagination",
     type: "bullets",
+  },
+});
+
+//--- Swiper temoignages ---/
+const swiperTemoignages = new Swiper(".swiper-temoignages", {
+  speed: 400,
+  autoplay: {
+    delay: 3000,
   },
 });
