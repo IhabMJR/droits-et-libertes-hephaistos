@@ -4,9 +4,9 @@
 @use "sass:color";
 
 .contenant_temoignages {
-  overflow-x: hidden;
   display: flex;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 .temoignages {
@@ -59,12 +59,11 @@
       color: variables.$rouge;
     }
   }
-  .temoignages__cartes {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    overflow-x: scroll;
+  .swiper-wrapper {
     margin-top: 50px;
+    .swiper-slide {
+      width: 50%;
+    }
     .carte {
       position: relative;
       background-color: variables.$argent;

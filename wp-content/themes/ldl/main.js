@@ -25,7 +25,6 @@ const swiper = new Swiper(".swiper-hero", {
 //--- Swiper temoignages ---/
 const swiperTemoignages = new Swiper(".swiper-temoignages", {
   speed: 400,
-  autoplay: {
-    delay: 3000,
-  },
+  spaceBetween: 30,
+  slidesPerView: 'auto'
 });
