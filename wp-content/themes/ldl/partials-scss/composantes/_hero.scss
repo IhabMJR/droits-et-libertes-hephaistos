@@ -21,6 +21,11 @@
     @media screen and (max-width: 1370px) {
       bottom: 400px;
     }
+    @media screen and (max-height: 1080px) {
+      width: 250px;
+      height: 250px;
+      bottom: 200px;
+    }
     @include mixins.phone {
       width: 250px;
       height: 250px;
@@ -35,6 +40,10 @@
       left: 140px;
       border: 3px solid variables.$rouge;
       position: absolute;
+      @media screen and (max-height: 1080px) {
+        width: 100px;
+        left: 80px;
+      }
       @include mixins.phone {
         width: 100px;
         left: 80px;
@@ -45,6 +54,11 @@
       top: 160px;
       left: 370px;
       position: absolute;
+      @media screen and (max-height: 1080px) {
+        width: 45px;
+        left: 190px;
+        top: 90px;
+      }
       @include mixins.phone {
         width: 45px;
         left: 190px;
@@ -103,6 +117,10 @@
       .rouge {
         color: variables.$rouge;
       }
+      @media screen and (max-height: 1080px) {
+        font-size: 64px;
+        line-height: 75px;
+      }
       @include mixins.tablet {
         margin-bottom: -180px;
       }
@@ -117,6 +135,10 @@
       color: #fff;
       border-top: 2.5px solid #fff;
       padding-top: 15px;
+      @media screen and (max-height: 1080px) {
+        font-size: 18px;
+        line-height: 28px;
+      }
       @include mixins.tablet {
         display: none;
       }

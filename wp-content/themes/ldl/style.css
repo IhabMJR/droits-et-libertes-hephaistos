@@ -22,6 +22,13 @@
     bottom: 400px;
   }
 }
+@media screen and (max-height: 1080px) {
+  .revue {
+    width: 250px;
+    height: 250px;
+    bottom: 200px;
+  }
+}
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .revue {
     width: 250px;
@@ -41,6 +48,12 @@
   border: 3px solid #B80820;
   position: absolute;
 }
+@media screen and (max-height: 1080px) {
+  .revue .image {
+    width: 100px;
+    left: 80px;
+  }
+}
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .revue .image {
     width: 100px;
@@ -52,6 +65,13 @@
   top: 160px;
   left: 370px;
   position: absolute;
+}
+@media screen and (max-height: 1080px) {
+  .revue .btn-revue {
+    width: 45px;
+    left: 190px;
+    top: 90px;
+  }
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .revue .btn-revue {
@@ -125,6 +145,12 @@
 .hero .titre h1 .rouge {
   color: #B80820;
 }
+@media screen and (max-height: 1080px) {
+  .hero .titre h1 {
+    font-size: 64px;
+    line-height: 75px;
+  }
+}
 @media only screen and (min-width: 500px) and (max-width: 880px) {
   .hero .titre h1 {
     margin-bottom: -180px;
@@ -145,6 +171,12 @@
   color: #fff;
   border-top: 2.5px solid #fff;
   padding-top: 15px;
+}
+@media screen and (max-height: 1080px) {
+  .hero .titre p {
+    font-size: 18px;
+    line-height: 28px;
+  }
 }
 @media only screen and (min-width: 500px) and (max-width: 880px) {
   .hero .titre p {
