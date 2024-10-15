@@ -1013,7 +1013,7 @@
 }
 .actualites__cartes .carte {
   background-color: red;
-  height: 550px;
+  height: 70vh;
   border-radius: 20px;
   background-repeat: no-repeat;
   background-size: cover;
