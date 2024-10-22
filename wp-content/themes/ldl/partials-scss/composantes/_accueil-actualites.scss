@@ -39,14 +39,11 @@
     min-width: 0;
   }
   &__cartes {
-    @media screen and (max-width: 1200px) {
-      overflow-x: scroll;
-    }
+
     .scroll {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       column-gap: 3vh;
-      padding: 0 20px;
       @media screen and (max-width: 1300px) {
         column-gap: 15px;
       }
@@ -55,6 +52,7 @@
       background-color: red;
       height: 70vh;
       max-height: 700px;
+      max-width: 400px;
       border-radius: 20px;
       background-repeat: no-repeat;
       background-size: cover;

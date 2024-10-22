@@ -28,3 +28,12 @@ const swiperTemoignages = new Swiper(".swiper-temoignages", {
   spaceBetween: 30,
   slidesPerView: 'auto'
 });
+
+//--- Swiper actualites ---/
+const swiperActualites = new Swiper(".scroll", {
+  speed: 400,
+  spaceBetween: 30,
+  slidesPerView: 'auto',
+  centeredSlides: true,
+  initialSlide: 1
+});

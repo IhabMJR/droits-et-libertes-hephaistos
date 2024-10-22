@@ -993,17 +993,11 @@
     min-width: 0;
   }
 }
-@media screen and (max-width: 1200px) {
-  .actualites__cartes {
-    overflow-x: scroll;
-  }
-}
 .actualites__cartes .scroll {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   -moz-column-gap: 3vh;
        column-gap: 3vh;
-  padding: 0 20px;
 }
 @media screen and (max-width: 1300px) {
   .actualites__cartes .scroll {
@@ -1015,6 +1009,7 @@
   background-color: red;
   height: 70vh;
   max-height: 700px;
+  max-width: 400px;
   border-radius: 20px;
   background-repeat: no-repeat;
   background-size: cover;
