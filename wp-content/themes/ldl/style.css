@@ -1021,6 +1021,11 @@
   -webkit-backdrop-filter: grayscale(100) contrast(70%) brightness(0.4);
           backdrop-filter: grayscale(100) contrast(70%) brightness(0.4);
 }
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .actualites__cartes .carte {
+    height: 400px;
+  }
+}
 @media screen and (max-width: 1300px) {
   .actualites__cartes .carte {
     width: 400px;
@@ -1049,6 +1054,12 @@
     font-size: 28px;
   }
 }
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .actualites__cartes .carte__titre h3 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
 .actualites__cartes .carte__titre p {
   border-radius: 25px;
 }
@@ -1070,6 +1081,11 @@
   bottom: 0;
   margin: 15px 30px;
 }
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .actualites__cartes .carte__details {
+    font-size: 18px;
+  }
+}
 .actualites__cartes .carte .btn-nouvelle {
   width: 50px;
   right: 0;
@@ -1088,7 +1104,6 @@
 }
 .actualites__cartes .carte:hover {
   filter: none;
-  /*transform: scale(1.02);*/
   cursor: pointer;
 }
 
@@ -1721,6 +1736,12 @@
     font-size: 28px;
   }
 }
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .carte_principale__titre h3 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
 .carte_principale__titre p {
   border-radius: 25px;
 }
@@ -1741,6 +1762,11 @@
   text-align: start;
   bottom: 0;
   margin: 15px 30px;
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .carte_principale__details {
+    font-size: 18px;
+  }
 }
 .carte_principale .btn-nouvelle {
   width: 50px;

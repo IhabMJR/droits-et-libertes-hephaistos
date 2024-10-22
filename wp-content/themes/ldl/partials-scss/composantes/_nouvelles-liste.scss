@@ -51,6 +51,10 @@
       @media screen and (max-width: 1200px) {
         font-size: 28px;
       }
+      @include mixins.phone {
+        font-size: 20px;
+        line-height: 26px;
+      }
     }
     p {
       border-radius: 25px;
@@ -70,6 +74,9 @@
     text-align: start;
     bottom: 0;
     margin: 15px 30px;
+    @include mixins.phone {
+      font-size: 18px;
+    }
   }
   .btn-nouvelle {
     width: 50px;
