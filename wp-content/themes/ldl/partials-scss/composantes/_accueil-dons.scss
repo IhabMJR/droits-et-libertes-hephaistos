@@ -8,6 +8,7 @@
   @include mixins.phone {
     width: 200vw;
   }
+  z-index: 1;
 }
 
 .contenant_bande_dons {
@@ -15,6 +16,9 @@
   overflow: hidden;
   display: flex;
   justify-content: center;
+  margin-top: -150px;
+  margin-bottom: -100px;
+
 }
 
 .dons {

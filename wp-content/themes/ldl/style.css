@@ -955,7 +955,7 @@
   overflow-x: hidden;
   background-image: url("./assets/images/world_map.png");
   background-repeat: no-repeat;
-  background-size: 1500px;
+  background-size: cover;
   display: flex;
   justify-content: center;
   background-position: center;
@@ -996,14 +996,6 @@
 .actualites__cartes .scroll {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  -moz-column-gap: 3vh;
-       column-gap: 3vh;
-}
-@media screen and (max-width: 1300px) {
-  .actualites__cartes .scroll {
-    -moz-column-gap: 15px;
-         column-gap: 15px;
-  }
 }
 .actualites__cartes .carte {
   background-color: red;
@@ -1447,6 +1439,7 @@
 .bande_dons {
   width: 100vw;
   margin: 0 auto;
+  z-index: 1;
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .bande_dons {
@@ -1459,6 +1452,8 @@
   overflow: hidden;
   display: flex;
   justify-content: center;
+  margin-top: -150px;
+  margin-bottom: -100px;
 }
 
 .dons {
@@ -1655,6 +1650,125 @@
 
 .card_page_luttes p {
   margin: 0;
+}
+
+/*--- Importation des partials ---*/
+.wrapper {
+  max-width: 1550px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.carte_principale {
+  background-image: url("./assets/images/nouvelle_armes_israel.png");
+  height: 40vh;
+  width: 95vw;
+  max-width: 1260px;
+  max-height: 700px;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  padding: 5px;
+  -webkit-backdrop-filter: grayscale(100) contrast(70%) brightness(0.4);
+          backdrop-filter: grayscale(100) contrast(70%) brightness(0.4);
+}
+.carte_principale__titre {
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+  color: #000;
+  line-height: 40px;
+  margin-top: 20px;
+  width: auto;
+  font-size: 18px;
+  color: #fff;
+  text-align: start;
+  padding: 0 30px;
+  letter-spacing: 0.8px;
+}
+.carte_principale__titre h3 {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 40px;
+}
+@media screen and (max-width: 1200px) {
+  .carte_principale__titre h3 {
+    font-size: 28px;
+  }
+}
+.carte_principale__titre p {
+  border-radius: 25px;
+}
+.carte_principale__titre p span {
+  background-color: rgba(136, 136, 136, 0.4);
+  border-radius: 25px;
+  padding: 5px 15px;
+}
+.carte_principale__details {
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+  color: #000;
+  line-height: 40px;
+  position: absolute;
+  width: 100%;
+  color: #fff;
+  font-size: 24px;
+  text-align: start;
+  bottom: 0;
+  margin: 15px 30px;
+}
+.carte_principale .btn-nouvelle {
+  width: 50px;
+  right: 0;
+  bottom: 0;
+  margin: 30px;
+  position: absolute;
+}
+
+.link_nouvelles {
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+  color: #B80820;
+}
+.link_nouvelles:hover {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.container_link_nouvelles {
+  margin: 35px 0;
+}
+
+.btn_trier_par {
+  align-self: flex-start;
+  margin: 35px 0 20px 0;
+  margin-left: 150px;
+}
+
+.btn_trier_par:hover {
+  cursor: pointer;
+}
+
+.btn_trier_par p {
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+  color: #000;
+  line-height: 40px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.btn_trier_par p:after {
+  content: url("./assets/images/trier_fleche.png");
+  position: relative;
+  padding-left: 10px;
 }
 
 /*--- Importation des fonts ---*/
