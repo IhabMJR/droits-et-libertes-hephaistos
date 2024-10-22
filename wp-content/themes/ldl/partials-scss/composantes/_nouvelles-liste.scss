@@ -13,6 +13,12 @@
   overflow: hidden;
 }
 
+.carte_principale:hover {
+  box-shadow: none;
+  cursor: pointer;
+  transform: scale(1.005);
+}
+
 .carte_principale {
   background-image: url("./assets/images/nouvelle_armes_israel.png");
   height: 45vh;
@@ -27,6 +33,8 @@
   margin-bottom: 40px;
   padding: 5px;
   backdrop-filter: grayscale(100) contrast(70%) brightness(0.4);
+  box-shadow: inset 0 0 1000px #000;
+  transition: box-shadow 1s, transform 0.5s;
   &__titre {
     @include mixins.contenu;
     margin-top: 20px;
