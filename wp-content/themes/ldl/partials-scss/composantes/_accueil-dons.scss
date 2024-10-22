@@ -41,7 +41,7 @@
     font-size: 42px;
     position: relative;
     &:after {
-      content: url("/assets/images/dessin_trois_lignes.png");
+      content: url("./assets/images/dessin_trois_lignes.png");
       position: absolute;
       top: -50px;
       right: 0;
@@ -64,7 +64,7 @@
     position: relative;
     z-index: 5;
     &:before {
-      content: url("/assets/images/dessin_vague.png");
+      content: url("./assets/images/dessin_vague.png");
       position: relative;
       top: 225px;
       left: -180px;
