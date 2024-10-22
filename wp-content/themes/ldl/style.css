@@ -1654,7 +1654,7 @@
 
 /*--- Importation des partials ---*/
 .wrapper {
-  max-width: 1550px;
+  max-width: 1260px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -1665,9 +1665,9 @@
 
 .carte_principale {
   background-image: url("./assets/images/nouvelle_armes_israel.png");
-  height: 40vh;
-  width: 95vw;
-  max-width: 1260px;
+  height: 45vh;
+  width: 100%;
+  max-width: 95vw;
   max-height: 700px;
   border-radius: 20px;
   background-repeat: no-repeat;
@@ -1749,26 +1749,47 @@
 .btn_trier_par {
   align-self: flex-start;
   margin: 35px 0 20px 0;
-  margin-left: 150px;
+  margin-left: 20px;
 }
 
 .btn_trier_par:hover {
   cursor: pointer;
 }
 
-.btn_trier_par p {
+.btn_trier_par:hover .trier_par_content {
+  display: block;
+}
+
+.btn_trier_par span {
   font-family: "Tex Gyre Adventor Regular";
   font-size: 24px;
   color: #000;
   line-height: 40px;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 400;
+  font-size: 20px;
 }
 
-.btn_trier_par p:after {
+.btn_trier_par span:after {
   content: url("./assets/images/trier_fleche.png");
   position: relative;
   padding-left: 10px;
+}
+
+.trier_par_content {
+  display: none;
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+  color: #000;
+  line-height: 40px;
+  font-size: 16px;
+  position: absolute;
+  background-color: #f4f4f4;
+  width: auto;
+  padding: 0 16px;
+  padding-top: 10px;
+  z-index: 1;
+  border-radius: 20px;
 }
 
 /*--- Importation des fonts ---*/
