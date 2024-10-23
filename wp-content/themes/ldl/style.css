@@ -750,6 +750,7 @@
     margin: auto;
   }
 }
+
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .item2 {
     font-size: 12px;
@@ -1676,6 +1677,50 @@
 
 .card_page_luttes p {
   margin: 0;
+}
+
+.body_une_lutte {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.section_une_lutte {
+  max-width: 800px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.titre_une_lutte {
+  font-size: 1.8em;
+  color: #333333;
+  margin-bottom: 10px;
+  font-size: 42px;
+  font-weight: 600;
+}
+
+.date_une_lutte {
+  font-size: 1em;
+  color: #555555;
+  line-height: 1.6;
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+  color: #000;
+  line-height: 40px;
+}
+
+.description_une_lutte {
+  font-size: 42px;
+  font-weight: 600;
+}
+
+.image_une_lutte {
+  border-radius: 70px;
+  max-height: 400px;
+  margin-top: 20px;
+  width: 100%;
 }
 
 /*--- Importation des partials ---*/

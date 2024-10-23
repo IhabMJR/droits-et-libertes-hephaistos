@@ -413,9 +413,6 @@
     @include mixins.tablet {
       margin: auto;     
     }
-    @include mixins.phone {
-
-    }
   }
   .item2 {
     @include mixins.phone {
