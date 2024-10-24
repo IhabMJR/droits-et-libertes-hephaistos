@@ -7,14 +7,25 @@
     width: 100%;
     margin-top: 150px;    
     display: grid;
-    grid-template-columns: 1fr  1fr;
+    grid-template-columns: 1fr  1fr;    
+    gap: 5px;
 }
+
+.title_lutte{
+    font-size: 48px;
+}
+
+.description_lutte{
+    font-size: 24px;
+}
+
 .card_page_luttes {
     width: 40vw;
-    border: 1px solid red;
+    border: 3px solid red;
     border-radius: 10px;
     padding: 20px;
     margin: 30px auto;
+
 }
 
 .image_lutte_page{
@@ -28,6 +39,8 @@
   border-radius: 50px;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .link_page_luttes {
