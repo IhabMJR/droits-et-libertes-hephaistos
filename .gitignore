@@ -3,6 +3,6 @@ wp-config/
 wp-admin/
 wp-includes/
 license.txt
-readme.html/
+readme.html
 .DS_Store
 .htaccess
