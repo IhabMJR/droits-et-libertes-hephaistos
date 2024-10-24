@@ -7,34 +7,32 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 20px;
-    
+    margin-top: 200px;
+    margin-bottom: 150px;
 }
 
 .section_une_lutte {
     max-width: 800px;
     margin: 20px;
-    padding: 20px;
 }
 
 .titre_une_lutte {
-    font-size: 1.8em;
     color: #333333;
     margin-bottom: 10px;
-    font-size: 42px;
-    font-weight: 600;
+    font-size: 36px;
+    font-family: "Tex Gyre Adventor Bold";
 }
 
 .date_une_lutte{
-    font-size: 1em;
+    font-size: 24px;
     color: #555555;
     line-height: 1.6;
-    @include mixins.contenu;
+    font-family: "Tex Gyre Adventor Bold";
 }
 
 .description_une_lutte{
-    font-size: 42px;
-    font-weight: 600;
+    font-size: 30px;
+    font-family: "Tex Gyre Adventor Bold";
 }
 
 .image_une_lutte {
