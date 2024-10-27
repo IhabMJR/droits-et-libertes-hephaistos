@@ -79,3 +79,8 @@ $desktop: 1400px;
   font-size: 20px;
   color: #fff;
 }
+
+@mixin description-base {
+  font-size: 25px;
+  font-family: "Tex Gyre Adventor";
+}

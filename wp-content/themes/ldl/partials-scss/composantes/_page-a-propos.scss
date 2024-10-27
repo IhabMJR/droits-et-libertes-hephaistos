@@ -1,0 +1,24 @@
+@use "../mixins";
+@use "../variables";
+@use "sass:color";
+
+.container_a_propos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 150px;
+}
+
+.titre_a_propos {
+    @include mixins.petit-titre-bold;
+    position: relative;
+    display: block;
+    margin: 0 auto 100px auto;
+}
+
+.description_a_propos {
+    @include mixins.description-base;
+    width: 60vw;
+}

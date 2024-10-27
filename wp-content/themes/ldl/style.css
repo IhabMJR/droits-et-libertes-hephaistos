@@ -1911,6 +1911,31 @@
   border-radius: 20px;
 }
 
+.container_a_propos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+  margin-bottom: 150px;
+}
+
+.titre_a_propos {
+  font-family: "Tex Gyre Adventor Bold";
+  font-weight: bold;
+  font-size: 48px;
+  color: #000;
+  position: relative;
+  display: block;
+  margin: 0 auto 100px auto;
+}
+
+.description_a_propos {
+  font-size: 25px;
+  font-family: "Tex Gyre Adventor";
+  width: 60vw;
+}
+
 /*--- Importation des fonts ---*/
 @font-face {
   font-family: "TeX Gyre Adventor Regular";
