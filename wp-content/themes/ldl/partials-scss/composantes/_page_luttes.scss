@@ -9,14 +9,38 @@
     display: grid;
     grid-template-columns: 1fr  1fr;    
     gap: 5px;
+    @include  mixins.phone {
+        grid-template-columns: 1fr;
+        margin-top: 100px;
+      }
+      @include mixins.tablet {
+        grid-template-columns: 1fr 1fr;
+        margin-top: 120px;
+      }
 }
 
 .title_lutte{
     font-size: 48px;
+    @include  mixins.phone {
+        font-size: 32px;
+        text-align: center;
+    }
+    @include mixins.tablet {
+        font-size: 40px;
+        text-align: center;
+    }
 }
 
 .description_lutte{
-    font-size: 24px;
+    @include mixins.description-base;
+    @include  mixins.phone {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+    @include mixins.tablet {
+        font-size: 18px;
+        padding: 0 20px;
+    }
 }
 
 .card_page_luttes {
@@ -25,22 +49,48 @@
     border-radius: 10px;
     padding: 20px;
     margin: 30px auto;
-
+    @include  mixins.phone {
+        width: 90%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+    @include mixins.tablet {
+        width: 45vw;
+        margin: 25px auto;
+        padding: 18px;
+    }
 }
 
 .image_lutte_page{
   grid-column-start: 1;
   grid-column-end: 3;
+  @include  mixins.phone {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  @include mixins.tablet {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
 }
 
 .image_of_lutte{
-  width: 100%;
-  max-height: 700px;
+  object-fit: cover;
+  width: 100vw;
+  max-height: 850px;
   border-radius: 50px;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   margin-top: 20px;
   margin-bottom: 20px;
+  @include  mixins.phone {
+    max-height: 400px;
+    border-radius: 20px;
+  }
+  @include mixins.tablet {
+    max-height: 600px;
+    border-radius: 30px;
+  }
 }
 
 .link_page_luttes {
@@ -51,12 +101,34 @@
       color: #000;
       text-decoration: none;
       cursor: pointer;
+      @include  mixins.phone {
+        font-size: 20px;
+      }
+      @include mixins.tablet {
+        font-size: 22px;
+      }
 }
 }
 
 .card_page_luttes h3 {
     margin: 0 0 10px;
+    @include  mixins.phone {
+        font-size: 20px;
+        text-align: center;
+    }
+    @include mixins.tablet {
+        font-size: 24px;
+        text-align: center;
+    }
 }
 .card_page_luttes p {
     margin: 0;
+    @include  mixins.phone {
+        font-size: 14px;
+        text-align: justify;
+    }
+    @include mixins.tablet {
+        font-size: 16px;
+        text-align: justify;
+    }
 }

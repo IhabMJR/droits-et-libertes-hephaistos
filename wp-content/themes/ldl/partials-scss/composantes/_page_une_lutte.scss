@@ -33,6 +33,7 @@
 .description_une_lutte{
     font-size: 30px;
     font-family: "Tex Gyre Adventor Bold";
+    @include mixins.description-base;
 }
 
 .image_une_lutte {
