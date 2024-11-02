@@ -1,0 +1,65 @@
+@use "../mixins";
+@use "../variables";
+@use "sass:color";
+
+.container_nous_joindre {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  max-width: 1550px;
+  margin: 200px auto 150px;
+
+  .titre_nous_joindre {
+    @include mixins.petit-titre-bold;
+    position: relative;
+    display: block;
+    margin: 0 auto 100px auto;
+  }
+
+  .sous_titre_nous_joindre {
+    @include mixins.petit-titre;
+    text-align: left;
+    position: relative;
+    display: block;
+    width: 500px;
+    margin-left: 25px;
+    margin-bottom: 25px;
+  }
+
+  .wrapper_nous_joindre {
+    text-align: left;
+    position: relative;
+    display: block;
+    width: 500px;
+    margin-left: 25px;
+    margin-bottom: 25px;
+  }
+
+  .description_nous_joindre {
+    @include mixins.description-base;
+    width: 85vw;
+    margin-bottom: 80px;
+  }
+}
+
+form {
+  display: block;
+  width: 100%;
+
+  .form_text {
+    @include mixins.description-base;
+    margin: 0;
+  }
+
+  .btn_nous_joindre {
+    @include mixins.description-base;
+    @include mixins.contenu;
+    min-width: 8vw;
+    padding: 5px 20px;
+    font-size: 26px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #000;
+    border: solid variables.$rouge;
+    border-radius: 20px;
+  }
+}

@@ -1822,7 +1822,7 @@
 
 .description_lutte {
   font-size: 25px;
-  font-family: "Tex Gyre Adventor";
+  font-family: "Tex Gyre Adventor Regular";
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .description_lutte {
@@ -1984,7 +1984,7 @@
   font-size: 30px;
   font-family: "Tex Gyre Adventor Bold";
   font-size: 25px;
-  font-family: "Tex Gyre Adventor";
+  font-family: "Tex Gyre Adventor Regular";
 }
 
 .image_une_lutte {
@@ -2161,8 +2161,7 @@
   margin-top: 100px;
   margin-bottom: 150px;
 }
-
-.titre_a_propos {
+.container_a_propos .titre_a_propos {
   font-family: "Tex Gyre Adventor Bold";
   font-weight: bold;
   font-size: 48px;
@@ -2171,11 +2170,77 @@
   display: block;
   margin: 0 auto 100px auto;
 }
-
-.description_a_propos {
+.container_a_propos .description_a_propos {
   font-size: 25px;
-  font-family: "Tex Gyre Adventor";
+  font-family: "Tex Gyre Adventor Regular";
   width: 60vw;
+}
+
+.container_nous_joindre {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  max-width: 1550px;
+  margin: 200px auto 150px;
+}
+.container_nous_joindre .titre_nous_joindre {
+  font-family: "Tex Gyre Adventor Bold";
+  font-weight: bold;
+  font-size: 48px;
+  color: #000;
+  position: relative;
+  display: block;
+  margin: 0 auto 100px auto;
+}
+.container_nous_joindre .sous_titre_nous_joindre {
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 48px;
+  color: #000;
+  text-align: left;
+  position: relative;
+  display: block;
+  width: 500px;
+  margin-left: 25px;
+  margin-bottom: 25px;
+}
+.container_nous_joindre .wrapper_nous_joindre {
+  text-align: left;
+  position: relative;
+  display: block;
+  width: 500px;
+  margin-left: 25px;
+  margin-bottom: 25px;
+}
+.container_nous_joindre .description_nous_joindre {
+  font-size: 25px;
+  font-family: "Tex Gyre Adventor Regular";
+  width: 85vw;
+  margin-bottom: 80px;
+}
+
+form {
+  display: block;
+  width: 100%;
+}
+form .form_text {
+  font-size: 25px;
+  font-family: "Tex Gyre Adventor Regular";
+  margin: 0;
+}
+form .btn_nous_joindre {
+  font-size: 25px;
+  font-family: "Tex Gyre Adventor Regular";
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+  color: #000;
+  line-height: 40px;
+  min-width: 8vw;
+  padding: 5px 20px;
+  font-size: 26px;
+  background-color: rgba(0, 0, 0, 0);
+  color: #000;
+  border: solid #B80820;
+  border-radius: 20px;
 }
 
 /*--- Importation des fonts ---*/
