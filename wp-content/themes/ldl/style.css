@@ -1594,64 +1594,193 @@
 
 /*---------- Héro ----------*/
 .hero-nouvelle {
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
   max-width: 100%;
-  max-height: 100%;
   position: relative;
   display: flex;
   justify-content: center;
   overflow: hidden;
 }
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .hero-nouvelle {
+    height: 80vh;
+  }
+}
+@media screen and (orientation: landscape) and (max-height: 1000px) {
+  .hero-nouvelle {
+    height: 125vh;
+  }
+}
 
 .hero-nouvelle .fond {
-  height: 80%;
+  height: 70vh;
   width: 100%;
-  background-color: #D3D3D3;
+  position: absolute;
+  background-color: #d3d3d3;
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .hero-nouvelle .fond {
+    height: 50vh;
+  }
+}
+
+.contenu-nouvelle {
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+  color: #000;
+  line-height: 40px;
+  width: 70vw;
+  max-width: 1550px;
+  padding: 0 20px 0 20px;
+  margin: 0 auto;
+  position: relative;
+}
+.contenu-nouvelle strong {
+  font-weight: 800;
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .contenu-nouvelle {
+    padding: 0 15px;
+    font-size: 18px;
+    width: 100vw;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .contenu-nouvelle a {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 1025px) {
+  .contenu-nouvelle a {
+    font-size: 22px;
+  }
 }
 
 .hero-nouvelle .contenu {
-  max-width: 800px;
-  top: 25%;
+  width: 70vw;
+  max-width: 1550px;
+  top: 20%;
   position: absolute;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .hero-nouvelle .contenu {
+    width: 100vw;
+    padding: 0 15px;
+  }
+}
 .hero-nouvelle .contenu h2 {
-  font-size: 42px;
+  font-size: 48px;
   font-weight: 600;
+  letter-spacing: -2px;
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .hero-nouvelle .contenu h2 {
+    font-size: 28px;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 1025px) {
+  .hero-nouvelle .contenu h2 {
+    font-size: 38px;
+  }
+}
+@media screen and (max-height: 1000px) {
+  .hero-nouvelle .contenu h2 {
+    font-size: 32px;
+  }
 }
 .hero-nouvelle .contenu p {
   font-family: "Tex Gyre Adventor Regular";
   font-size: 24px;
   color: #000;
   line-height: 40px;
+  font-size: 28px;
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .hero-nouvelle .contenu p {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 1025px) {
+  .hero-nouvelle .contenu p {
+    font-size: 22px;
+  }
+}
+@media screen and (max-height: 1000px) {
+  .hero-nouvelle .contenu p {
+    font-size: 18px;
+  }
 }
 .hero-nouvelle .contenu .img-nouvelle {
   border-radius: 70px;
-  max-height: 400px;
-  margin-top: 20px;
+  height: 50vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 10px;
   width: 100%;
+}
+@media only screen and (min-width: 500px) and (max-width: 880px) {
+  .hero-nouvelle .contenu .img-nouvelle {
+    height: 45vh;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .hero-nouvelle .contenu .img-nouvelle {
+    height: 30vh;
+  }
 }
 .hero-nouvelle .contenu .nouvelle-dessin {
   position: absolute;
-  top: -300px;
-  right: -380px;
+  width: 30vw;
+  top: -25vh;
+  right: -10vw;
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .hero-nouvelle .contenu .nouvelle-dessin {
+    width: 250px;
+  }
 }
 .hero-nouvelle .contenu .btns-nouvelle {
   display: flex;
   width: 100%;
-  margin-top: 8px;
+  margin-top: 20px;
   padding-left: 10px;
   padding-right: 10px;
 }
-.hero-nouvelle .contenu a {
+.hero-nouvelle .contenu .btns-nouvelle a {
   color: #B80820;
-  font-size: 14px;
+  font-size: 20px;
 }
-.hero-nouvelle .contenu a:nth-child(2) {
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .hero-nouvelle .contenu .btns-nouvelle a {
+    font-size: 12px;
+  }
+}
+.hero-nouvelle .contenu .btns-nouvelle a:nth-child(2) {
   margin-left: auto;
+}
+.hero-nouvelle .contenu .btns-nouvelle a:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+.btns-nouvelle a:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1580px) {
+  .contenant_bande_dons.articles {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.actualites__cartes.liste {
+  margin-bottom: 20px;
 }
 
 .container_page_luttes {
