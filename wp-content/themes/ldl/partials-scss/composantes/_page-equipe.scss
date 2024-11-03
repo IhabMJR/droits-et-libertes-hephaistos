@@ -1,0 +1,57 @@
+@use "../mixins";
+@use "../variables";
+@use "sass:color";
+
+.container_equipe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 150px;
+
+    .titre_equipe {
+        @include mixins.petit-titre-bold;
+        position: relative;
+        display: block;
+        margin: 0 auto 100px auto;
+    }
+
+    .description_equipe {
+        @include mixins.description-base;
+        width: 60vw;
+    }
+
+    .swiper.equipe {
+        width: 100%;
+        overflow-x: hidden;
+        margin-top: 40px;
+        margin-bottom: -70px;
+    }
+
+    .membre_equipe {
+        width: 30vw;
+        height: 30vw;
+        background-size: cover;
+        border-radius: 2vw;
+        padding: 20px;
+        &.laurence {
+            background-image: url(/assets/images/laurence.jpg);
+        }
+        &.karina {
+            background-image: url(/assets/images/karina.jpg);
+        }
+        &.elisabeth {
+            background-image: url(/assets/images/elisabeth.jpg);
+        }
+        &.lynda {
+            background-image: url(/assets/images/lynda.jpg);
+        }
+        &_poste {
+            width: 100%;
+        }
+        &_nom {
+            width: 100%;
+        }
+    }
+}

@@ -37,3 +37,10 @@ const swiperActualites = new Swiper(".scroll", {
   centeredSlides: true,
   initialSlide: 1
 });
+
+//-- Swiper equipe --//
+const swiperEquipe = new Swiper(".swiper.equipe", {
+  speed: 400,
+  spaceBetween: 30,
+  slidesPerView: 'auto',
+});

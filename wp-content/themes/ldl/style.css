@@ -2243,6 +2243,60 @@ form .btn_nous_joindre {
   border-radius: 20px;
 }
 
+.container_equipe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+  margin-bottom: 150px;
+}
+.container_equipe .titre_equipe {
+  font-family: "Tex Gyre Adventor Bold";
+  font-weight: bold;
+  font-size: 48px;
+  color: #000;
+  position: relative;
+  display: block;
+  margin: 0 auto 100px auto;
+}
+.container_equipe .description_equipe {
+  font-size: 25px;
+  font-family: "Tex Gyre Adventor Regular";
+  width: 60vw;
+}
+.container_equipe .swiper.equipe {
+  width: 100%;
+  overflow-x: hidden;
+  margin-top: 40px;
+  margin-bottom: -70px;
+}
+.container_equipe .membre_equipe {
+  width: 30vw;
+  height: 30vw;
+  background-size: cover;
+  border-radius: 2vw;
+  padding: 20px;
+}
+.container_equipe .membre_equipe.laurence {
+  background-image: url(/assets/images/laurence.jpg);
+}
+.container_equipe .membre_equipe.karina {
+  background-image: url(/assets/images/karina.jpg);
+}
+.container_equipe .membre_equipe.elisabeth {
+  background-image: url(/assets/images/elisabeth.jpg);
+}
+.container_equipe .membre_equipe.lynda {
+  background-image: url(/assets/images/lynda.jpg);
+}
+.container_equipe .membre_equipe_poste {
+  width: 100%;
+}
+.container_equipe .membre_equipe_nom {
+  width: 100%;
+}
+
 /*--- Importation des fonts ---*/
 @font-face {
   font-family: "TeX Gyre Adventor Regular";
