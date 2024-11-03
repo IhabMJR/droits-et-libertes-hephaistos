@@ -1962,7 +1962,7 @@
 }
 
 .section_une_lutte {
-  max-width: 800px;
+  max-width: 70vw;
   margin: 20px;
 }
 
@@ -1989,9 +1989,56 @@
 
 .image_une_lutte {
   border-radius: 70px;
-  max-height: 400px;
+  max-height: 700px;
   margin-top: 20px;
   width: 100%;
+}
+
+.text_unelutte {
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+  color: #000;
+  line-height: 40px;
+  font-size: 28px;
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .text_unelutte {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 1025px) {
+  .text_unelutte {
+    font-size: 22px;
+  }
+}
+@media screen and (max-height: 1000px) {
+  .text_unelutte {
+    font-size: 18px;
+  }
+}
+
+.link_unelutte {
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+  color: #000;
+  line-height: 40px;
+  font-size: 18px;
+  margin-top: 10vw;
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .link_unelutte {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 1025px) {
+  .link_unelutte {
+    font-size: 20px;
+  }
+}
+@media screen and (max-height: 1000px) {
+  .link_unelutte {
+    font-size: 14px;
+  }
 }
 
 /*--- Importation des partials ---*/
