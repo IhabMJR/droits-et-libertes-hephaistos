@@ -9,6 +9,8 @@
     flex-direction: column;
     margin-top: 100px;
     margin-bottom: 150px;
+    margin-left: 50px;
+    margin-right: 50px;
 
     .titre_equipe {
         @include mixins.petit-titre-bold;
@@ -19,19 +21,21 @@
 
     .description_equipe {
         @include mixins.description-base;
-        width: 60vw;
+        width: auto;
+        max-width: 1500px;
     }
 
     .swiper.equipe {
         width: 100%;
+        max-width: 1500px;
         overflow-x: hidden;
         margin-top: 40px;
         margin-bottom: -70px;
     }
 
     .membre_equipe {
-        width: 30vw;
-        height: 30vw;
+        width: auto;
+        height: 500px;
         background-size: cover;
         border-radius: 2vw;
         padding: 20px;

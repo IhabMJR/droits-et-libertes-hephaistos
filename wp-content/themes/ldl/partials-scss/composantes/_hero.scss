@@ -18,13 +18,10 @@
     background-image: url("./assets/images/brush_stroke.png");
     background-size: cover;
     background-repeat: no-repeat;
-    @media screen and (max-width: 1370px) {
-      bottom: 400px;
-    }
     @media screen and (max-height: 1080px) {
       width: 250px;
       height: 250px;
-      bottom: 200px;
+      bottom: 230px;
     }
     @include mixins.phone {
       width: 250px;

@@ -42,5 +42,9 @@ const swiperActualites = new Swiper(".scroll", {
 const swiperEquipe = new Swiper(".swiper.equipe", {
   speed: 400,
   spaceBetween: 30,
-  slidesPerView: 'auto',
+  slidesPerView: 2.5,
+  pagination: {
+    el: ".swiper-pagination",
+    type: "bullets",
+  },
 });

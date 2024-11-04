@@ -17,16 +17,11 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-@media screen and (max-width: 1370px) {
-  .revue {
-    bottom: 400px;
-  }
-}
 @media screen and (max-height: 1080px) {
   .revue {
     width: 250px;
     height: 250px;
-    bottom: 200px;
+    bottom: 230px;
   }
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
@@ -2297,6 +2292,8 @@ form .btn_nous_joindre {
   flex-direction: column;
   margin-top: 100px;
   margin-bottom: 150px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 .container_equipe .titre_equipe {
   font-family: "Tex Gyre Adventor Bold";
@@ -2310,17 +2307,19 @@ form .btn_nous_joindre {
 .container_equipe .description_equipe {
   font-size: 25px;
   font-family: "Tex Gyre Adventor Regular";
-  width: 60vw;
+  width: auto;
+  max-width: 1500px;
 }
 .container_equipe .swiper.equipe {
   width: 100%;
+  max-width: 1500px;
   overflow-x: hidden;
   margin-top: 40px;
   margin-bottom: -70px;
 }
 .container_equipe .membre_equipe {
-  width: 30vw;
-  height: 30vw;
+  width: auto;
+  height: 500px;
   background-size: cover;
   border-radius: 2vw;
   padding: 20px;
