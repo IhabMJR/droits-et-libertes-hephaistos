@@ -348,7 +348,7 @@
       position: relative;
     }
   }
-
+ 
   .text-don-footer{
     margin: auto;
   }
@@ -411,7 +411,7 @@
   .item1 {
  
     @include mixins.tablet {
-      margin: auto;     
+      margin: auto;    
     }
   }
   .item2 {
@@ -521,20 +521,22 @@
     }
   }
    
-  .icon1 {   
+  .icon1 {  
     @include mixins.phone {
       width: 50px;
       position: absolute;
-      top: 40px;
+      top: 60px;
+      left: 5vw;
     }
-
+ 
   }
  
   .icon2 {
     @include mixins.phone {
       width: 50px;
       position: absolute;
-      top: 140px;
+      top: 130px;
+      left: 5vw;
     }
   }
  
@@ -542,7 +544,8 @@
     @include mixins.phone {
       width: 50px;
       position: absolute;
-      top: 240px;
+      top: 200px;
+      left: 5vw;
     }
   }
  
@@ -550,7 +553,8 @@
     @include mixins.phone {
       width: 50px;
       position: absolute;
-      top: 340px;
+      top: 280px;
+      left: 5vw;
     }
   }
  
@@ -558,7 +562,8 @@
     @include mixins.phone {
       width: 50px;
       position: absolute;
-      top: 440px;
+      top: 360px;
+      left: 5vw;
     }
   }
   .text-copyright {

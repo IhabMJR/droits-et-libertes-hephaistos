@@ -1,7 +1,7 @@
 @use "../mixins";
 @use "../variables";
 @use "sass:color";
-
+ 
 .body_une_lutte {
     display: flex;
     justify-content: center;
@@ -10,53 +10,54 @@
     margin-top: 200px;
     margin-bottom: 150px;
 }
-
+ 
 .section_une_lutte {
     max-width: 70vw;
     margin: 20px;
 }
-
+ 
 .titre_une_lutte {
     color: #333333;
     margin-bottom: 10px;
     font-size: 36px;
     font-family: "Tex Gyre Adventor Bold";
 }
-
+ 
 .date_une_lutte{
     font-size: 24px;
     color: #555555;
     line-height: 1.6;
-    font-family: "Tex Gyre Adventor Bold";
+    @include mixins.contenu;
 }
-
+ 
 .description_une_lutte{
     font-size: 30px;
     font-family: "Tex Gyre Adventor Bold";
     @include mixins.description-base;
 }
-
+ 
 .image_une_lutte {
+    object-fit: cover;
     border-radius: 70px;
     max-height: 700px;
     margin-top: 20px;
     width: 100%;
 }
-
+ 
 .text_unelutte {
     @include mixins.contenu;
     font-size: 28px;
     @include mixins.phone {
       font-size: 18px;
     }
-    @media screen and (min-width: mixins.$phone) and (max-width: 1025px) {   
+    @media screen and (min-width: mixins.$phone) and (max-width: 1025px) {  
         font-size: 22px;
     }
-    @media screen and (max-height: 1000px) {   
+    @media screen and (max-height: 1000px) {  
         font-size: 18px;
     }
 }
-
+ 
 .link_unelutte {
     @include mixins.contenu;
     font-size: 18px;
@@ -64,10 +65,10 @@
     @include mixins.phone {
       font-size: 18px;
     }
-    @media screen and (min-width: mixins.$phone) and (max-width: 1025px) {   
+    @media screen and (min-width: mixins.$phone) and (max-width: 1025px) {  
         font-size: 20px;
     }
-    @media screen and (max-height: 1000px) {   
+    @media screen and (max-height: 1000px) {  
         font-size: 14px;
     }
 }

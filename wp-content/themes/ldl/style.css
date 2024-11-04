@@ -891,7 +891,8 @@
   .icon1 {
     width: 50px;
     position: absolute;
-    top: 40px;
+    top: 60px;
+    left: 5vw;
   }
 }
 
@@ -899,7 +900,8 @@
   .icon2 {
     width: 50px;
     position: absolute;
-    top: 140px;
+    top: 130px;
+    left: 5vw;
   }
 }
 
@@ -907,7 +909,8 @@
   .icon3 {
     width: 50px;
     position: absolute;
-    top: 240px;
+    top: 200px;
+    left: 5vw;
   }
 }
 
@@ -915,7 +918,8 @@
   .icon4 {
     width: 50px;
     position: absolute;
-    top: 340px;
+    top: 280px;
+    left: 5vw;
   }
 }
 
@@ -923,7 +927,8 @@
   .icon5 {
     width: 50px;
     position: absolute;
-    top: 440px;
+    top: 360px;
+    left: 5vw;
   }
 }
 
@@ -1990,7 +1995,10 @@
   font-size: 24px;
   color: #555555;
   line-height: 1.6;
-  font-family: "Tex Gyre Adventor Bold";
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+  color: #000;
+  line-height: 40px;
 }
 
 .description_une_lutte {
@@ -2001,6 +2009,8 @@
 }
 
 .image_une_lutte {
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 70px;
   max-height: 700px;
   margin-top: 20px;
