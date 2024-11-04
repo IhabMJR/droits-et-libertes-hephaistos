@@ -1,0 +1,50 @@
+@use "../mixins";
+@use "../variables";
+@use "sass:color";
+
+body {
+  overflow: hidden;
+}
+
+.bande_devant {
+  width: 200vw;
+  height: 130px;
+  background: variables.$rouge;
+  rotate: 5deg;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.marquee {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  @include mixins.gros-titre;
+  font-size: 80px;
+  color: #fff;
+  -webkit-text-stroke-color: #fff;
+  -webkit-text-stroke-width: 1px; 
+  &:hover {
+    color: transparent;
+    -webkit-text-stroke-color: #fff;
+    -webkit-text-stroke-width: 1px; 
+    cursor: pointer;
+  }
+}
+
+
+.bande_derriere {
+  width: 200vw;
+  height: 130px;
+  background: variables.$charbon;
+  rotate: -5deg;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: -50%;
+  z-index: -1;
+}

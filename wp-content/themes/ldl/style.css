@@ -2361,6 +2361,63 @@ form .btn_nous_joindre {
   width: 100%;
 }
 
+body {
+  overflow: hidden;
+}
+
+.bande_devant {
+  width: 200vw;
+  height: 130px;
+  background: #B80820;
+  rotate: 5deg;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.marquee {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  font-family: "Tex Gyre Adventor Bold";
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 96px;
+  line-height: 110px;
+  font-size: 80px;
+  color: #fff;
+  -webkit-text-stroke-color: #fff;
+  -webkit-text-stroke-width: 1px;
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .marquee {
+    font-size: 72px;
+    line-height: 65px;
+  }
+}
+.marquee:hover {
+  color: transparent;
+  -webkit-text-stroke-color: #fff;
+  -webkit-text-stroke-width: 1px;
+  cursor: pointer;
+}
+
+.bande_derriere {
+  width: 200vw;
+  height: 130px;
+  background: #575757;
+  rotate: -5deg;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: -50%;
+  z-index: -1;
+}
+
 /*--- Importation des fonts ---*/
 @font-face {
   font-family: "TeX Gyre Adventor Regular";
