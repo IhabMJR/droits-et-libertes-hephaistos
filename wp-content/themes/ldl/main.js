@@ -57,6 +57,9 @@ const carteActualites = document.querySelectorAll(".carte");
   window.open("./page_une_nouvelle.html", "_self")
 });*/
 
+//-- GSAP 404--
+gsap.fromTo('.bande_devant', { marginRight: "-1000px", ease: "power.inOut",}, { marginRight:"-20px"});
+
 //-- Animation bande 404--
 //trouvé sur https://getbutterfly.com/javascript-marquee-a-collection-of-scrolling-text-snippets/
 function initializeMarquee() {
