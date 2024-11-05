@@ -276,13 +276,19 @@
   border: solid #B80820;
   border-radius: 20px;
 }
+@media only screen and (min-width: 500px) and (max-width: 880px) {
+  .navbar .don {
+    margin-top: 10px;
+  }
+}
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .navbar .don {
     display: none;
   }
 }
 .navbar .don:hover {
-  background-color: rgba(1, 1, 1, 0.5);
+  color: #EBEBEB;
+  border-color: #ECDDDD;
 }
 .navbar #dropdownMenuButton {
   font-family: "Tex Gyre Adventor Regular";
@@ -295,6 +301,11 @@
   background-color: rgba(0, 0, 0, 0);
   border: none;
   text-align: start;
+}
+@media only screen and (min-width: 500px) and (max-width: 880px) {
+  .navbar #dropdownMenuButton {
+    margin-top: 10px;
+  }
 }
 .navbar .dropdown-menu {
   background-color: rgba(0, 0, 0, 0);
@@ -2347,8 +2358,10 @@ form .btn_nous_joindre {
 }
 .container_equipe .membre_equipe {
   width: auto;
-  height: 500px;
+  min-width: 550px;
+  height: 550px;
   background-size: cover;
+  filter: grayscale(100%);
   border-radius: 2vw;
   padding: 20px;
 }
@@ -2364,11 +2377,61 @@ form .btn_nous_joindre {
 .container_equipe .membre_equipe.lynda {
   background-image: url(/assets/images/lynda.jpg);
 }
-.container_equipe .membre_equipe_poste {
-  width: 100%;
-}
 .container_equipe .membre_equipe_nom {
   width: 100%;
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+  color: #000;
+  line-height: 40px;
+  margin-top: 20px;
+  width: auto;
+  font-size: 18px;
+  color: #fff;
+  text-align: start;
+  padding: 0 30px;
+  letter-spacing: 0.8px;
+}
+.container_equipe .membre_equipe_nom h3 {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 40px;
+}
+@media screen and (max-width: 1200px) {
+  .container_equipe .membre_equipe_nom h3 {
+    font-size: 28px;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .container_equipe .membre_equipe_nom h3 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+.container_equipe .membre_equipe_nom p {
+  border-radius: 25px;
+}
+.container_equipe .membre_equipe_nom p span {
+  background-color: rgba(136, 136, 136, 0.4);
+  border-radius: 25px;
+  padding: 5px 15px;
+}
+.container_equipe .membre_equipe_details {
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+  color: #000;
+  line-height: 40px;
+  position: absolute;
+  width: 100%;
+  color: #fff;
+  font-size: 24px;
+  text-align: start;
+  bottom: 0;
+  margin: 15px 30px;
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .container_equipe .membre_equipe_details {
+    font-size: 18px;
+  }
 }
 
 .error_container {

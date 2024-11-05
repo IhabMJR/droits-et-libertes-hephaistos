@@ -78,11 +78,16 @@
     color: #fff;
     border: solid variables.$rouge;
     border-radius: 20px;
+
+    @include mixins.tablet {
+      margin-top: 10px;
+    }
     @include mixins.phone {
       display: none;
     }
     &:hover {
-      background-color: rgba(1, 1, 1, 0.5);
+      color: variables.$nuage;
+      border-color: variables.$rose;
     }
   }
   #dropdownMenuButton {
@@ -93,6 +98,10 @@
     background-color: rgba(0, 0, 0, 0);
     border: none;
     text-align: start;
+
+    @include mixins.tablet {
+      margin-top: 10px;
+    }
   }
 
   .dropdown-menu {
