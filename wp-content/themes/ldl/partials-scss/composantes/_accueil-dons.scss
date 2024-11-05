@@ -120,6 +120,7 @@
       color: #fff;
       font-size: 42px;
       border-radius: 70px;
+      transition: background-color 0.5s ease-out;
       &:hover {
         background-color: #000;
         cursor: pointer;

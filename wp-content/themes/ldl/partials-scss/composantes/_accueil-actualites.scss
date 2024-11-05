@@ -147,6 +147,7 @@
   background-color: rgba(0, 0, 0, 0);
   border: solid variables.$rouge 4px;
   border-radius: 40px;
+  transition: box-shadow 0.5s;
   &:hover {
     box-shadow: 0 0 18px rgba(0, 0, 0, 0.3);
   }

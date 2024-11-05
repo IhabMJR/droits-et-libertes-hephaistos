@@ -1130,6 +1130,7 @@
   background-color: rgba(0, 0, 0, 0);
   border: solid #B80820 4px;
   border-radius: 40px;
+  transition: box-shadow 0.5s;
 }
 .toutes-nouvelles:hover {
   box-shadow: 0 0 18px rgba(0, 0, 0, 0.3);
@@ -1296,6 +1297,7 @@
 
 .btn-next {
   width: 80px;
+  transition: filter 0.5s;
 }
 @media only screen and (min-width: 500px) and (max-width: 880px) {
   .btn-next {
@@ -1611,6 +1613,7 @@
   color: #fff;
   font-size: 42px;
   border-radius: 70px;
+  transition: background-color 0.5s ease-out;
 }
 .dons__btn button:hover {
   background-color: #000;
@@ -1998,6 +2001,7 @@
   font-family: "Tex Gyre Adventor Regular";
   font-size: 24px;
   color: #B80820;
+  transition: box-shadow 0.5s;
 }
 .link_page_luttes:hover {
   color: #000;
@@ -2473,16 +2477,18 @@ body:has(.bande_devant) {
 }
 
 .lien_error {
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+  color: #B80820;
   position: absolute;
   left: 50%;
   top: 62%;
   transform: translate(-50%, -50%);
-  text-decoration: underline;
-  color: #B80820;
 }
 .lien_error:hover {
-  text-decoration: none;
   color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .bande_devant, .bande_derriere {

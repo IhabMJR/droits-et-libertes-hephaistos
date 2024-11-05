@@ -157,6 +157,7 @@
     font-family: "Tex Gyre Adventor Regular";
     font-size: 24px;
     color: variables.$rouge;
+    transition: box-shadow 0.5s;
     &:hover {
       color: #000;
       text-decoration: none;

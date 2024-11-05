@@ -9,16 +9,11 @@ body:has(.bande_devant) {
 }
 
 .lien_error {
+  @include mixins.lien;
   position: absolute;
   left: 50%;
   top: 62%;
   transform: translate(-50%, -50%);
-  text-decoration: underline;
-  color: variables.$rouge;
-  &:hover {
-    text-decoration: none;
-    color: #000;
-  }
 }
 
 .bande_devant, .bande_derriere {

@@ -122,6 +122,7 @@
 
 .btn-next {
   width: 80px;
+  transition: filter 0.5s;
   @include mixins.tablet {
     display: flex;
     width: 70px;

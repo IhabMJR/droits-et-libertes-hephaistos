@@ -60,12 +60,12 @@ const carteActualites = document.querySelectorAll(".carte");
 //-- Animation bande 404--
 //trouvé sur https://getbutterfly.com/javascript-marquee-a-collection-of-scrolling-text-snippets/
 function initializeMarquee() {
-  createMarqueeContainer("latest-news");
-  rotateMarquee(marqueeContainers);
-}
-
-function initializeMarquee() {
-  createMarqueeContainer("bandeDons");
+  if (document.body.classList.contains('pageDons')) {
+    createMarqueeContainer("latest-news");
+  }
+  else if (document.body.classList.contains('pageAccueil')) {
+    createMarqueeContainer("bandeDons");
+  }
   rotateMarquee(marqueeContainers);
 }
 
@@ -145,4 +145,5 @@ gsap
   .timeline()
   .from(".bande_devant", { x: "-15000", ease: "power.inOut" })
   .from(".bande_derriere", { x: "15000", ease: "power.inOut" })
-  .from(".bande_devant", { rotate: 0}), ">";
+  .from(".bande_devant", { rotate: 0 }),
+  ">";
