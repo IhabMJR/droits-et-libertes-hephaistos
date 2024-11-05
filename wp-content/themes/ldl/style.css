@@ -2434,24 +2434,46 @@ form .btn_nous_joindre {
   }
 }
 
-.error_container {
+body:has(.bande_devant) {
+  overflow: hidden;
   width: 100vw;
-  height: 100vh;
   max-width: 100%;
-  max-height: 100%;
+}
+
+.lien_error {
+  position: absolute;
+  left: 50%;
+  top: 62%;
+  transform: translate(-50%, -50%);
+  text-decoration: underline;
+  color: #B80820;
+}
+.lien_error:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+.bande_devant, .bande_derriere {
+  position: absolute;
+  width: 150vw;
+  left: -10px;
+  height: 140px;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
   overflow: hidden;
 }
 
 .bande_devant {
-  width: 200vw;
-  height: 130px;
   background: #B80820;
-  rotate: 5deg;
-  margin: 0 auto;
-  position: absolute;
-  top: 50%;
-  text-align: center;
-  overflow: hidden;
+  rotate: 3deg;
+}
+
+.bande_derriere {
+  background: #575757;
+  rotate: -2deg;
+  z-index: -1;
 }
 
 .marquee {
@@ -2479,19 +2501,6 @@ form .btn_nous_joindre {
   color: transparent;
   -webkit-text-stroke-color: #fff;
   -webkit-text-stroke-width: 1px;
-  cursor: pointer;
-}
-
-.bande_derriere {
-  width: 200vw;
-  height: 130px;
-  background: #575757;
-  rotate: -5deg;
-  margin: 0 auto;
-  position: absolute;
-  top: 50%;
-  left: -50%;
-  z-index: -1;
 }
 
 /*--- Importation des fonts ---*/

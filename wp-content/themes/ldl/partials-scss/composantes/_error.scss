@@ -2,24 +2,46 @@
 @use "../variables";
 @use "sass:color";
 
-.error_container {
+body:has(.bande_devant) {
+  overflow: hidden;
   width: 100vw;
-  height: 100vh;
   max-width: 100%;
-  max-height: 100%;
+}
+
+.lien_error {
+  position: absolute;
+  left: 50%;
+  top: 62%;
+  transform: translate(-50%, -50%);
+  text-decoration: underline;
+  color: variables.$rouge;
+  &:hover {
+    text-decoration: none;
+    color: #000;
+  }
+}
+
+.bande_devant, .bande_derriere {
+  position: absolute;
+  width: 150vw;
+  left: -10px;
+  height: 140px;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
   overflow: hidden;
 }
 
 .bande_devant {
-  width: 200vw;
-  height: 130px;
   background: variables.$rouge;
-  rotate: 5deg;
-  margin: 0 auto;
-  position: absolute;
-  top: 50%;
-  text-align: center;
-  overflow: hidden;
+  rotate: 3deg;
+}
+
+.bande_derriere {
+  background: variables.$charbon;
+  rotate: -2deg;
+  z-index: -1;
 }
 
 .marquee {
@@ -35,19 +57,5 @@
     color: transparent;
     -webkit-text-stroke-color: #fff;
     -webkit-text-stroke-width: 1px; 
-    cursor: pointer;
   }
-}
-
-
-.bande_derriere {
-  width: 200vw;
-  height: 130px;
-  background: variables.$charbon;
-  rotate: -5deg;
-  margin: 0 auto;
-  position: absolute;
-  top: 50%;
-  left: -50%;
-  z-index: -1;
 }

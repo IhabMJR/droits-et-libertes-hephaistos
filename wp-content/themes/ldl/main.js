@@ -1,11 +1,11 @@
 //--- Navbar scroll ---
-const navbar = document.querySelector('.navbar');
+const navbar = document.querySelector(".navbar");
 
-window.addEventListener('scroll', () => {
+window.addEventListener("scroll", () => {
   if (window.scrollY >= 56) {
-    navbar.classList.add('navbar-scrolled');
+    navbar.classList.add("navbar-scrolled");
   } else if (window.scrollY < 56) {
-    navbar.classList.remove('navbar-scrolled');
+    navbar.classList.remove("navbar-scrolled");
   }
 });
 
@@ -26,16 +26,16 @@ const swiper = new Swiper(".swiper-hero", {
 const swiperTemoignages = new Swiper(".swiper-temoignages", {
   speed: 400,
   spaceBetween: 30,
-  slidesPerView: 'auto'
+  slidesPerView: "auto",
 });
 
 //--- Swiper actualites ---/
 const swiperActualites = new Swiper(".scroll", {
   speed: 400,
   spaceBetween: 30,
-  slidesPerView: 'auto',
+  slidesPerView: "auto",
   centeredSlides: true,
-  initialSlide: 1
+  initialSlide: 1,
 });
 
 //-- Swiper equipe --//
@@ -58,12 +58,16 @@ const carteActualites = document.querySelectorAll(".carte");
 });*/
 
 //-- GSAP 404--
-gsap.fromTo('.bande_devant', { marginRight: "-1000px", ease: "power.inOut",}, { marginRight:"-20px"});
+gsap
+  .timeline()
+  .from(".bande_devant", { x: "-15000", ease: "power.inOut" })
+  .from(".bande_derriere", { x: "15000", ease: "power.inOut" })
+  .from(".bande_devant", { rotate: 0}), ">";
 
 //-- Animation bande 404--
 //trouvé sur https://getbutterfly.com/javascript-marquee-a-collection-of-scrolling-text-snippets/
 function initializeMarquee() {
-  createMarqueeContainer('latest-news');
+  createMarqueeContainer("latest-news");
   rotateMarquee(marqueeContainers);
 }
 
@@ -79,27 +83,29 @@ const marqueeContainers = [];
 
 function createMarqueeContainer(id) {
   const container = document.getElementById(id);
-  const itemWidth = getObjectWidth(container.getElementsByTagName("span")[0]) + 10;
+  const itemWidth =
+    getObjectWidth(container.getElementsByTagName("span")[0]) + 10;
   const fullWidth = getObjectWidth(container);
   const textContent = container.getElementsByTagName("span")[0].innerHTML;
   container.innerHTML = "";
   const height = container.style.height;
 
   container.onmouseout = () => rotateMarquee(marqueeContainers);
-  
-  container.onmouseover = () => cancelAnimationFrame(marqueeContainers[0].animationID);
+
+  container.onmouseover = () =>
+    cancelAnimationFrame(marqueeContainers[0].animationID);
 
   container.items = [];
   const maxItems = Math.ceil(fullWidth / itemWidth) + 1;
 
   for (let i = 0; i < maxItems; i++) {
-      container.items[i] = document.createElement("div");
-      container.items[i].innerHTML = textContent;
-      container.items[i].style.position = "absolute";
-      container.items[i].style.left = itemWidth * i + "px";
-      container.items[i].style.width = itemWidth + "px";
-      container.items[i].style.height = height;
-      container.appendChild(container.items[i]);
+    container.items[i] = document.createElement("div");
+    container.items[i].innerHTML = textContent;
+    container.items[i].style.position = "absolute";
+    container.items[i].style.left = itemWidth * i + "px";
+    container.items[i].style.width = itemWidth + "px";
+    container.items[i].style.height = height;
+    container.appendChild(container.items[i]);
   }
 
   marqueeContainers.push(container);
@@ -109,21 +115,29 @@ function rotateMarquee(containers) {
   if (!containers) return;
 
   for (let j = containers.length - 1; j > -1; j--) {
-      const maxItems = containers[j].items.length;
+    const maxItems = containers[j].items.length;
 
-      for (let i = 0; i < maxItems; i++) {
-          const itemStyle = containers[j].items[i].style;
-          itemStyle.left = parseInt(itemStyle.left, 10) - 1 + "px";
-      }
+    for (let i = 0; i < maxItems; i++) {
+      const itemStyle = containers[j].items[i].style;
+      itemStyle.left = parseInt(itemStyle.left, 10) - 1 + "px";
+    }
 
-      const firstItemStyle = containers[j].items[0].style;
+    const firstItemStyle = containers[j].items[0].style;
 
-      if (parseInt(firstItemStyle.left, 10) + parseInt(firstItemStyle.width, 10) < 0) {
-          const shiftedItem = containers[j].items.shift();
-          shiftedItem.style.left = parseInt(shiftedItem.style.left) + parseInt(shiftedItem.style.width) * maxItems + "px";
-          containers[j].items.push(shiftedItem);
-      }
+    if (
+      parseInt(firstItemStyle.left, 10) + parseInt(firstItemStyle.width, 10) <
+      0
+    ) {
+      const shiftedItem = containers[j].items.shift();
+      shiftedItem.style.left =
+        parseInt(shiftedItem.style.left) +
+        parseInt(shiftedItem.style.width) * maxItems +
+        "px";
+      containers[j].items.push(shiftedItem);
+    }
   }
 
-  containers[0].animationID = requestAnimationFrame(() => rotateMarquee(containers));
+  containers[0].animationID = requestAnimationFrame(() =>
+    rotateMarquee(containers)
+  );
 }
