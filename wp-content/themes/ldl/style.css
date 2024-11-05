@@ -2371,7 +2371,11 @@ form .btn_nous_joindre {
   width: 100%;
 }
 
-body {
+.error_container {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  max-height: 100%;
   overflow: hidden;
 }
 
