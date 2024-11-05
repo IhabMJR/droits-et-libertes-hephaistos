@@ -83,7 +83,7 @@
 .card_page_luttes p {
     margin: 0;
 }*/
- 
+
 .container_page_luttes {
     position: relative;
     width: 100%;
@@ -91,6 +91,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
+    
 }
  
 .title_lutte{
@@ -114,21 +115,15 @@
 }
  
 .card_page_luttes {
-    width: 40vw;
+    width: 100%;
     border: 3px solid red;
     border-radius: 10px;
     padding: 20px;
-    margin: 30px auto;
+    margin: 40px auto;
     max-width: 500px;
-    @include mixins.phone {
-        width: 70vw;
-      }
-      @include mixins.xl {
-        width: 70vw;
-      }
       @include mixins.desktop {
         max-width: 500px;
-        margin-right: 5vw;
+        margin-right: 200px;
       }
 }
  
@@ -171,3 +166,4 @@
 .card_page_luttes p {
     margin: 0;
 }
+

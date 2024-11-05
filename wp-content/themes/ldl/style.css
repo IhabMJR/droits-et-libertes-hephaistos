@@ -1715,27 +1715,17 @@
 }
 
 .card_page_luttes {
-  width: 40vw;
+  width: 100%;
   border: 3px solid red;
   border-radius: 10px;
   padding: 20px;
-  margin: 30px auto;
+  margin: 40px auto;
   max-width: 500px;
-}
-@media only screen and (min-width: 0) and (max-width: 500px) {
-  .card_page_luttes {
-    width: 70vw;
-  }
-}
-@media only screen and (min-width: 500px) and (max-width: 1200px) {
-  .card_page_luttes {
-    width: 70vw;
-  }
 }
 @media only screen and (min-width: 1400px) {
   .card_page_luttes {
     max-width: 500px;
-    margin-right: 5vw;
+    margin-right: 200px;
   }
 }
 
