@@ -1774,6 +1774,20 @@
   margin: 0;
 }
 
+.tache_partenaire_droit {
+  position: fixed;
+  top: 300px;
+  right: 0;
+  width: 900px;
+}
+
+.tache_partenaire_gauche {
+  position: fixed;
+  top: -300px;
+  left: 0;
+  width: 900px;
+}
+
 .body_une_lutte {
   display: flex;
   justify-content: center;
