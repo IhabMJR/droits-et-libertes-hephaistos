@@ -29,6 +29,13 @@ const swiperTemoignages = new Swiper(".swiper-temoignages", {
   slidesPerView: "auto",
 });
 
+//--- Swiper partenaire ---/
+const swiperPartenaire = new Swiper(".swiper-partenaire", {
+  speed: 400,
+  spaceBetween: 30,
+  slidesPerView: "auto",
+});
+
 //--- Swiper actualites ---/
 const swiperActualites = new Swiper(".scroll", {
   speed: 400,

@@ -344,293 +344,6 @@
   }
 }
 
-/*.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 3fr 2fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 5px;
-  margin-top: 50px;
-  @include mixins.phone {
-    margin: 10px 30px;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr;
-    gap: 10px;
-    position: relative;
-  }
-}
-.grid-icon {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
-  grid-template-rows: 1fr;
-  margin-top: 20px;
-  position: relative;
-}
-.item1 {
-  grid-column-start: 2;
-  grid-row-end: 1;
-  grid-row: 1 / 4;
-  @include mixins.tablet {
-    margin: auto;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 4;
-  }
-}
-.item2 {
-  grid-column-start: 3;
-  grid-row-end: 2;
-  grid-row: 1 / 1;
-  @include mixins.tablet {
-    grid-column-start: 3;
-    grid-column-end: 5;
-  }
-  @include mixins.phone {
-    font-size: 12px;
-    margin: 0px;
-    grid-column-start: 2;
-    grid-row-end: 1;
-  }
-}
-.item3 {
-  grid-column-start: 3;
-  grid-row-end: 3;
-  grid-row: 2;
-  @include mixins.phone {
-    font-size: 12px;
-    margin: 0px;
-    grid-column-start: 2;
-    grid-row-end: 2;
-  }
-}
-.item4 {
-  grid-column-start: 3;
-  grid-row-end: 4;
-  grid-row: 3;
-  margin: auto 0px;
-  @include mixins.tablet {
-    margin: auto 0px;
-  }
-  @include mixins.phone {
-    font-size: 12px;
-    margin: 0px;
-    grid-column-start: 2;
-    grid-row-end: 3;
-  }
-}
-.item5 {
-  grid-column-start: 3;
-  grid-row-end: 5;
-  @include mixins.phone {
-    font-size: 12px;
-    margin: 0px;
-    grid-column-start: 2;
-    grid-row-end: 5;
-  }
-}
-.item6 {
-  grid-column-start: 3;
-  grid-row-end: 6;
-  @include mixins.phone {
-    font-size: 12px;
-    margin: 0px;
-    grid-column-start: 2;
-    grid-row-end: 6;
-  }
-}
-.logo-partenaire {
-  margin: 100px 20px;
-  width: 10vw;
-}
-.partenaire1 {
-  margin-left: 20vw;
-}
-.ligne {
-  background-color: #fff;
-  width: 70vw;
-  height: 0.1vh;
-  grid-row-end: 7;
-  grid-column-start: 2;
-  grid-column-end: 6;
-  @include mixins.phone {
-    display: none;
-  }
-}
-.logo-footer {
-  width: 10vw;
-  @include mixins.tablet {
-    width: 16vw;
-  }
-  @include mixins.phone {
-    margin: 0px;
-    width: 16vw;
-    grid-column-start: 2;
-    grid-row-end: -7;
-    bottom: 0px;
-    left: 20vw;
-  }
-}
-.text-adresse {
-  color: #fff;
-  margin-left: 20px;
-  @include mixins.text-footer;
-  @include mixins.phone {
-    font-size: 12px;
-    margin: 0px;
-  }
-  @include mixins.tablet {
-    font-size: 12px;
-   }
-}
-.text-contact {
-  color: #fff;
-  margin-left: 20px;
-  @include mixins.text-footer;
-  @include mixins.phone {
-    font-size: 12px;
-  }
-  @include mixins.tablet {
-    font-size: 12px;
-   }
-}
-
-.grid_icon{
-  display: grid;
-  grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr 3fr;
-  @include mixins.phone {
-    grid-template-rows: 1fr 1fr;
-    margin-left: 50px;
-    gap: 10px;
-    position: absolute;
-    top: 2vw;
-  }
-  @include mixins.tablet {
-    gap: 30px;
-    margin-right: 10vw;
-  }
-}
-
-.icon {
-  width: 10vw;
-  margin: auto;
-  max-width: 70px;
-  grid-column-start: 2;
-   @include mixins.phone {
-    grid-row-start: 1;
-    margin: auto;
-  }
-}
-
-.icon1 {
-  grid-column-start: 2;
-  @include mixins.phone {
-    width: 50px;
-    grid-column-start: 1;
-    grid-row-start: 1;
-  }
-}
-
-.icon2 {
-  grid-column-start: 3;
-  @include mixins.phone {
-    width: 50px;
-    grid-column-start: 1;
-    grid-row-start: 2;
-  }
-}
-
-.icon3 {
-  grid-column-start: 4;
-  @include mixins.phone {
-    width: 50px;
-    grid-column-start: 1;
-    grid-row-start: 3;
-  }
-}
-
-.icon4 {
-  width: 60px;
-  grid-column-start: 5;
-  @include mixins.phone {
-    width: 50px;
-    grid-column-start: 1;
-    grid-row-start: 4;
-  }
-}
-
-.icon5 {
-  grid-column-start: 6;
-  @include mixins.phone {
-    width: 50px;
-    grid-column-start: 1;
-    grid-row-start: 5;
-  }
-}
-.text-copyright {
-  text-align: center;
-    @include mixins.phone {
-      font-size: 12px;
-      margin: 0px;
-      grid-column-start: 2;
-      grid-row-start: 9;
-    }
-  @include mixins.text-footer;
-  @include mixins.tablet {
-    font-size: 12px;
-   }
-}
-.btn {
-  color: #fff;
-  border: solid;
-  width: 20vw;
-  height: 5vw;
-  max-width: 17vw;
-  max-height: 5vw;
-  border-radius: 20px;
-  border-color: variables.$rouge;
-  grid-column-end: 5;
-  grid-row-end: 3;
-  margin-left: auto;
-  @include mixins.text-footer;
-  @include mixins.phone {
-    border-radius: 5vw;
-    font-size: 10px;
-    grid-column-start: 2;
-    grid-row-end: 7;
-    width: 30vw;
-    height: 7vw;
-    margin-left: 0px;
-  }
-  @include mixins.tablet {
-    width: 30vw;
-    max-width: 22vw;
-    height: 7vw;
-    grid-column-start: 4;
-    grid-column-end: 6;
-    margin: auto;
-    border-radius: 4vw;
-    font-size: 14px;
-  }
-}
-.btn:hover {
-  color: variables.$nuage;
-  border-color: variables.$rose;
-}
-.arrow {
-  grid-column-start: 4;
-  grid-row-start: 2;
-  grid-row-end: 4;
-  width: 7vw;
-  margin-left: 5vw;
-  margin-top: 4vw;
-  @include mixins.tablet {
-    margin-left: 5vw;
-    margin-top: 5vw;
-  }
-  @include mixins.phone {
-    display: none;
-  }
-}*/
 .overall-container {
   display: flex;
   justify-content: center;
@@ -960,6 +673,64 @@
   .text-copyright {
     font-size: 12px;
   }
+}
+
+/* section des partenaire*/
+.contenu_partenaire {
+  display: flex;
+  overflow-x: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+.img_partenaire {
+  width: 100%;
+  max-width: 500px;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .img_partenaire {
+    width: 100%;
+    max-width: 150px;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 880px) {
+  .img_partenaire {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+.carte-partenaire {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .carte-partenaire {
+    width: 100%;
+    height: 150px;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 880px) {
+  .carte-partenaire {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+.swiper-partenaire {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 20px 0;
 }
 
 /*--- Importation des partials ---*/
