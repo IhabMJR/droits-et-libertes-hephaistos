@@ -9,6 +9,7 @@
     flex-direction: column;
     margin-top: 200px;
     margin-bottom: 150px;
+    position: relative;
 }
  
 .section_une_lutte {
@@ -45,6 +46,7 @@
 }
  
 .text_unelutte {
+    text-align: justify;
     @include mixins.contenu;
     font-size: 28px;
     @include mixins.phone {
@@ -71,4 +73,46 @@
     @media screen and (max-height: 1000px) {  
         font-size: 14px;
     }
+}
+
+.btn_une_lutte {
+    display: flex;
+    border: solid;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    max-height: 5vw;
+    border-radius: 10px;
+    border-color: variables.$rouge;
+    margin-left: auto;
+    color: variables.$rouge;
+    bottom: 20px;    
+    @include mixins.text-footer;
+    @include mixins.phone {
+      border-radius: 15px;
+      font-size: 10px;
+      width: 30vw;
+      height: 7vw;
+      min-width: 200px;
+      min-height: 50px;
+      margin-left: 0px;
+      margin: auto;
+    }
+    @include mixins.tablet {
+      width: 30vw;
+      min-width: 100px;
+      margin: auto;
+      border-radius: 15px;
+      font-size: 14px;
+    }
+  }
+ 
+  .btn_une_lutte:hover {
+    border-color: variables.$rose;
+  }
+
+  .Retour_lutte {
+    color: black;
+    font-size: large;
 }

@@ -1795,6 +1795,7 @@
   flex-direction: column;
   margin-top: 200px;
   margin-bottom: 150px;
+  position: relative;
 }
 
 .section_une_lutte {
@@ -1836,6 +1837,7 @@
 }
 
 .text_unelutte {
+  text-align: justify;
   font-family: "Tex Gyre Adventor Regular";
   font-size: 24px;
   color: #000;
@@ -1880,6 +1882,54 @@
   .link_unelutte {
     font-size: 14px;
   }
+}
+
+.btn_une_lutte {
+  display: flex;
+  border: solid;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  max-height: 5vw;
+  border-radius: 10px;
+  border-color: #B80820;
+  margin-left: auto;
+  color: #B80820;
+  bottom: 20px;
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 20px;
+  color: #fff;
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .btn_une_lutte {
+    border-radius: 15px;
+    font-size: 10px;
+    width: 30vw;
+    height: 7vw;
+    min-width: 200px;
+    min-height: 50px;
+    margin-left: 0px;
+    margin: auto;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 880px) {
+  .btn_une_lutte {
+    width: 30vw;
+    min-width: 100px;
+    margin: auto;
+    border-radius: 15px;
+    font-size: 14px;
+  }
+}
+
+.btn_une_lutte:hover {
+  border-color: #ECDDDD;
+}
+
+.Retour_lutte {
+  color: black;
+  font-size: large;
 }
 
 /*--- Importation des partials ---*/
