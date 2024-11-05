@@ -57,17 +57,15 @@ const carteActualites = document.querySelectorAll(".carte");
   window.open("./page_une_nouvelle.html", "_self")
 });*/
 
-//-- GSAP 404--
-gsap
-  .timeline()
-  .from(".bande_devant", { x: "-15000", ease: "power.inOut" })
-  .from(".bande_derriere", { x: "15000", ease: "power.inOut" })
-  .from(".bande_devant", { rotate: 0}), ">";
-
 //-- Animation bande 404--
 //trouvé sur https://getbutterfly.com/javascript-marquee-a-collection-of-scrolling-text-snippets/
 function initializeMarquee() {
   createMarqueeContainer("latest-news");
+  rotateMarquee(marqueeContainers);
+}
+
+function initializeMarquee() {
+  createMarqueeContainer("bandeDons");
   rotateMarquee(marqueeContainers);
 }
 
@@ -141,3 +139,10 @@ function rotateMarquee(containers) {
     rotateMarquee(containers)
   );
 }
+
+//-- GSAP 404--
+gsap
+  .timeline()
+  .from(".bande_devant", { x: "-15000", ease: "power.inOut" })
+  .from(".bande_derriere", { x: "15000", ease: "power.inOut" })
+  .from(".bande_devant", { rotate: 0}), ">";

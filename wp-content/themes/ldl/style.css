@@ -31,9 +31,9 @@
     bottom: 320px;
   }
 }
-@media only screen and (min-width: 500px) and (max-width: 880px) {
+@media screen and (max-height: 2240px) {
   .revue {
-    bottom: 400px;
+    bottom: 500px;
   }
 }
 .revue .image {
@@ -1474,24 +1474,56 @@
   background: #cfcfcf;
 }
 
-.bande_dons {
-  width: 100vw;
+.contenant_bande_dons {
+  position: relative;
+  width: 150vw;
+  left: -10px;
+  height: 140px;
   margin: 0 auto;
-  z-index: 1;
-}
-@media only screen and (min-width: 0) and (max-width: 500px) {
-  .bande_dons {
-    width: 200vw;
-  }
+  bottom: -70px;
+  transform: translateY(-50%);
+  text-align: center;
+  overflow: hidden;
+  background: #B80820;
+  rotate: 3deg;
 }
 
-.contenant_bande_dons {
-  max-width: 100%;
-  overflow: hidden;
+.contenant_bande_dons.avant {
+  z-index: 4;
+}
+
+.contenant_bande_dons.derriere {
+  rotate: -2deg;
+  top: -70px;
+  background: #575757;
+}
+
+#bandeDons {
   display: flex;
-  justify-content: center;
-  margin-top: -150px;
-  margin-bottom: -100px;
+  align-items: center;
+  white-space: nowrap;
+  font-family: "Tex Gyre Adventor Bold";
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 96px;
+  line-height: 110px;
+  font-size: 50px;
+  text-transform: lowercase;
+  color: #fff;
+  -webkit-text-stroke-color: #fff;
+  -webkit-text-stroke-width: 1px;
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  #bandeDons {
+    font-size: 72px;
+    line-height: 65px;
+  }
+}
+#bandeDons:hover {
+  color: transparent;
+  -webkit-text-stroke-color: #fff;
+  -webkit-text-stroke-width: 1px;
 }
 
 .dons {
@@ -2519,6 +2551,10 @@ body:has(.bande_devant) {
 
 body {
   background-color: #f4f4f4;
+}
+
+main {
+  overflow-x: hidden;
 }
 
 .rouge {

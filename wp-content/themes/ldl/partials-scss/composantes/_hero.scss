@@ -28,8 +28,8 @@
       height: 250px;
       bottom: 320px;
     }
-    @include mixins.tablet {
-      bottom: 400px;
+    @media screen and (max-height: 2240px) {
+      bottom: 500px;
     }
     .image {
       width: 200px;

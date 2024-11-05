@@ -2,23 +2,45 @@
 @use "../variables";
 @use "sass:color";
 
-.bande_dons {
-  width: 100vw;
+.contenant_bande_dons {
+  position: relative;
+  width: 150vw;
+  left: -10px;
+  height: 140px;
   margin: 0 auto;
-  @include mixins.phone {
-    width: 200vw;
-  }
-  z-index: 1;
+  bottom: -70px;
+  transform: translateY(-50%);
+  text-align: center;
+  overflow: hidden;
+  background: variables.$rouge;
+  rotate: 3deg;
 }
 
-.contenant_bande_dons {
-  max-width: 100%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  margin-top: -150px;
-  margin-bottom: -100px;
+.contenant_bande_dons.avant {
+  z-index: 4;
+}
 
+.contenant_bande_dons.derriere {
+  rotate: -2deg;
+  top: -70px;
+  background: variables.$charbon;
+} 
+
+#bandeDons {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    @include mixins.gros-titre;
+    font-size: 50px;
+    text-transform: lowercase;
+    color: #fff;
+    -webkit-text-stroke-color: #fff;
+    -webkit-text-stroke-width: 1px; 
+    &:hover {
+      color: transparent;
+      -webkit-text-stroke-color: #fff;
+      -webkit-text-stroke-width: 1px; 
+    }
 }
 
 .dons {
