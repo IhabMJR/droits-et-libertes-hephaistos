@@ -49,6 +49,17 @@ const swiperEquipe = new Swiper(".swiper.equipe", {
   },
 });
 
+//-- Swiper luttes --//
+const swiperLuttes = new Swiper(".swiper.luttes", {
+  speed: 400,
+  spaceBetween: 10,
+  loop: true,
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+});
+
 //-- Href to nouvelle --//
 const cartePrincipale = document.querySelector(".carte_principale");
 const carteActualites = document.querySelectorAll(".carte");

@@ -1136,15 +1136,6 @@
   box-shadow: 0 0 18px rgba(0, 0, 0, 0.3);
 }
 
-.contenant_lutte {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 100px;
-  max-width: 1550px;
-  margin: 0 auto;
-  margin-bottom: 120px;
-}
-
 .img_lutte {
   width: 50%;
   -o-object-fit: cover;
@@ -1175,9 +1166,12 @@
   display: flex;
   height: auto;
   background-color: #fff;
+  max-width: 1550px;
+  margin: 0 auto;
   border-radius: 70px;
   position: relative;
   text-align: left;
+  margin-bottom: 120px;
 }
 @media only screen and (min-width: 500px) and (max-width: 880px) {
   .luttes_cartes {
@@ -1280,18 +1274,20 @@
 .btn_container {
   position: absolute;
   bottom: -40px;
-  align-self: center;
+  right: 18%;
 }
 @media only screen and (min-width: 500px) and (max-width: 880px) {
   .btn_container {
     display: flex;
     bottom: -35px;
+    right: 35%;
   }
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .btn_container {
     display: flex;
     bottom: -35px;
+    right: 35%;
   }
 }
 

@@ -2,15 +2,6 @@
 @use "../variables";
 @use "sass:color";
 
-.contenant_lutte {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 100px;
-  max-width: 1550px;
-  margin: 0 auto;
-  margin-bottom: 120px;
-}
-
 .img_lutte {
   width: 50%;
   object-fit: cover;
@@ -36,10 +27,12 @@
   display: flex;
   height: auto;
   background-color: #fff;
+  max-width: 1550px;
+  margin: 0 auto;
   border-radius: 70px;
   position: relative;
   text-align: left;
-
+  margin-bottom: 120px;
   @include mixins.tablet {
     flex-direction: column;
     width: 100vw;
@@ -109,14 +102,17 @@
 .btn_container {
   position: absolute;
   bottom: -40px;
-  align-self: center;
+  right: 18%;
+
   @include mixins.tablet {
     display: flex;
     bottom: -35px;
+    right: 35%;
   }
   @include mixins.phone {
     display: flex;
     bottom: -35px;
+    right: 35%;
   }
 }
 
