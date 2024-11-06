@@ -942,7 +942,7 @@
   border-radius: 70px;
   position: relative;
   text-align: left;
-  margin-bottom: 120px;
+  margin-bottom: 100px;
 }
 @media only screen and (min-width: 500px) and (max-width: 880px) {
   .luttes_cartes {
@@ -1716,7 +1716,7 @@
 
 .card_page_luttes {
   width: 100%;
-  border: 3px solid red;
+  border: 5px solid #B80820;
   border-radius: 10px;
   padding: 20px;
   margin: 40px auto;
