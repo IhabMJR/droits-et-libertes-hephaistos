@@ -34,25 +34,25 @@
   }
 
   .membre_equipe {
-    width: auto;
-    min-width: 550px;
+    max-width: 550px;
     height: 550px;
     background-size: cover;
     filter: grayscale(100%);
     border-radius: 2vw;
     padding: 20px;
+    transition: 0.5s;
 
     &.laurence {
-      background-image: url(/assets/images/laurence.jpg);
+      background-image: url(./assets/images/laurence.jpg);
     }
     &.karina {
-      background-image: url(/assets/images/karina.jpg);
+      background-image: url(./assets/images/karina.jpg);
     }
     &.elisabeth {
-      background-image: url(/assets/images/elisabeth.jpg);
+      background-image: url(./assets/images/elisabeth.jpg);
     }
     &.lynda {
-      background-image: url(/assets/images/lynda.jpg);
+      background-image: url(./assets/images/lynda.jpg);
     }
     &_nom {
       width: 100%;
@@ -99,5 +99,19 @@
         font-size: 18px;
       }
     }
+    &:hover {
+      filter: grayscale(20%);
+    }
   }
+}
+
+.modal_equipe {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.9);
 }

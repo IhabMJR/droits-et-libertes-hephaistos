@@ -49,11 +49,24 @@ const swiperActualites = new Swiper(".scroll", {
 const swiperEquipe = new Swiper(".swiper.equipe", {
   speed: 400,
   spaceBetween: 30,
-  slidesPerView: 2.5,
   pagination: {
     el: ".swiper-pagination",
     type: "bullets",
   },
+  breakpoints: {
+    500: {
+      slidesPerView: 1.1,
+      spaceBetween: 20
+    },
+    800: {
+      slidesPerView: 1.5,
+      spaceBetween: 20
+    },
+    1400: {
+      slidesPerView: 2.5,
+      spaceBetween: 20
+    }
+  }
 });
 
 //-- Swiper luttes --//

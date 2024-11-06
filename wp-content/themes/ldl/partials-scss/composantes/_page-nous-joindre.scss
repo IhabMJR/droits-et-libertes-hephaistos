@@ -52,7 +52,6 @@ form {
   }
 
   .btn_nous_joindre {
-    @include mixins.description-base;
     @include mixins.contenu;
     min-width: 8vw;
     padding: 5px 20px;
@@ -61,5 +60,9 @@ form {
     color: #000;
     border: solid variables.$rouge;
     border-radius: 20px;
+
+    &:hover {
+      filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
+    }
   }
 }
