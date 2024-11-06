@@ -58,12 +58,18 @@ const swiperEquipe = new Swiper(".swiper.equipe", {
 
 //-- Swiper luttes --//
 const swiperLuttes = new Swiper(".swiper.luttes", {
-  speed: 400,
+  speed: 0,
   spaceBetween: 10,
   loop: true,
   navigation: {
-    nextEl: '.button-next',
-    prevEl: '.button-prev',
+    nextEl: ".button-next",
+    prevEl: ".button-prev",
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    880: {
+      speed: 400,
+    },
   },
 });
 
@@ -78,10 +84,9 @@ const carteActualites = document.querySelectorAll(".carte");
 //-- Animation bande 404--
 //trouvé sur https://getbutterfly.com/javascript-marquee-a-collection-of-scrolling-text-snippets/
 function initializeMarquee() {
-  if (document.body.classList.contains('pageDons')) {
+  if (document.body.classList.contains("pageDons")) {
     createMarqueeContainer("latest-news");
-  }
-  else if (document.body.classList.contains('pageAccueil')) {
+  } else if (document.body.classList.contains("pageAccueil")) {
     createMarqueeContainer("bandeDons");
   }
   rotateMarquee(marqueeContainers);

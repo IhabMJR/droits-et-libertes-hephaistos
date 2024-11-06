@@ -56,6 +56,10 @@ main {
   background-color: #000;
 }
 
+footer {
+  overflow-x: hidden;
+}
+
 a {
   @include mixins.lien;
 }

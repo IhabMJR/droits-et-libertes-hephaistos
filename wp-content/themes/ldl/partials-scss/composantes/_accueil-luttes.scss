@@ -33,13 +33,23 @@
   position: relative;
   text-align: left;
   margin-bottom: 100px;
+  background-image: url("./assets/images/fond_lutte_actualite.png");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: bottom right;
   @include mixins.tablet {
+    background-size: 70%;
     flex-direction: column;
     width: 100vw;
+    max-width: 100%;
+    background-position: bottom left;
   }
   @include mixins.phone {
+    background-size: 80%;
+    background-position: bottom left;
     flex-direction: column;
     width: 100vw;
+    max-width: 100%;
   }
 }
 
@@ -50,17 +60,13 @@
   padding: 50px;
   width: 100%;
   height: 100%;
-  position: relative;
-  background-image: url("./assets/images/fond_lutte_actualite.png");
-  background-repeat: no-repeat;
-  background-size: 70%;
-  background-position: bottom left;
+
   @include mixins.tablet {
     background-image: none;
   }
   @include mixins.phone {
     background-image: none;
-      padding: 40px;
+    padding: 40px;
   }
 }
 
@@ -84,10 +90,15 @@
   }
 }
 
+.para_lutte {
+  max-width: 80vw;
+}
+
 .text_lutte {
   @include mixins.contenu;
-  width: 100%;
-  max-width: 600px;
+  width: 100vw;
+  max-width: 100%;
+  min-width: 0;
   margin: 30px 0 30px 0;
   @include mixins.phone {
     line-height: 38px;
@@ -102,17 +113,18 @@
 .btn_container {
   position: absolute;
   bottom: -40px;
-  right: 18%;
-
+  left: 75%;
+  transform: translateX(-50%);
+  z-index: 1;
   @include mixins.tablet {
     display: flex;
     bottom: -35px;
-    right: 35%;
+    left: 50%;
   }
   @include mixins.phone {
     display: flex;
     bottom: -35px;
-    right: 35%;
+    left: 50%;
   }
 }
 
