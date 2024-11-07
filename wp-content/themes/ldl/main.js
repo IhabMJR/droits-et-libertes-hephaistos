@@ -201,14 +201,17 @@ const bandeProjet = document.querySelector('.bande_projet');
 
 //-- Modal equipe --//
 const modalEquipe = document.querySelector(".modal_equipe");
-const membreEquipe = document.querySelector(".membre_equipe");
+const membresEquipe = document.querySelectorAll(".membre_equipe.laurence, .membre_equipe.karina, .membre_equipe.elisabeth, .membre_equipe.lynda");
+
 const modalBtnFermer = document.querySelector(".modal_equipe_btn");
 
 function showModal() {
   modalEquipe.style.display = "flex";
 }
 
-membreEquipe.addEventListener("click", () => showModal());
+membresEquipe.forEach(membre => {
+  membre.addEventListener("click", () => showModal());
+});
 
 function noModal() {
   modalEquipe.style.display = "none";
