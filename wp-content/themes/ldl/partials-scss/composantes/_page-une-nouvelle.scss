@@ -148,13 +148,17 @@
   cursor: pointer;
 }
 
-.contenant_bande_dons.articles {
-  @media screen and (max-width: 1580px) {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
+.bande.articles {
+  width: 100vw;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.bande.articles img {
+  width: 100vw;
+  max-width: 100%;
 }
 
 .actualites__cartes.liste {
-  margin-bottom: 20px;
+  margin-bottom: 100px;
 }

@@ -90,10 +90,6 @@ const swiperLuttes = new Swiper(".swiper.luttes", {
 const cartePrincipale = document.querySelector(".carte_principale");
 const carteActualites = document.querySelectorAll(".carte");
 
-/*cartePrincipale.addEventListener("click", () => {
-  window.open("./page_une_nouvelle.html", "_self")
-});*/
-
 //-- Animation bande 404--
 //trouvé sur https://getbutterfly.com/javascript-marquee-a-collection-of-scrolling-text-snippets/
 function initializeMarquee() {
@@ -188,3 +184,8 @@ if (document.body.classList.contains("pageDons")) {
   .from(".bande_devant", { rotate: 0 }),
   ">";
 }
+
+//Ouvre la page d'une nouvelle
+cartePrincipale.addEventListener("click", () => {
+  window.open("./page_une_nouvelle.html", "_self")
+});
