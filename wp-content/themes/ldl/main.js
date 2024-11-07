@@ -56,34 +56,34 @@ const swiperEquipe = new Swiper(".swiper.equipe", {
   breakpoints: {
     500: {
       slidesPerView: 1.1,
-      spaceBetween: 20
+      spaceBetween: 20,
     },
     800: {
       slidesPerView: 1.5,
-      spaceBetween: 20
+      spaceBetween: 20,
     },
     1400: {
       slidesPerView: 2.5,
-      spaceBetween: 20
-    }
-  }
+      spaceBetween: 20,
+    },
+  },
 });
 
 //-- Swiper luttes --//
 const swiperLuttes = new Swiper(".swiper.luttes", {
-  speed: 0,
-  spaceBetween: 10,
+  speed: 400,
+  spaceBetween: 0,
   loop: true,
+  observer: true,
+  observeParents: true,
+  direction: "horizontal",
+  parallax: true,
+  touchEventsTarget: "wrapper",
+  slidesPerView: 'auto',
   navigation: {
     nextEl: ".button-next",
     prevEl: ".button-prev",
-  },
-  breakpoints: {
-    // when window width is >= 320px
-    880: {
-      speed: 400,
-    },
-  },
+  }
 });
 
 //-- Href to nouvelle --//
@@ -99,10 +99,13 @@ const carteActualites = document.querySelectorAll(".carte");
 function initializeMarquee() {
   if (document.body.classList.contains("pageDons")) {
     createMarqueeContainer("latest-news");
+    rotateMarquee(marqueeContainers);
   } else if (document.body.classList.contains("pageAccueil")) {
     createMarqueeContainer("bandeDons");
+    rotateMarquee(marqueeContainers);
+  } else {
+    //empty on purpose
   }
-  rotateMarquee(marqueeContainers);
 }
 
 window.onload = initializeMarquee;
@@ -177,9 +180,11 @@ function rotateMarquee(containers) {
 }
 
 //-- GSAP 404--
-gsap
+if (document.body.classList.contains("pageDons")) {
+  gsap
   .timeline()
   .from(".bande_devant", { x: "-15000", ease: "power.inOut" })
   .from(".bande_derriere", { x: "15000", ease: "power.inOut" })
   .from(".bande_devant", { rotate: 0 }),
   ">";
+}

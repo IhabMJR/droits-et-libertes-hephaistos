@@ -12,7 +12,7 @@ body:has(.bande_devant) {
   @include mixins.lien;
   position: absolute;
   left: 50%;
-  top: 62%;
+  top: 70vh;
   transform: translate(-50%, -50%);
 }
 
