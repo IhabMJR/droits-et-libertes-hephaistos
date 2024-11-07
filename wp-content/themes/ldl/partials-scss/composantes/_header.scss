@@ -14,11 +14,10 @@
 }
 
 .navbar {
-  top: 60px;
+  top: 50px;
   z-index: 1010;
   padding: 25px 0;
   transition: all 0.4s;
-
   &-scrolled {
     background-color: #000000;
   }
@@ -66,6 +65,9 @@
     @include mixins.contenu;
     margin: 0 10px 0 10px;
     font-size: 20px;
+    @media screen and (max-width: 1230px) {
+      font-size: 18px;
+    }
     color: #fff;
     &:hover {
       color: variables.$rouge;

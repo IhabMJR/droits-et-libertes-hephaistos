@@ -7,9 +7,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 200px;
     margin-bottom: 150px;
     position: relative;
+    max-width: 1500px;
+    margin: 200px auto;
 }
  
 .article_lutte {
@@ -21,8 +22,9 @@ margin-top: 50px;
 }
  
 .section_une_lutte {
-    max-width: 70vw;
-    margin: 20px;
+  @media screen and (max-width: 1500px) {
+    margin: 0 20px;
+  }
 }
  
 .titre_une_lutte {
