@@ -2328,6 +2328,7 @@ form .btn_nous_joindre:hover {
   background-color: #EBEBEB;
   border-radius: 25px;
   padding: 25px;
+  max-width: 1500px;
 }
 .modal_equipe_fond_titre {
   font-family: "Tex Gyre Adventor Bold";

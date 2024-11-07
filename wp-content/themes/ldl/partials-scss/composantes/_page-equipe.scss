@@ -122,6 +122,7 @@
     background-color: variables.$nuage;
     border-radius: 25px;
     padding: 25px;
+    max-width: 1500px;
 
     &_titre {
       @include mixins.petit-titre-bold;
