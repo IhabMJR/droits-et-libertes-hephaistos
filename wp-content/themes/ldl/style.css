@@ -198,6 +198,8 @@
 }
 
 .navbar {
+  top: 60px;
+  z-index: 1010;
   padding: 25px 0;
   transition: all 0.4s;
 }
@@ -938,22 +940,33 @@
   height: auto;
   background-color: #fff;
   max-width: 1550px;
+  min-width: 0;
   margin: 0 auto;
   border-radius: 70px;
   position: relative;
   text-align: left;
   margin-bottom: 100px;
+  background-image: url("./assets/images/fond_lutte_actualite.png");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: bottom right;
 }
 @media only screen and (min-width: 500px) and (max-width: 880px) {
   .luttes_cartes {
+    background-size: 70%;
     flex-direction: column;
     width: 100vw;
+    max-width: 100%;
+    background-position: bottom left;
   }
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .luttes_cartes {
+    background-size: 80%;
+    background-position: bottom left;
     flex-direction: column;
     width: 100vw;
+    max-width: 100%;
   }
 }
 
@@ -964,11 +977,6 @@
   padding: 50px;
   width: 100%;
   height: 100%;
-  position: relative;
-  background-image: url("./assets/images/fond_lutte_actualite.png");
-  background-repeat: no-repeat;
-  background-size: 70%;
-  background-position: bottom left;
 }
 @media only screen and (min-width: 500px) and (max-width: 880px) {
   .text_container {
@@ -1015,13 +1023,18 @@
   }
 }
 
+.para_lutte {
+  max-width: 80vw;
+}
+
 .text_lutte {
   font-family: "Tex Gyre Adventor Regular";
   font-size: 24px;
   color: #000;
   line-height: 40px;
-  width: 100%;
-  max-width: 600px;
+  width: 100vw;
+  max-width: 100%;
+  min-width: 0;
   margin: 30px 0 30px 0;
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
@@ -1045,20 +1058,22 @@
 .btn_container {
   position: absolute;
   bottom: -40px;
-  right: 18%;
+  left: 75%;
+  transform: translateX(-50%);
+  z-index: 1;
 }
 @media only screen and (min-width: 500px) and (max-width: 880px) {
   .btn_container {
     display: flex;
     bottom: -35px;
-    right: 35%;
+    left: 50%;
   }
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .btn_container {
     display: flex;
     bottom: -35px;
-    right: 35%;
+    left: 50%;
   }
 }
 
@@ -1679,11 +1694,14 @@
 }*/
 .container_page_luttes {
   position: relative;
+  margin: 0 auto;
+  max-width: 1500px;
   width: 100%;
   margin-top: 150px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
+  margin-bottom: 150px;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 50px;
 }
 
 .title_lutte {
@@ -1715,18 +1733,9 @@
 }
 
 .card_page_luttes {
-  width: 100%;
   border: 5px solid #B80820;
   border-radius: 10px;
   padding: 20px;
-  margin: 40px auto;
-  max-width: 500px;
-}
-@media only screen and (min-width: 1400px) {
-  .card_page_luttes {
-    max-width: 500px;
-    margin-right: 200px;
-  }
 }
 
 .image_of_lutte {
@@ -1751,7 +1760,7 @@
 }
 
 .image_lutte_page {
-  width: 100%;
+  grid-column: 1/3;
 }
 
 .link_page_luttes {
@@ -2318,7 +2327,7 @@ body:has(.bande_devant) {
   color: #B80820;
   position: absolute;
   left: 50%;
-  top: 62%;
+  top: 70vh;
   transform: translate(-50%, -50%);
 }
 .lien_error:hover {
@@ -2377,6 +2386,60 @@ body:has(.bande_devant) {
   -webkit-text-stroke-width: 1px;
 }
 
+.bande_projet {
+  /*background-color: variables.$charbon;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+  position: sticky;*/
+  background-color: #575757;
+  padding: 10px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  position: relative;
+}
+
+.text_bande {
+  position: relative;
+  text-align: center;
+  color: #EBEBEB;
+  font-size: 1vw;
+}
+@media only screen and (min-width: 500px) and (max-width: 1200px) {
+  .text_bande {
+    font-size: 1vw;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 880px) {
+  .text_bande {
+    font-size: 1vw;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .text_bande {
+    font-size: 10px;
+  }
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #EBEBEB;
+  font-size: 1.5rem;
+  padding: 5px;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+
+.close-btn:hover {
+  color: red;
+}
+
 /*--- Importation des fonts ---*/
 @font-face {
   font-family: "TeX Gyre Adventor Regular";
@@ -2409,6 +2472,10 @@ main {
 
 .navbar-autre-page {
   background-color: #000;
+}
+
+footer {
+  overflow-x: hidden;
 }
 
 a {

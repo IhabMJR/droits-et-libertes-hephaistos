@@ -188,3 +188,15 @@ if (document.body.classList.contains("pageDons")) {
   .from(".bande_devant", { rotate: 0 }),
   ">";
 }
+
+//-- button de bande --
+const closeButton = document.querySelector('.close-btn');
+const bandeProjet = document.querySelector('.bande_projet');
+ 
+ 
+closeButton.addEventListener('click', function() {
+  bandeProjet.style.display = 'none';
+ 
+  navbar.style.top = '0';
+  navbar.classList.remove('scrolled');
+});

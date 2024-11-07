@@ -1,0 +1,51 @@
+@use "../mixins";
+@use "../variables";
+@use "sass:color";
+ 
+.bande_projet {
+    /*background-color: variables.$charbon;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    position: sticky;*/
+    background-color: variables.$charbon;
+    padding: 10px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    position: relative;
+}
+ 
+.text_bande {
+    position: relative;
+    text-align: center;
+    color: variables.$nuage;
+    font-size: 1vw;
+    @include mixins.xl {
+        font-size: 1vw;
+      }
+      @include mixins.tablet {
+        font-size: 1vw;
+      }
+      @include mixins.phone {
+        font-size: 10px;
+      }
+}
+ 
+.close-btn {
+    background: none;
+    border: none;
+    color: variables.$nuage;
+    font-size: 1.5rem;
+    padding: 5px;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+ 
+.close-btn:hover {
+    color: red;
+  }
