@@ -1811,6 +1811,14 @@
   position: relative;
 }
 
+.article_lutte {
+  border-bottom: 2px solid black;
+}
+
+.article_lutte_text {
+  margin-top: 50px;
+}
+
 .section_une_lutte {
   max-width: 70vw;
   margin: 20px;
@@ -1820,6 +1828,7 @@
   color: #333333;
   margin-bottom: 10px;
   font-size: 36px;
+  margin-top: 50px;
   font-family: "Tex Gyre Adventor Bold";
 }
 
@@ -1835,14 +1844,26 @@
 
 .description_une_lutte {
   font-size: 30px;
+  text-align: justify;
   font-family: "Tex Gyre Adventor Bold";
   font-size: 25px;
   font-family: "Tex Gyre Adventor Regular";
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .description_une_lutte {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 880px) {
+  .description_une_lutte {
+    font-size: 16px;
+  }
 }
 
 .image_une_lutte {
   -o-object-fit: cover;
      object-fit: cover;
+  filter: grayscale(100%);
   border-radius: 70px;
   max-height: 700px;
   margin-top: 20px;
@@ -1859,17 +1880,12 @@
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .text_unelutte {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
-@media screen and (min-width: 500px) and (max-width: 1025px) {
+@media only screen and (min-width: 500px) and (max-width: 880px) {
   .text_unelutte {
-    font-size: 22px;
-  }
-}
-@media screen and (max-height: 1000px) {
-  .text_unelutte {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -1879,21 +1895,15 @@
   color: #000;
   line-height: 40px;
   font-size: 18px;
-  margin-top: 10vw;
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .link_unelutte {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
-@media screen and (min-width: 500px) and (max-width: 1025px) {
+@media only screen and (min-width: 500px) and (max-width: 880px) {
   .link_unelutte {
-    font-size: 20px;
-  }
-}
-@media screen and (max-height: 1000px) {
-  .link_unelutte {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
@@ -2448,10 +2458,9 @@ body:has(.bande_devant) {
   background-color: #575757;
   padding: 10px;
   width: 100%;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1020;
-  position: relative;
 }
 
 .text_bande {

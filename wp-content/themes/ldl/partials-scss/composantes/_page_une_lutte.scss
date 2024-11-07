@@ -12,6 +12,14 @@
     position: relative;
 }
  
+.article_lutte {
+    border-bottom: 2px solid black;
+}
+ 
+.article_lutte_text {
+margin-top: 50px;
+}
+ 
 .section_une_lutte {
     max-width: 70vw;
     margin: 20px;
@@ -21,6 +29,7 @@
     color: #333333;
     margin-bottom: 10px;
     font-size: 36px;
+    margin-top: 50px;
     font-family: "Tex Gyre Adventor Bold";
 }
  
@@ -33,12 +42,20 @@
  
 .description_une_lutte{
     font-size: 30px;
+    text-align: justify;
     font-family: "Tex Gyre Adventor Bold";
     @include mixins.description-base;
+    @include mixins.phone {
+        font-size: 16px;
+      }
+    @include mixins.tablet {
+        font-size: 16px;
+    }
 }
  
 .image_une_lutte {
     object-fit: cover;
+    filter: grayscale(100%);
     border-radius: 70px;
     max-height: 700px;
     margin-top: 20px;
@@ -50,31 +67,24 @@
     @include mixins.contenu;
     font-size: 28px;
     @include mixins.phone {
-      font-size: 18px;
+      font-size: 16px;
     }
-    @media screen and (min-width: mixins.$phone) and (max-width: 1025px) {  
-        font-size: 22px;
-    }
-    @media screen and (max-height: 1000px) {  
-        font-size: 18px;
+    @include mixins.tablet {
+        font-size: 16px;
     }
 }
  
 .link_unelutte {
     @include mixins.contenu;
     font-size: 18px;
-    margin-top: 10vw;
     @include mixins.phone {
-      font-size: 18px;
+      font-size: 16px;
     }
-    @media screen and (min-width: mixins.$phone) and (max-width: 1025px) {  
-        font-size: 20px;
-    }
-    @media screen and (max-height: 1000px) {  
-        font-size: 14px;
+    @include mixins.tablet {
+        font-size: 16px;
     }
 }
-
+ 
 .btn_une_lutte {
     display: flex;
     border: solid;
@@ -111,7 +121,7 @@
   .btn_une_lutte:hover {
     border-color: variables.$rose;
   }
-
+ 
   .Retour_lutte {
     color: black;
     font-size: large;

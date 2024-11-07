@@ -196,8 +196,11 @@ if (document.body.classList.contains("body_liste_nouvelles")) {
 const closeButton = document.querySelector('.close-btn');
 const bandeProjet = document.querySelector('.bande_projet');
  
- 
+closeButton.addEventListener('click', function() {
+  bandeProjet.style.display = 'none';
 
+  navbar.style.top = '0';
+});
 
 //-- Modal equipe --//
 const modalEquipe = document.querySelector(".modal_equipe");
