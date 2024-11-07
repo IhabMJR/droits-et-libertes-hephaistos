@@ -185,11 +185,12 @@ if (document.body.classList.contains("pageDons")) {
   ">";
 }
 
-
 //Ouvre la page d'une nouvelle
-cartePrincipale.addEventListener("click", () => {
-  window.open("./page_une_nouvelle.html", "_self")
-});
+if (document.body.classList.contains("body_liste_nouvelles")) {
+  cartePrincipale.addEventListener("click", function() {
+    window.open("./page_une_nouvelle.html", "_self");
+  });
+}
 
 //-- button de bande --
 const closeButton = document.querySelector('.close-btn');
