@@ -2,6 +2,14 @@
 /*--- Importation des partials générales ---*/
 /*--- Importation des partials composantes ---*/
 /*--- Importation des partials ---*/
+
+/*
+Theme Name: Hephaistos
+Author: Justine Rousseau
+Description: Ligue des droits et libertes
+Version: 1.0
+*/
+
 .hero {
   overflow: hidden;
 }
@@ -2519,7 +2527,7 @@ body:has(.bande_devant) {
   font-size: 1.5rem;
   padding: 5px;
   position: absolute;
-  top: 10px;
+  top: 0;
   right: 20px;
   transition: color 0.5s;
 }
