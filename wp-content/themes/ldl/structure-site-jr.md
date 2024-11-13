@@ -1,113 +1,141 @@
 <!-- Accueil -->
 # Accueil
 
-## COMPOSANTE DE LA PAGES
-### Bloc don de l'accueil
-#### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
-##### home-donation
+## TYPE DE CONTENU (POST TYPE): Page
 
-### Bloc luttes de l'accueil
-#### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
-##### home-luttes
-#### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
-##### lutte-title
-##### lutte-content
+## MODÈLE (TEMPLATE): home.php
 
-## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
+## COMPOSANTES
+
+### NOM DU PARTIAL: infinite-strip.php (+ page d'une nouvelle, 404)
+#### CHAMPS PERSONNALISÉS
+ - texte (text)
+
+### NOM DU PARTIAL: hero.php (+ liste des nouvelles, liste des luttes, équipe, à propos)
+#### CHAMPS PERSONNALISÉS
+ - titre (text)
+ - description (text area)
+ - images (gallery)
+
+### NOM DU PARTIAL: news-swiper.php (+ liste des nouvelles, page d'une nouvelle)
+
+### NOM DU PARTIAL: lutte-extrait.php (+ liste des luttes)
+#### CHAMPS PERSONNALISÉS
+ - titre (text)
+ - description (text area)
 
 <!-- Liste des nouvelles -->
 # Liste des nouvelles
-## TYPE DE CONTENU (POST TYPE)
-### nouvelle
-## MODÈLE (TEMPLATE)
 
-## COMPOSANTE DE LA PAGES
-### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
+## TYPE DE CONTENU (POST TYPE): Page
 
-### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
+## MODÈLE (TEMPLATE): news-hub.php
 
-## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
+## COMPOSANTES
+
+### NOM DU PARTIAL: hero.php (+ accueil, liste des luttes, équipe, à propos)
+#### CHAMPS PERSONNALISÉS
+ - titre (text)
+ - description (text area)
+ - images (gallery)
 
 <!-- Page d'une nouvelle -->
 # Page d'une nouvelle
 
-## MODÈLE (TEMPLATE)
+## TYPE DE CONTENU (POST TYPE) : Article (Post)
 
-## COMPOSANTE DE LA PAGES
-### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
+## MODÈLE (TEMPLATE): news-article.php
 
-### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
+## COMPOSANTES
 
-## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
+### NOM DU PARTIAL: infinite-strip.php (+ accueil, 404)
+#### CHAMPS PERSONNALISÉS
+ - texte (text)
 
 <!-- Liste des luttes -->
 # Liste des luttes
 
-## MODÈLE (TEMPLATE)
+## TYPE DE CONTENU (POST TYPE) : Page
 
-## COMPOSANTE DE LA PAGES
-### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
+## MODÈLE (TEMPLATE): luttes-hub.php
 
-### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
+## COMPOSANTES
 
-## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
+### NOM DU PARTIAL: hero.php (+ accueil, liste des nouvelles, équipe, à propos)
+#### CHAMPS PERSONNALISÉS
+ - titre (text)
+ - description (text area)
+ - images (gallery)
+
+### NOM DU PARTIAL: lutte-extrait.php (+ accueil)
+#### CHAMPS PERSONNALISÉS
+ - titre (text)
+ - description (text area)
 
 <!-- Page d'une lutte -->
 # Page d'une lutte
 
-## MODÈLE (TEMPLATE)
+## TYPE DE CONTENU (POST TYPE) : Lutte (Post)
 
-## COMPOSANTE DE LA PAGES
-### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
-
-### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
-
-## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
+## MODÈLE (TEMPLATE): lutte.php
 
 <!-- Équipe -->
 # Équipe
 
-## MODÈLE (TEMPLATE)
+## TYPE DE CONTENU (POST TYPE) : Page
 
-## COMPOSANTE DE LA PAGES
-### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
+## MODÈLE (TEMPLATE) : team.php
 
-### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
+# COMPOSANTES
 
-## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
+### NOM DU PARTIAL: description.php (+ à propos)
+#### CHAMPS PERSONNALISÉS
+ - titre (text)
+ - description (text area)
+
+### NOM DU PARTIAL: hero.php (+ accueil, liste des nouvelles, liste des luttes, à propos)
+#### CHAMPS PERSONNALISÉS
+ - titre (text)
+ - description (text area)
+ - images (gallery)
 
 <!-- À propos -->
 # À propos
 
-## MODÈLE (TEMPLATE)
+## TYPE DE CONTENU (POST TYPE) : Page
 
-## COMPOSANTE DE LA PAGES
-### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
+## MODÈLE (TEMPLATE) : about.php
 
-### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
+## COMPOSANTES
 
-## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
+### NOM DU PARTIAL: description.php (+ équipe)
+#### CHAMPS PERSONNALISÉS
+ - titre (text)
+ - description (text area)
+
+### NOM DU PARTIAL: hero.php (+ accueil, liste des nouvelles, liste des luttes, équipe)
+#### CHAMPS PERSONNALISÉS
+ - titre (text)
+ - description (text area)
+ - images (gallery)
 
 <!-- Nous joindre -->
 # Nous joindre
 
-## MODÈLE (TEMPLATE)
+## TYPE DE CONTENU (POST TYPE) : Page
 
-## COMPOSANTE DE LA PAGES
-### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
-
-### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
-
-## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
+## MODÈLE (TEMPLATE) : contact-us.php
 
 <!-- Erreur 404 -->
 # Erreur 404
 
-## MODÈLE (TEMPLATE)
+## TYPE DE CONTENU (POST TYPE) : Page
 
-## COMPOSANTE DE LA PAGES
-### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
+## MODÈLE (TEMPLATE) : 404.php
 
-### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
+## COMPOSANTES
 
-## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
+### NOM DU PARTIAL: infinite-strip.php (+ accueil, page d'une nouvelle)
+#### CHAMPS PERSONNALISÉS
+ - texte (text)
+
