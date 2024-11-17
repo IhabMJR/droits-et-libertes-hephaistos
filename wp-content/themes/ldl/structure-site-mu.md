@@ -25,7 +25,7 @@ images:gallery
 - Page
 
 ## MODÈLE (TEMPLATE)
-- 'news-hub.php'
+- 'liste-nouvelles.php'
 
 ## COMPOSANTES
 hero
@@ -36,7 +36,7 @@ carte-nouvelle
 
 ### CHAMPS PERSONNALISÉS
 content:text
-image:image
+title:text
 
 
 ## AUTRES CHAMPS PERSONNALISÉS
@@ -45,7 +45,7 @@ image:image
 <!-- 404 -->
 # 404
 ## TYPE DE CONTENU (POST TYPE)
-- page erreur
+- page
 
 ## MODÈLE (TEMPLATE)
 - '404.php'
@@ -56,7 +56,7 @@ bannière
 ### NOM DU PARTIAL
 
 ### CHAMPS PERSONNALISÉS
-content:text
+title:text
 
 ## AUTRES CHAMPS PERSONNALISÉS
 
@@ -73,6 +73,8 @@ content:text
 - 'content'
 
 ### CHAMPS PERSONNALISÉS
+title:text
+content:text
 
 ## AUTRES CHAMPS PERSONNALISÉS
 
@@ -82,15 +84,15 @@ content:text
 - page
 
 ## MODÈLE (TEMPLATE)
-- 'team.php'
+- 'teams.php'
 
 ## COMPOSANTES
 ### NOM DU PARTIAL
-- 'équipe.php'
+- 'équipe'
 
 ### CHAMPS PERSONNALISÉS
-- 'nom_des_membres'
-- 'photo_des_membres'
+title:text
+image:gallery
 
 ## AUTRES CHAMPS PERSONNALISÉS
 
@@ -107,6 +109,9 @@ content:text
 - 'contacter.php'
 
 ### CHAMPS PERSONNALISÉS
+content:text
+content:text area
+content:email
 
 ## AUTRES CHAMPS PERSONNALISÉS
 
@@ -120,12 +125,12 @@ content:text
 
 ## COMPOSANTES
 ### NOM DU PARTIAL
-- 'luttes-hub.php'
+- 'luttes.php'
 
 ### CHAMPS PERSONNALISÉS
-- 'titre_luttes'
-- 'description_luttes'
-- 'date_luttes'
+content:text
+title:text
+
 
 ## AUTRES CHAMPS PERSONNALISÉS
 
@@ -142,9 +147,9 @@ content:text
 - 'une_luttes.php'
 
 ### CHAMPS PERSONNALISÉS
-- 'un_titre_luttes'
-- 'une_description_luttes'
-- 'une_date_luttes'
+content:text
+image:image
+
 
 ## AUTRES CHAMPS PERSONNALISÉS
 
@@ -161,8 +166,7 @@ content:text
 - 'une_luttes.php'
 
 ### CHAMPS PERSONNALISÉS
-- 'un_titre_nouvelle'
-- 'une_description_nouvelle'
-- 'une_date_nouvelle'
+content:text
+image:image
 
 ## AUTRES CHAMPS PERSONNALISÉS
