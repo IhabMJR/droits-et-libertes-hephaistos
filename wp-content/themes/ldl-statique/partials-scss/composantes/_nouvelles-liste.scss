@@ -1,0 +1,138 @@
+/*--- Importation des partials ---*/
+@use "../mixins";
+@use "../variables";
+@use "sass:color";
+
+.wrapper {
+  max-width: 1260px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.carte_principale:hover {
+  box-shadow: none;
+  cursor: pointer;
+  transform: scale(1.005);
+}
+
+.carte_principale {
+  background-image: url("./assets/images/nouvelle_armes_israel.png");
+  height: 45vh;
+  width: 100%;
+  max-width: 95vw;
+  max-height: 700px;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  padding: 5px;
+  backdrop-filter: grayscale(100) contrast(70%) brightness(0.4);
+  box-shadow: inset 0 0 1000px #000;
+  transition: box-shadow 1s, transform 0.5s;
+  &__titre {
+    @include mixins.contenu;
+    margin-top: 20px;
+    width: auto;
+    font-size: 18px;
+    color: #fff;
+    text-align: start;
+    padding: 0 30px;
+    letter-spacing: 0.8px;
+    h3 {
+      font-size: 28px;
+      font-weight: bold;
+      line-height: 40px;
+      @media screen and (max-width: 1200px) {
+        font-size: 28px;
+      }
+      @include mixins.phone {
+        font-size: 20px;
+        line-height: 26px;
+      }
+    }
+    p {
+      border-radius: 25px;
+      span {
+        background-color: rgba(136, 136, 136, 0.4);
+        border-radius: 25px;
+        padding: 5px 15px;
+      }
+    }
+  }
+  &__details {
+    @include mixins.contenu;
+    position: absolute;
+    width: 100%;
+    color: #fff;
+    font-size: 24px;
+    text-align: start;
+    bottom: 0;
+    margin: 15px 30px;
+    @include mixins.phone {
+      font-size: 18px;
+    }
+  }
+  .btn-nouvelle {
+    width: 50px;
+    right: 0;
+    bottom: 0;
+    margin: 30px;
+    position: absolute;
+  }
+}
+
+.link_nouvelles {
+  @include mixins.lien;
+}
+
+.container_link_nouvelles {
+  margin: 35px 0;
+}
+
+//----- Trier par -----
+
+.btn_trier_par {
+  align-self: flex-start;
+  margin: 35px 0 20px 0;
+  margin-left: 20px;
+}
+
+.btn_trier_par:hover {
+  cursor: pointer;
+}
+
+.btn_trier_par:hover .trier_par_content {
+  display: block;
+} 
+
+.btn_trier_par span {
+  @include mixins.contenu;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.btn_trier_par span:after {
+  content: url("./assets/images/trier_fleche.png");
+  position: relative;
+  padding-left: 10px;
+}
+
+.trier_par_content {
+  display: none;
+  @include mixins.contenu;
+  font-size: 16px;
+  position: absolute;
+  background-color: #f4f4f4;
+  width: auto;
+  padding: 0 16px;
+  padding-top: 10px;
+  z-index: 1;
+  border-radius: 20px;
+}

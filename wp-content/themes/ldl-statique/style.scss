@@ -1,0 +1,72 @@
+/*
+Theme Name: Ligue des droits et libertes
+Author: Héphaïstos
+Version: 1.0
+*/
+
+/*--- Importation des partials générales ---*/
+@use "partials-scss/variables";
+@use "partials-scss/mixins";
+@use "sass:color";
+
+/*--- Importation des partials composantes ---*/
+@use "partials-scss/composantes/hero";
+@use "partials-scss/composantes/header";
+@use "partials-scss/composantes/footer";
+@use "partials-scss/composantes/accueil-actualites";
+@use "partials-scss/composantes/accueil-luttes";
+@use "partials-scss/composantes/accueil-temoignages";
+@use "partials-scss/composantes/accueil-dons";
+@use "partials-scss/composantes/page-une-nouvelle";
+@use "partials-scss/composantes/page_luttes";
+@use "partials-scss/composantes/page_une_lutte";
+@use "partials-scss/composantes/nouvelles-liste";
+@use "partials-scss/composantes/page-a-propos";
+@use "partials-scss/composantes/page-nous-joindre";
+@use "partials-scss/composantes/page-equipe";
+@use "partials-scss/composantes/error";
+@use "partials-scss/composantes/bande";
+
+/*--- Importation des fonts ---*/
+@font-face {
+  font-family: "TeX Gyre Adventor Regular";
+  src: url("./assets/fonts/texgyreadventor-regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "TeX Gyre Adventor Bold";
+  font-weight: bold;
+  src: url("./assets/fonts/texgyreadventor-bold.otf") format("opentype");
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+.rouge {
+  color: variables.$rouge;
+}
+
+.contenu {
+  margin: 35px;
+}
+
+.navbar-autre-page {
+  background-color: #000;
+}
+
+footer {
+  overflow-x: hidden;
+}
+
+a {
+  @include mixins.lien;
+}

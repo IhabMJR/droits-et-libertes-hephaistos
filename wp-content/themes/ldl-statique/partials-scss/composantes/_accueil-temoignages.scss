@@ -1,0 +1,128 @@
+/*--- Importation des partials ---*/
+@use "../mixins";
+@use "../variables";
+@use "sass:color";
+
+.contenant_temoignages {
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.temoignages {
+  width: 100vw;
+  max-width: 1550px;
+  min-width: 1200px;
+  height: auto;
+  margin-bottom: 200px;
+  @media screen and (max-width: 1300px) {
+    max-width: auto;
+    min-width: 0;
+  }
+  &__titre {
+    @include mixins.petit-titre;
+    font-weight: normal;
+    text-align: left;
+    position: relative;
+    display: block;
+    margin-left: 25px;
+    width: auto;
+    @include mixins.tablet {
+      text-align: center;
+      margin: auto;
+    }
+    @include mixins.phone {
+      text-align: center;
+      width: 300px;
+      margin: auto;
+    }
+  }
+  &__sous-titre {
+    @include mixins.petit-titre-bold;
+    text-align: left;
+    position: relative;
+    display: block;
+    width: 500px;
+    margin-bottom: 100px;
+    margin-left: 25px;
+    @include mixins.tablet {
+      text-align: center;
+      width: 300px;
+      margin: auto;
+    }
+    @include mixins.phone {
+      text-align: center;
+      width: 300px;
+      margin: auto;
+    }
+    .text-rouge {
+      color: variables.$rouge;
+    }
+  }
+  .swiper-wrapper {
+    margin-top: 50px;
+    .swiper-slide {
+      width: 50%;
+    }
+    .carte {
+      position: relative;
+      background-color: variables.$argent;
+      height: auto;
+      border-radius: 80px;
+      padding: 30px;
+      position: relative;
+      min-width: 300px;
+      margin-top: 50px;
+      &__quotation{
+        position: absolute;
+        width: 100px;
+        top: -50px;
+        @include mixins.tablet {
+          top: -40px;
+        }
+        @include mixins.phone {
+          width: 50px;
+          top: -20px;
+        }
+      }
+      &__titre {
+        @include mixins.contenu;
+        margin-top: 30px;
+        width: auto;
+        color: #000;
+        text-align: start;
+        padding: 0 30px;
+        letter-spacing: 0.8px;
+        h3 {
+          font-size: 32px;
+          font-weight: bold;
+          line-height: 40px;
+        }
+      }
+      &__description {
+        @include mixins.contenu;
+        width: auto;
+        font-size: 32px;
+        color: #000;
+        padding: 0 30px;
+        letter-spacing: 0.8px;
+        line-height: 1.5;
+        @media screen and (max-width: 1520px) {
+          line-height: 1.3;
+          font-size: 22px;
+        }
+        @include mixins.tablet {
+          line-height: 1.3;
+          font-size: 22px;
+        }
+        @include mixins.phone {
+          line-height: 1.3;
+          font-size: 22px;
+        }
+      }
+      &:nth-child(2) {
+        background: color.adjust(variables.$argent, $lightness:15%);
+      }
+    }
+  }
+}

@@ -1,0 +1,164 @@
+@use "../mixins";
+@use "../variables";
+@use "sass:color";
+
+/*---------- Héro ----------*/
+.hero-nouvelle {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  @include mixins.phone {
+    height: 80vh;
+  }
+  @media screen and (orientation: landscape) and (max-height: 1000px) {   
+    height: 125vh;
+}
+}
+
+.hero-nouvelle .fond {
+  height: 70vh;
+  width: 100%;
+  position: absolute;
+  background-color: #d3d3d3;
+  @include mixins.phone {
+    height: 50vh;
+  }
+}
+.contenu-nouvelle {
+  @include mixins.contenu;
+  width: 70vw;
+  max-width: 1550px;
+  padding: 0 20px 0 20px;
+  margin: 0 auto;
+  position: relative;
+  strong {
+    font-weight: 800;
+  }
+  @include mixins.phone {
+    padding: 0 15px;
+    font-size: 18px;
+    width: 100vw;
+  }
+
+  a {
+    @include mixins.phone {
+        font-size: 18px;
+      }
+      @media screen and (min-width: mixins.$phone) and (max-width: 1025px) {   
+          font-size: 22px;
+      }
+  }
+}
+
+.hero-nouvelle .contenu {
+  width: 70vw;
+  max-width: 1550px;
+  top: 20%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  @include mixins.phone {    
+    width: 100vw;
+    padding: 0 15px;
+  }
+  h2 {
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: -2px;
+    @include mixins.phone {
+      font-size: 28px;
+    }
+    @media screen and (min-width: mixins.$phone) and (max-width: 1025px) {   
+        font-size: 38px;
+    }
+    @media screen and (max-height: 1000px) {   
+        font-size: 32px;
+    }
+  }
+
+  p {
+    @include mixins.contenu;
+    font-size: 28px;
+    @include mixins.phone {
+      font-size: 18px;
+    }
+    @media screen and (min-width: mixins.$phone) and (max-width: 1025px) {   
+        font-size: 22px;
+    }
+    @media screen and (max-height: 1000px) {   
+        font-size: 18px;
+    }
+  }
+
+  .img-nouvelle {
+    border-radius: 70px;
+    height: 50vh;
+    object-fit: cover;
+    margin-top: 10px;
+    width: 100%;
+    @include mixins.tablet {
+        height: 45vh;
+      }
+    @include mixins.phone {
+      height: 30vh;
+    }
+
+  }
+
+  .nouvelle-dessin {
+    position: absolute;
+    width: 30vw;
+    top: -25vh;
+    right: -10vw;
+    @include mixins.phone {
+        width: 250px;
+      }
+  }
+
+  .btns-nouvelle {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    a {
+      color: variables.$rouge;
+      font-size: 20px;
+      @include mixins.phone {
+        font-size: 12px;
+      }
+      &:nth-child(2) {
+        margin-left: auto;
+      }
+      &:hover {
+        color: #000;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.btns-nouvelle a:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+.bande.articles {
+  width: 100vw;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.bande.articles img {
+  width: 100vw;
+  max-width: 100%;
+}
+
+.actualites__cartes.liste {
+  margin-bottom: 100px;
+}

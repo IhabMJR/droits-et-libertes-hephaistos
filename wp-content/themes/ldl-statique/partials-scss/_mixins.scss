@@ -1,0 +1,86 @@
+@use "variables";
+
+// --- Media queries ---
+$phone: 500px;
+$tablet: 880px;
+$desktop: 1400px;
+
+@mixin phone {
+  @media only screen and (min-width: 0) and (max-width: $phone) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: $phone) and (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media only screen and (min-width: $phone) and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: $desktop) {
+    @content;
+  }
+}
+
+// --- Texte ---
+@mixin gros-titre {
+  font-family: "Tex Gyre Adventor Bold";
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 96px;
+  line-height: 110px;
+  @include phone {
+    font-size: 72px;
+    line-height: 65px;
+  }
+}
+
+@mixin petit-titre {
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 48px;
+  color: #000;
+}
+
+@mixin petit-titre-bold {
+  font-family: "Tex Gyre Adventor Bold";
+  font-weight: bold;
+  font-size: 48px;
+  color: #000;
+}
+
+@mixin contenu {
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+  color: #000;
+  line-height: 40px;
+}
+
+@mixin lien {
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 24px;
+  color: variables.$rouge;
+  &:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+}
+
+@mixin text-footer {
+  font-family: "Tex Gyre Adventor Regular";
+  font-size: 20px;
+  color: #fff;
+}
+
+@mixin description-base {
+  font-size: 25px;
+  font-family: "Tex Gyre Adventor Regular";
+}
