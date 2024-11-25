@@ -1,15 +1,12 @@
 @charset "UTF-8";
+/*
+Theme Name: Ligue des droits et libertes
+Author: Héphaïstos
+Version: 1.0
+*/
 /*--- Importation des partials générales ---*/
 /*--- Importation des partials composantes ---*/
 /*--- Importation des partials ---*/
-
-/*
-Theme Name: Héphaïstos
-Author: Justine Rousseau
-Description: Ligue des droits et libertes
-Version: 1.0
-*/
-
 .hero {
   overflow: hidden;
 }
