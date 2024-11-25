@@ -293,6 +293,24 @@
   }
 
 /* section des partenaire*/ 
+.partenaire_sous_titre {
+  @include mixins.petit-titre-bold;
+    text-align: left;
+    position: relative;
+    display: block;
+    width: 500px;
+    margin-left: 70px;
+    @include mixins.tablet {
+      text-align: center;
+      width: 300px;
+      margin: auto;
+    }
+    @include mixins.phone {
+      text-align: center;
+      width: 300px;
+      margin: auto;
+    }
+}
 
 .contenu_partenaire {
   display: flex;

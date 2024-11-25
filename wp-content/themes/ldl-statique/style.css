@@ -76,7 +76,7 @@
   }
 }
 .revue .btn-revue:hover {
-  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 0 8px rgb(0, 0, 0));
 }
 
 .swiper-hero {
@@ -683,6 +683,32 @@
 }
 
 /* section des partenaire*/
+.partenaire_sous_titre {
+  font-family: "Tex Gyre Adventor Bold";
+  font-weight: bold;
+  font-size: 48px;
+  color: #000;
+  text-align: left;
+  position: relative;
+  display: block;
+  width: 500px;
+  margin-left: 70px;
+}
+@media only screen and (min-width: 500px) and (max-width: 880px) {
+  .partenaire_sous_titre {
+    text-align: center;
+    width: 300px;
+    margin: auto;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .partenaire_sous_titre {
+    text-align: center;
+    width: 300px;
+    margin: auto;
+  }
+}
+
 .contenu_partenaire {
   display: flex;
   overflow-x: hidden;
@@ -776,7 +802,7 @@
 .carte.swiper-slide:hover {
   cursor: pointer;
   box-shadow: none;
-  transform: scale(1.005);
+  transform: scale(1.05);
 }
 
 .actualites {
@@ -911,7 +937,17 @@
   transition: box-shadow 0.5s;
 }
 .toutes-nouvelles:hover {
-  box-shadow: 0 0 18px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 20px rgb(0, 0, 0);
+}
+
+.swiper_nouvelle {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  display: block;
 }
 
 .img_lutte {
@@ -1099,7 +1135,7 @@
   }
 }
 .btn-next:hover {
-  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 0 8px rgb(0, 0, 0));
 }
 
 .btn-right {
@@ -1136,6 +1172,7 @@
   position: relative;
   display: block;
   margin-left: 25px;
+  margin-top: 100px;
   width: auto;
 }
 @media only screen and (min-width: 500px) and (max-width: 880px) {
@@ -1160,7 +1197,6 @@
   position: relative;
   display: block;
   width: 500px;
-  margin-bottom: 100px;
   margin-left: 25px;
 }
 @media only screen and (min-width: 500px) and (max-width: 880px) {

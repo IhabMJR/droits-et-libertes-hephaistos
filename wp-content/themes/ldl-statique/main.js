@@ -45,6 +45,15 @@ const swiperActualites = new Swiper(".scroll", {
   initialSlide: 1,
 });
 
+//--- Swiper actualites-nouvelle ---/
+const swiperActualitesNouvelle = new Swiper(".swiper_nouvelle", {
+  speed: 400,
+  spaceBetween: 30,
+  slidesPerView: "auto",
+  centeredSlides: true,
+  initialSlide: 1,
+});
+
 //-- Swiper equipe --//
 const swiperEquipe = new Swiper(".swiper.equipe", {
   speed: 400,
