@@ -6,4 +6,4 @@ license.txt
 readme.html
 .DS_Store
 .htaccess
-!wp-content/*index.php
+!wp-content/themes/*/index.php
