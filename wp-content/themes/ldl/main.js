@@ -81,8 +81,8 @@ const swiperLuttes = new Swiper(".swiper.luttes", {
   touchEventsTarget: "wrapper",
   slidesPerView: 'auto',
   navigation: {
-    nextEl: ".button-next",
-    prevEl: ".button-prev",
+    nextEl: ".button-prev",
+    prevEl: ".button-next",
   }
 });
 
@@ -93,10 +93,10 @@ const carteActualites = document.querySelectorAll(".carte");
 //-- Animation bande 404--
 //trouvé sur https://getbutterfly.com/javascript-marquee-a-collection-of-scrolling-text-snippets/
 function initializeMarquee() {
-  if (document.body.classList.contains("pageDons")) {
+  if (document.body.classList.contains("error404")) {
     createMarqueeContainer("latest-news");
     rotateMarquee(marqueeContainers);
-  } else if (document.body.classList.contains("pageAccueil")) {
+  } else if (document.body.classList.contains("home")) {
     createMarqueeContainer("bandeDons");
     rotateMarquee(marqueeContainers);
   } else {
@@ -220,4 +220,6 @@ function noModal() {
   modalEquipe.style.display = "none";
 }
 
+if (document.body.classList.contains("page-template-team")) {
 modalBtnFermer.addEventListener("click", () => noModal());
+}
