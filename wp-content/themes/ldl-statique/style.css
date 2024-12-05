@@ -2197,7 +2197,8 @@
   margin: 0 auto 100px auto;
 }
 .container_nous_joindre .sous_titre_nous_joindre {
-  font-family: "Tex Gyre Adventor Regular";
+  font-family: "Tex Gyre Adventor Bold";
+  font-weight: bold;
   font-size: 48px;
   color: #000;
   text-align: left;
@@ -2221,10 +2222,43 @@
   width: 85vw;
   margin-bottom: 80px;
 }
+.container_nous_joindre .image_coordonner {
+  position: absolute;
+  width: 1200px;
+  bottom: 300px;
+  right: -800px;
+  opacity: 50%;
+}
+@media only screen and (min-width: 500px) and (max-width: 880px) {
+  .container_nous_joindre .image_coordonner {
+    width: 800px;
+    bottom: 550px;
+    right: -300px;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .container_nous_joindre .image_coordonner {
+    display: none;
+  }
+}
 
 form {
-  display: block;
-  width: 100%;
+  display: flex;
+  width: 90vw;
+  flex-wrap: wrap;
+  -moz-column-gap: 80px;
+       column-gap: 80px;
+}
+form .formulaire {
+  width: 70vw;
+  max-width: 600px;
+  min-width: 600px;
+}
+form textarea {
+  width: 70vw;
+  max-width: 1360px;
+  min-width: 600px;
+  margin-left: 0px;
 }
 form .form_text {
   font-size: 25px;

@@ -17,7 +17,7 @@
   }
 
   .sous_titre_nous_joindre {
-    @include mixins.petit-titre;
+    @include mixins.petit-titre-bold;
     text-align: left;
     position: relative;
     display: block;
@@ -40,11 +40,42 @@
     width: 85vw;
     margin-bottom: 80px;
   }
+
+ .image_coordonner{
+  position: absolute;
+  width: 1200px;
+  bottom: 300px;
+  right: -800px;
+  opacity: 50%;
+  @include mixins.tablet {
+    width: 800px;
+    bottom: 550px;
+    right: -300px;
+  }
+  @include mixins.phone {
+   display: none;
+  }
+ }
 }
 
 form {
-  display: block;
-  width: 100%;
+  display: flex;
+  width: 90vw;
+  flex-wrap: wrap;
+  column-gap: 80px;
+
+  .formulaire{
+    width: 70vw;
+    max-width: 600px;
+    min-width: 600px;
+  }
+
+  textarea {
+    width: 70vw;
+    max-width: 1360px;
+    min-width: 600px;
+    margin-left: 0px
+  }
 
   .form_text {
     @include mixins.description-base;
