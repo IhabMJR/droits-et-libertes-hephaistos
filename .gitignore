@@ -7,3 +7,4 @@ readme.html
 .DS_Store
 .htaccess
 !wp-content/themes/*/index.php
+!wp-content/themes/*/*.php
