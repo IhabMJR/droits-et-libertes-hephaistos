@@ -2595,7 +2595,7 @@ body:has(.bande_devant) {
 }
 
 .close-btn:hover {
-  color: red;
+  color: #B80820;
 }
 
 /*--- Importation des fonts ---*/

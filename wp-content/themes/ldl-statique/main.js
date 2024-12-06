@@ -201,14 +201,21 @@ if (document.body.classList.contains("body_liste_nouvelles")) {
   });
 }
 
-//-- button de bande --
+//-- Bouton de bande --//
 const closeButton = document.querySelector('.close-btn');
 const bandeProjet = document.querySelector('.bande_projet');
- 
-closeButton.addEventListener('click', function() {
-  bandeProjet.style.display = 'none';
+const nav = document.querySelector("nav"); // Ensure this exists in your HTML
+const bandeLocalStorage = localStorage.getItem("bande");
 
-  navbar.style.top = '0';
+//-- Enlever la bande --//
+if (bandeLocalStorage === 'hidden') {
+  bandeProjet.style.display = 'none';
+  nav.style.top = '0';
+}
+closeButton.addEventListener('click', function () {
+  bandeProjet.style.display = 'none';
+  nav.style.top = '0';
+  localStorage.setItem("bande", 'hidden');
 });
 
 //-- Modal equipe --//

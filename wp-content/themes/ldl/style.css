@@ -815,6 +815,15 @@ Version: 1.0
   position: relative;
   -webkit-backdrop-filter: grayscale(100) contrast(70%) brightness(0.4);
           backdrop-filter: grayscale(100) contrast(70%) brightness(0.4);
+  /*&:nth-child(1) {
+    background-image: url("./assets/images/nouvelle_armes_israel.png");
+  }
+  &:nth-child(2) {
+    background-image: url("./assets/images/nouvelle_armes_israel.png");
+  }
+  &:nth-child(3) {
+    background-image: url("./assets/images/nouvelle_armes_israel.png");
+  }*/
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .actualites__cartes .carte {
@@ -887,15 +896,6 @@ Version: 1.0
   bottom: 0;
   margin: 30px;
   position: absolute;
-}
-.actualites__cartes .carte:nth-child(1) {
-  background-image: url("./assets/images/nouvelle_armes_israel.png");
-}
-.actualites__cartes .carte:nth-child(2) {
-  background-image: url("./assets/images/nouvelle_armes_israel.png");
-}
-.actualites__cartes .carte:nth-child(3) {
-  background-image: url("./assets/images/nouvelle_armes_israel.png");
 }
 .actualites__cartes .carte:hover {
   filter: none;
