@@ -239,7 +239,7 @@ function noModal() {
 modalBtnFermer.addEventListener("click", () => noModal());
 
 //-- burger --//
-//-- https://codepen.io/ryan_labar/pen/QyyzVX --//
+//-- https://codepen.io/forrestlonganecker/pen/XWrdXGq --//
 
   var upper = document.getElementsByClassName('upper')[0];
   var middle = document.getElementsByClassName('middle')[0];
