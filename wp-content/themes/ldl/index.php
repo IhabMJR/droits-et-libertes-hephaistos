@@ -40,55 +40,37 @@ get_header(); // Affiche header.php
         <div class="swiper luttes">
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide text_container">
-              <h3 class="titre_lutte">Nos luttes</h3>
-              <h3 class="titre_lutte2">Droit à la santé</h3>
-              <div class="para_lutte">
-                <p class="text_lutte">
-                  En plus de l’accès à des soins de santé en temps opportun,
-                  le droit à la santé implique l’adoption de politiques
-                  gouvernementales agissant sur les déterminants sociaux de la
-                  santé ayant un impact sur la santé et la participation de la
-                  population à la prise de toute décision.
-                </p>
-              </div>
-              <a class="link_lutte">Voir plus</a>
-            </div>
-            <div class="swiper-slide text_container">
-              <h3 class="titre_lutte">Nos luttes</h3>
-              <h3 class="titre_lutte2">COVID-19</h3>
-              <div class="para_lutte">
-                <p class="text_lutte">Dès le 13 mars 2020, la Ligue des droits et libertés (LDL) s’est questionnée les
-                  nombreuses décisions prises par le gouvernement du Québec en ayant toujours en tête cette question :
-                  quels seront leurs impacts sur les droits humains ?</p>
-              </div>
-              <a class="link_lutte">Voir plus</a>
-            </div>
-            <div class="swiper-slide text_container">
-              <h3 class="titre_lutte">Nos luttes</h3>
-              <h3 class="titre_lutte2">Droit d’association</h3>
-              <div class="para_lutte">
-                <p class="text_lutte">La protection et la promotion de la liberté d’association des groupes communautaires
-                  et des organisations sans but lucratif (OSBL) sont des enjeux de droits humains. En effet, le droit
-                  d’association participe à la réalisation de tous les droits humains en démocratie.</p>
-              </div>
-              <a class="link_lutte">Voir plus</a>
-            </div>
-          </div>
-          <!-- If we need navigation buttons 
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>-->
-        </div>
+            <?php
+            $luttes = new WP_Query([
+                'post_type' => 'lutte',
+                'posts_per_page' => -1,
+            ]);
 
+            // Loop Through Posts
+            if ($luttes->have_posts()):
+              while ($luttes->have_posts()): $luttes->the_post(); ?>
+                <!-- Slides -->
+                <div class="swiper-slide text_container">
+                  <h3 class="titre_lutte">Nos luttes</h3>
+                  <h3 class="titre_lutte2"><?php the_field('lutte-title'); ?></h3>
+                  <div class="para_lutte">
+                    <p class="text_lutte"><?php the_field('lutte-description'); ?></p>
+                  </div>
+                  <a href="<?php the_permalink(); ?>" class="link_lutte">Voir plus</a>
+                </div>
+            <?php
+            endwhile;
+            endif;
+            ?>
+          </div>
+        </div>
         <div class="btn_container">
-          <a class="button-next"><img class="btn-next btn-right"
-              src="<?php bloginfo('template_url'); ?>/assets/images/btn.png" /></a>
-          <a class="button-prev"><img class="btn-next btn-left"
-              src="<?php bloginfo('template_url'); ?>/assets/images/btn.png" /></a>
+          <a class="button-next"><img class="btn-next btn-right" src="<?php bloginfo('template_url'); ?>/assets/images/btn.png" /></a>
+          <a class="button-prev"><img class="btn-next btn-left" src="<?php bloginfo('template_url'); ?>/assets/images/btn.png" /></a>
         </div>
       </div>
     </div>
+
 
     <!-- Section Temoignages -->
     <div class="contenant_temoignages">
