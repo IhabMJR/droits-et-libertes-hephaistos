@@ -201,14 +201,21 @@ if (document.body.classList.contains("body_liste_nouvelles")) {
   });
 }
 
-//-- button de bande --
+//-- Bouton de bande --//
 const closeButton = document.querySelector('.close-btn');
 const bandeProjet = document.querySelector('.bande_projet');
- 
-closeButton.addEventListener('click', function() {
-  bandeProjet.style.display = 'none';
+const nav = document.querySelector("nav"); // Ensure this exists in your HTML
+const bandeLocalStorage = localStorage.getItem("bande");
 
-  navbar.style.top = '0';
+//-- Enlever la bande --//
+if (bandeLocalStorage === 'hidden') {
+  bandeProjet.style.display = 'none';
+  nav.style.top = '0';
+}
+closeButton.addEventListener('click', function () {
+  bandeProjet.style.display = 'none';
+  nav.style.top = '0';
+  localStorage.setItem("bande", 'hidden');
 });
 
 //-- Modal equipe --//
@@ -230,3 +237,21 @@ function noModal() {
 }
 
 modalBtnFermer.addEventListener("click", () => noModal());
+
+//-- burger --//
+//-- https://codepen.io/forrestlonganecker/pen/XWrdXGq --//
+
+  var upper = document.getElementsByClassName('upper')[0];
+  var middle = document.getElementsByClassName('middle')[0];
+  var lower = document.getElementsByClassName('lower')[0];
+
+  var tl = gsap.timeline({paused: true, reversed: true});
+
+  tl
+  .to(upper, {duration: 0.5, attr: {d: "M8,2 L2,8"}, x: 1, ease: "power2.inOut"}, 'start')
+  .to(middle, {duration: 0.5, autoAlpha: 0}, 'start')
+  .to(lower, {duration: 0.5, attr: {d: "M8,8 L2,2"}, x: 1, ease: "power2.inOut"}, 'start');
+
+  document.querySelector('.hamburger').addEventListener('click', function(){
+  tl.reversed() ? tl.play() : tl.reverse();
+});
