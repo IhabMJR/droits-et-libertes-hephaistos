@@ -19,67 +19,47 @@ get_header(); // Affiche header.php ?>
     </div>
   </div>
 
-  <div class="actualites__cartes">
-    <div class="carte_principale">
-      <div class="carte_principale__titre">
-        <p><span>Lettres ouvertes</span></p>
-        <h3>
-          Le Canada doit stopper de façon urgente l’exportation
-          d’armes à destination d’Israël
-        </h3>
-      </div>
-      <div class="carte_principale__details">
-        <p>27 août 2024</p>
-      </div>
-      <a href="#"><img class="btn-nouvelle" src="<?php bloginfo('template_url'); ?>/assets/images/btn.png" /></a>
-    </div>
+  <div class="news-hub-cards">
+    <!-- Cartes -->
+    <?php
+    $args = array(
+      'post_type' => 'post'
+    );
 
-    <!-- Slider main container -->
-    <div class="swiper scroll liste">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide carte">
-          <div class="carte__titre">
-            <p><span>Lettres ouvertes</span></p>
+    $post_query = new WP_Query($args);
+
+    if ($post_query->have_posts()) {
+      while ($post_query->have_posts()) {
+        $post_query->the_post();
+        ?>
+        <div class="news-hub-card" style="background-image: url(<?php the_post_thumbnail_url(); ?>)">
+          <div class="titre">
+            <p><span>
+                <?// get the post object
+                    global $post;
+
+                    // pass post id
+                    $categories = get_the_category($post->ID);
+
+                    if (!empty($categories)) {
+                      echo esc_html($categories[0]->name);
+                    } ?>
+              </span></p>
             <h3>
-              Le Canada doit stopper de façon urgente l’exportation
-              d’armes à destination d’Israël
+              <?php the_title(); ?>
             </h3>
           </div>
-          <div class="carte__details">
-            <p>27 août 2024</p>
+          <div class="details">
+            <p><?php the_date(); ?></p>
           </div>
-          <a href="#"><img class="btn-nouvelle" src="<?php bloginfo('template_url'); ?>/assets/images/btn.png" /></a>
+          <a href="<?php the_permalink(); ?>"><img class="btn-nouvelle"
+              src="<?php bloginfo('template_url'); ?>/assets/images/btn.png" /></a>
         </div>
-        <div class="swiper-slide carte">
-          <div class="carte__titre">
-            <p><span>Lettres ouvertes</span></p>
-            <h3>
-              Le Canada doit stopper de façon urgente l’exportation
-              d’armes à destination d’Israël
-            </h3>
-          </div>
-          <div class="carte__details">
-            <p>27 août 2024</p>
-          </div>
-          <a href="#"><img class="btn-nouvelle" src="<?php bloginfo('template_url'); ?>/assets/images/btn.png" /></a>
-        </div>
-        <div class="swiper-slide carte">
-          <div class="carte__titre">
-            <p><span>Lettres ouvertes</span></p>
-            <h3>
-              Le Canada doit stopper de façon urgente l’exportation
-              d’armes à destination d’Israël
-            </h3>
-          </div>
-          <div class="carte__details">
-            <p>27 août 2024</p>
-          </div>
-          <a href="#"><img class="btn-nouvelle" src="<?php bloginfo('template_url'); ?>/assets/images/btn.png" /></a>
-        </div>
-      </div>
-    </div>
+        <?php
+      }
+    }
+    ?>
+
   </div>
   <div class="container_link_nouvelles">
     <a class="link_nouvelles">Toutes les nouvelles</a>

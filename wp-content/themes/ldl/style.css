@@ -888,15 +888,6 @@ Version: 1.0
   margin: 30px;
   position: absolute;
 }
-.actualites__cartes .carte:nth-child(1) {
-  background-image: url("./assets/images/nouvelle_armes_israel.png");
-}
-.actualites__cartes .carte:nth-child(2) {
-  background-image: url("./assets/images/nouvelle_armes_israel.png");
-}
-.actualites__cartes .carte:nth-child(3) {
-  background-image: url("./assets/images/nouvelle_armes_israel.png");
-}
 .actualites__cartes .carte:hover {
   filter: none;
   cursor: pointer;
@@ -2022,40 +2013,65 @@ Version: 1.0
 
 /*--- Importation des partials ---*/
 .wrapper {
-  max-width: 1260px;
-  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 0 auto;
+  width: 90vw;
+  max-width: 1550px;
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.news-hub-cards {
   overflow: hidden;
-}
-
-.carte_principale:hover {
-  box-shadow: none;
-  cursor: pointer;
-  transform: scale(1.005);
-}
-
-.carte_principale {
-  background-image: url("./assets/images/nouvelle_armes_israel.png");
-  height: 45vh;
+  text-align: center;
   width: 100%;
-  max-width: 95vw;
-  max-height: 700px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+@media only screen and (min-width: 500px) and (max-width: 880px) {
+  .news-hub-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .news-hub-cards {
+    grid-template-columns: 1fr;
+  }
+}
+.news-hub-cards .news-hub-card {
+  background-color: red;
   border-radius: 20px;
+  height: 600px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%;
-  margin: 0 auto;
-  margin-bottom: 40px;
-  padding: 5px;
+  position: relative;
   -webkit-backdrop-filter: grayscale(100) contrast(70%) brightness(0.4);
           backdrop-filter: grayscale(100) contrast(70%) brightness(0.4);
   box-shadow: inset 0 0 1000px #000;
   transition: box-shadow 1s, transform 0.5s;
 }
-.carte_principale__titre {
+.news-hub-cards .news-hub-card:hover {
+  cursor: pointer;
+  box-shadow: none;
+  transform: scale(1.005);
+}
+.news-hub-cards .news-hub-card:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .news-hub-cards .news-hub-card:nth-child(1) {
+    grid-column-start: auto;
+    grid-column-end: auto;
+  }
+}
+.news-hub-cards .news-hub-card .titre {
   font-family: "Tex Gyre Adventor Regular";
   font-size: 24px;
   color: #000;
@@ -2068,31 +2084,31 @@ Version: 1.0
   padding: 0 30px;
   letter-spacing: 0.8px;
 }
-.carte_principale__titre h3 {
+.news-hub-cards .news-hub-card .titre h3 {
   font-size: 28px;
   font-weight: bold;
   line-height: 40px;
 }
 @media screen and (max-width: 1200px) {
-  .carte_principale__titre h3 {
+  .news-hub-cards .news-hub-card .titre h3 {
     font-size: 28px;
   }
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
-  .carte_principale__titre h3 {
+  .news-hub-cards .news-hub-card .titre h3 {
     font-size: 20px;
     line-height: 26px;
   }
 }
-.carte_principale__titre p {
+.news-hub-cards .news-hub-card .titre p {
   border-radius: 25px;
 }
-.carte_principale__titre p span {
+.news-hub-cards .news-hub-card .titre p span {
   background-color: rgba(136, 136, 136, 0.4);
   border-radius: 25px;
   padding: 5px 15px;
 }
-.carte_principale__details {
+.news-hub-cards .news-hub-card .details {
   font-family: "Tex Gyre Adventor Regular";
   font-size: 24px;
   color: #000;
@@ -2106,36 +2122,24 @@ Version: 1.0
   margin: 15px 30px;
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
-  .carte_principale__details {
+  .news-hub-cards .news-hub-card .details {
     font-size: 18px;
   }
 }
-.carte_principale .btn-nouvelle {
+.news-hub-cards .news-hub-card .btn-nouvelle {
   width: 50px;
   right: 0;
   bottom: 0;
   margin: 30px;
   position: absolute;
 }
-
-.link_nouvelles {
-  font-family: "Tex Gyre Adventor Regular";
-  font-size: 24px;
-  color: #B80820;
-}
-.link_nouvelles:hover {
-  color: #000;
-  text-decoration: none;
+.news-hub-cards .news-hub-card:hover {
+  filter: none;
   cursor: pointer;
-}
-
-.container_link_nouvelles {
-  margin: 35px 0;
 }
 
 .btn_trier_par {
   align-self: flex-start;
-  margin: 35px 0 20px 0;
   margin-left: 20px;
 }
 
