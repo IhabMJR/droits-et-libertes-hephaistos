@@ -24,58 +24,136 @@ const swiper = new Swiper(".swiper-hero", {
 
 //--- Fetch API nouvelles ---/
 const newsCardsDiv = document.querySelector(".news-hub-cards");
+const postsApiUrl = '/wordpress_ldl/wp-json/wp/v2/posts?per_page=20';
+const categoriesApiUrl = '/wordpress_ldl/wp-json/wp/v2/categories';
 
-const postsApiUrl = '/wordpress_ldl/wp-json/wp/v2/posts';
+let categoriesMap = {};
+let allPosts = [];
+let visiblePostsCount = 4; // Number of posts to show initially
+let currentOrder = 'asc'; // Default order is ascending
 
-fetch(postsApiUrl)
+// Buttons for ordering
+const orderAscButton = document.getElementById("order-asc");
+const orderDescButton = document.getElementById("order-desc");
+
+// Fetch categories first to have a map of category IDs to category names
+fetch(categoriesApiUrl)
   .then((response) => {
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
     return response.json();
   })
-  .then((data) => {
-    // Loop through each post and dynamically generate the HTML
-    data.forEach(post => {
-      // Get post details
-      const title = post.title.rendered;
-      const permalink = post.link;
-      const thumbnailUrl = post.featured_media ? post._embedded['wp:featuredmedia'][0].source_url : '';
-      const postDate = post.date; // Date of the post
-      const categories = post.categories || []; // Array of category IDs
-      const categoryNames = categories.map(catId => {
-        // You will need to fetch categories separately if they aren't included in the response
-        // Assuming you have the categories available, you could map the IDs to category names
-        return catId; // This is just a placeholder
-      }).join(', ');
-
-      // Create a new div for each post and populate it with data
-      const newsCardDiv = document.createElement('div');
-      newsCardDiv.classList.add('news-hub-card');
-      newsCardDiv.style.backgroundImage = `url(${thumbnailUrl})`;
-
-      newsCardDiv.innerHTML = `
-          <div class="titre">
-            <p><span>${categoryNames}</span></p>
-            <h3>${title}</h3>
-          </div>
-          <div class="details">
-            <p>${new Date(postDate).toLocaleDateString()}</p>  <!-- Format date -->
-          </div>
-          <a href="${permalink}">
-            <img class="btn-nouvelle" src="/wp-content/themes/your-theme/assets/images/btn.png" />
-          </a>
-        `;
-
-      // Append the post div to the container
-      newsCardsDiv.appendChild(newsCardDiv);
+  .then((categories) => {
+    // Create a map of category IDs to category names
+    categories.forEach(category => {
+      categoriesMap[category.id] = category.name;
     });
+
+    // Now fetch posts
+    fetchPosts(currentOrder);
   })
   .catch((error) => {
     console.error('Error:', error);
   });
 
+// Function to fetch and display posts based on order
+function fetchPosts(order) {
+  // Modify the posts API URL to include order parameters
+  const apiUrl = `${postsApiUrl}&orderby=date&order=${order}`;
 
+  fetch(apiUrl)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      allPosts = data;
+
+      // Initially display the first set of posts
+      displayPosts(visiblePostsCount);
+
+      // Create a "Show More" button if there are more posts to load
+      const showMoreButton = document.querySelector('.link_nouvelles');
+      if (allPosts.length > visiblePostsCount) {
+        showMoreButton.style.display = 'block';
+        showMoreButton.addEventListener('click', () => {
+          visiblePostsCount += 6; // Load 6 more posts
+          displayPosts(visiblePostsCount);
+
+          // Hide the button if all posts are shown
+          if (visiblePostsCount >= allPosts.length) {
+            showMoreButton.style.display = 'none';
+          }
+        });
+      }
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+}
+
+// Function to display posts
+function displayPosts(numberOfPosts) {
+  // Clear existing posts before rendering
+  newsCardsDiv.innerHTML = '';
+
+  // Loop through each post and dynamically generate the HTML
+  allPosts.slice(0, numberOfPosts).forEach(post => {
+    // Get post details
+    const title = post.title.rendered;
+    const permalink = post.link;
+    const thumbnailUrl = post.featured_media ? post._embedded['wp:featuredmedia'][0].source_url : '';
+    const postDate = post.date; // Date of the post
+    const categories = post.categories || []; // Array of category IDs
+
+    // Get category names from categoriesMap
+    const categoryNames = categories
+      .map(catId => categoriesMap[catId] || '') // Map category IDs to names, using empty string if not found
+      .filter(name => name) // Remove empty strings if category name is not found
+      .join(', ');
+
+    // Create a new div for each post and populate it with data
+    const newsCardDiv = document.createElement('div');
+    newsCardDiv.classList.add('news-hub-card');
+    newsCardDiv.style.backgroundImage = `url(${thumbnailUrl})`;
+
+    newsCardDiv.innerHTML = `
+      <div class="titre">
+        <p><span>${categoryNames}</span></p>
+        <h3>${title}</h3>
+      </div>
+      <div class="details">
+        <p>${new Date(postDate).toLocaleDateString()}</p>  <!-- Format date -->
+      </div>
+      <a href="${permalink}">
+        <img class="btn-nouvelle"/>
+      </a>
+    `;
+
+    // Append the post div to the container
+    if (document.body.classList.contains("page-template-news-hub")) {
+      newsCardsDiv.appendChild(newsCardDiv);
+    }
+  });
+}
+
+// Event listeners for order buttons
+if (document.body.classList.contains("page-template-news-hub")) {
+  orderAscButton.addEventListener('click', () => {
+    currentOrder = 'asc';
+    fetchPosts(currentOrder);
+  });
+}
+
+if (document.body.classList.contains("page-template-news-hub")) {
+  orderDescButton.addEventListener('click', () => {
+    currentOrder = 'desc';
+    fetchPosts(currentOrder);
+  });
+}
 
 //--- Swiper temoignages ---/
 const swiperTemoignages = new Swiper(".swiper-temoignages", {
@@ -247,14 +325,21 @@ if (document.body.classList.contains("body_liste_nouvelles")) {
   });
 }
 
-//-- button de bande --
+//-- Bouton de bande --//
 const closeButton = document.querySelector('.close-btn');
 const bandeProjet = document.querySelector('.bande_projet');
+const nav = document.querySelector("nav"); // Ensure this exists in your HTML
+const bandeLocalStorage = localStorage.getItem("bande");
 
+//-- Enlever la bande --//
+if (bandeLocalStorage === 'hidden') {
+  bandeProjet.style.display = 'none';
+  nav.style.top = '0';
+}
 closeButton.addEventListener('click', function () {
   bandeProjet.style.display = 'none';
-
-  navbar.style.top = '0';
+  nav.style.top = '0';
+  localStorage.setItem("bande", 'hidden');
 });
 
 //-- Modal equipe --//
