@@ -22,6 +22,61 @@ const swiper = new Swiper(".swiper-hero", {
   },
 });
 
+//--- Fetch API nouvelles ---/
+const newsCardsDiv = document.querySelector(".news-hub-cards");
+
+const postsApiUrl = '/wordpress_ldl/wp-json/wp/v2/posts';
+
+fetch(postsApiUrl)
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then((data) => {
+    // Loop through each post and dynamically generate the HTML
+    data.forEach(post => {
+      // Get post details
+      const title = post.title.rendered;
+      const permalink = post.link;
+      const thumbnailUrl = post.featured_media ? post._embedded['wp:featuredmedia'][0].source_url : '';
+      const postDate = post.date; // Date of the post
+      const categories = post.categories || []; // Array of category IDs
+      const categoryNames = categories.map(catId => {
+        // You will need to fetch categories separately if they aren't included in the response
+        // Assuming you have the categories available, you could map the IDs to category names
+        return catId; // This is just a placeholder
+      }).join(', ');
+
+      // Create a new div for each post and populate it with data
+      const newsCardDiv = document.createElement('div');
+      newsCardDiv.classList.add('news-hub-card');
+      newsCardDiv.style.backgroundImage = `url(${thumbnailUrl})`;
+
+      newsCardDiv.innerHTML = `
+          <div class="titre">
+            <p><span>${categoryNames}</span></p>
+            <h3>${title}</h3>
+          </div>
+          <div class="details">
+            <p>${new Date(postDate).toLocaleDateString()}</p>  <!-- Format date -->
+          </div>
+          <a href="${permalink}">
+            <img class="btn-nouvelle" src="/wp-content/themes/your-theme/assets/images/btn.png" />
+          </a>
+        `;
+
+      // Append the post div to the container
+      newsCardsDiv.appendChild(newsCardDiv);
+    });
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+
+
+
 //--- Swiper temoignages ---/
 const swiperTemoignages = new Swiper(".swiper-temoignages", {
   speed: 400,
@@ -178,16 +233,16 @@ function rotateMarquee(containers) {
 //-- GSAP 404--
 if (document.body.classList.contains("pageDons")) {
   gsap
-  .timeline()
-  .from(".bande_devant", { x: "-15000", ease: "power.inOut" })
-  .from(".bande_derriere", { x: "15000", ease: "power.inOut" })
-  .from(".bande_devant", { rotate: 0 }),
-  ">";
+    .timeline()
+    .from(".bande_devant", { x: "-15000", ease: "power.inOut" })
+    .from(".bande_derriere", { x: "15000", ease: "power.inOut" })
+    .from(".bande_devant", { rotate: 0 }),
+    ">";
 }
 
 //Ouvre la page d'une nouvelle
 if (document.body.classList.contains("body_liste_nouvelles")) {
-  cartePrincipale.addEventListener("click", function() {
+  cartePrincipale.addEventListener("click", function () {
     window.open("./page_une_nouvelle.html", "_self");
   });
 }
@@ -195,8 +250,8 @@ if (document.body.classList.contains("body_liste_nouvelles")) {
 //-- button de bande --
 const closeButton = document.querySelector('.close-btn');
 const bandeProjet = document.querySelector('.bande_projet');
- 
-closeButton.addEventListener('click', function() {
+
+closeButton.addEventListener('click', function () {
   bandeProjet.style.display = 'none';
 
   navbar.style.top = '0';
@@ -221,5 +276,5 @@ function noModal() {
 }
 
 if (document.body.classList.contains("page-template-team")) {
-modalBtnFermer.addEventListener("click", () => noModal());
+  modalBtnFermer.addEventListener("click", () => noModal());
 }

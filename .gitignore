@@ -3,8 +3,8 @@ wp-config/
 wp-admin/
 wp-includes/
 wp-content/plugins/
-wp-content/themes/*/style.css
-wp-content/themes/*/style.css.map
+wp-content/themes/ldl/style.css
+wp-content/themes/ldl/style.css.map
 license.txt
 readme.html
 .DS_Store
