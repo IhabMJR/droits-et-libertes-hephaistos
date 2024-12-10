@@ -9,3 +9,4 @@ readme.html
 .htaccess
 !wp-content/themes/*/index.php
 !wp-content/themes/*/*.php
+!wp-content/themes/*/partials/*.php
