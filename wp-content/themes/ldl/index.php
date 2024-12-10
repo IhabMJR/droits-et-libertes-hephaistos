@@ -83,42 +83,32 @@ get_header(); // Affiche header.php
         <!-- Swiper -->
         <div class="swiper-temoignages">
           <div class="swiper-wrapper">
+          <?php
+            $temoignages = new WP_Query([
+                'post_type' => 'temoignage',
+                'posts_per_page' => -1,
+            ]);
+
+            // Loop Through Posts
+            if ($temoignages->have_posts()):
+              while ($temoignages->have_posts()): $temoignages->the_post(); ?>
             <!-- Slides -->
             <div class="swiper-slide">
               <div class="carte">
                 <img src="<?php bloginfo('template_url'); ?>/assets/images/quotation.png" class="carte__quotation"
                   alt="quotation" />
                 <div class="carte__description">
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Nam eu convallis lacus."
+                  <?php the_field('temoignage_description'); ?>
                 </div>
                 <div class="carte__titre">
-                  <h3>John Doe</h3>
+                  <h3><?php the_field('temoignage_titre'); ?></h3>
                 </div>
               </div>
             </div>
-            <div class="swiper-slide">
-              <div class="carte">
-                <div class="carte__description">
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Nam eu convallis lacus."
-                </div>
-                <div class="carte__titre">
-                  <h3>John Doe</h3>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="carte">
-                <div class="carte__description">
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Nam eu convallis lacus."
-                </div>
-                <div class="carte__titre">
-                  <h3>John Doe</h3>
-                </div>
-              </div>
-            </div>
+            <?php
+            endwhile;
+            endif;
+            ?>
           </div>
         </div>
       </div>
