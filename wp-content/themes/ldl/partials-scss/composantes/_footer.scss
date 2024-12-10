@@ -2,6 +2,10 @@
 @use "../mixins";
 @use "../variables";
 @use "sass:color";
+
+a {
+  text-decoration: none;
+}
  
 .footer {
     background-color: #0f0f0f;
@@ -64,6 +68,7 @@
  
   .text-don-footer{
     margin: auto;
+    text-decoration: none;
   }
  
   .btn-don-footer {

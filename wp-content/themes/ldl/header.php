@@ -19,8 +19,8 @@
 
 	<?php wp_head();
 	/* Cette fonction permet à WordPress et aux extensions d'instancier des fichier CSS et js dans le <head>
-		 Supprimer cette fonction briserait vos extensions et diverses fonctionnalités WordPress. 
-		 Vous pouvez la déplacer si désiré, mais garder là. */
+			Supprimer cette fonction briserait vos extensions et diverses fonctionnalités WordPress. 
+			Vous pouvez la déplacer si désiré, mais garder là. */
 	?>
 </head>
 
@@ -43,10 +43,12 @@
 			<div class="container-fluid">
 				<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav"
 					aria-controls="mainNav" aria-expanded="false" aria-label="Affichage/masquage de la navigation">
-					<img src="<?php bloginfo('template_url'); ?>/assets/images/hamburger_menu.png" class="toggler-icon" />
+					<img src="<?php bloginfo('template_url'); ?>/assets/images/hamburger_menu.png"
+						class="toggler-icon" />
 				</button>
 
-				<a class="navbar-brand" class="nav-link" href="<?php echo esc_url(home_url('/')); // Lien vers la page d'accueil ?>">
+				<a class="navbar-brand" class="nav-link"
+					href="<?php echo esc_url(home_url('/')); // Lien vers la page d'accueil ?>">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/ldl-logo.png" />
 				</a>
 				<img src="<?php bloginfo('template_url'); ?>/assets/images/nav_ligne.png" class="nav-ligne" />
@@ -61,7 +63,9 @@
 					));
 					?>
 				</div>
-				<button class="don">Faire un don</button>
+				<a href="https://portail.liguedesdroits.ca/fr/don">
+					<button class="don">Faire un don</button>
+				</a>
 				<div class="dropdown">
 					<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
 						data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
