@@ -2,6 +2,7 @@
 wp-config/
 wp-admin/
 wp-includes/
+wp-content/
 license.txt
 readme.html
 .DS_Store
