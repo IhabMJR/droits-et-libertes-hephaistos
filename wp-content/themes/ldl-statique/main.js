@@ -258,64 +258,6 @@ modalBtnFermer.addEventListener("click", () => noModal());
   tl.reversed() ? tl.play() : tl.reverse();
 });
 
-//-- gsap parallax --//
-
-$(document).ready(function() {
-  var windowHeight = $(window).height(),
-      footerHeight = $('footer').height(),
-      heightDocument = windowHeight + $('.content').height() + footerHeight - 20;
-
-  // Set initial heights
-  $('#scroll-animate, #scroll-animate-main').css({
-      'height': heightDocument + 'px'
-  });
-
-  $('header').css({
-      'height': windowHeight + 'px',
-      'line-height': windowHeight + 'px'
-  });
-
-  // Set initial margin for parallax wrapper
-  $('.wrapper-parallax').css({
-      'margin-top': windowHeight + 'px'
-  });
-
-  // Initial footer scroll position
-  scrollFooter(window.scrollY, footerHeight);
-
-  // On scroll handler
-  $(window).scroll(function() {
-      var scroll = window.scrollY;
-
-      // Smooth parallax background effect
-      gsap.to('header', {
-          backgroundPositionY: 50 - (scroll * 100 / heightDocument) + '%',
-          duration: 0.5,
-          ease: 'power2.out'
-      });
-
-      // Footer animation on scroll
-      scrollFooter(scroll, footerHeight);
-  });
-
-  // Footer animation function
-  function scrollFooter(scrollY, heightFooter) {
-      if(scrollY >= heightDocument - windowHeight) {
-          gsap.to('footer', {
-              bottom: 0,
-              duration: 0.5,
-              ease: 'power2.out'
-          });
-      } else {
-          gsap.to('footer', {
-              bottom: -heightFooter + 'px',
-              duration: 0.5,
-              ease: 'power2.in'
-          });
-      }
-  }
-});
-
 // Parallax footer
 gsap.registerPlugin(ScrollTrigger);
 gsap.utils.toArray('section').forEach((section, i) => {
