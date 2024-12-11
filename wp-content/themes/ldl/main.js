@@ -1,13 +1,16 @@
 //--- Navbar scroll ---
 const navbar = document.querySelector(".navbar");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY >= 56) {
-    navbar.classList.add("navbar-scrolled");
-  } else if (window.scrollY < 56) {
-    navbar.classList.remove("navbar-scrolled");
-  }
-});
+if (document.body.classList.contains("post-template-news-article") || document.body.classList.contains("page-template-contact-us") || document.body.classList.contains("lutte-template")) {
+  navbar.classList.add("navbar-scrolled");
+} else {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY >= 56) {
+      navbar.classList.add("navbar-scrolled");
+    } else if (window.scrollY < 56) {
+      navbar.classList.remove("navbar-scrolled");
+    }
+  });
+}
 
 //--- Hero Swiper ---
 const swiper = new Swiper(".swiper-hero", {
@@ -74,10 +77,11 @@ function fetchPosts(order) {
 
       // Initially display the first set of posts
       displayPosts(visiblePostsCount);
+      
 
       // Create a "Show More" button if there are more posts to load
       const showMoreButton = document.querySelector('.link_nouvelles');
-      if (allPosts.length > visiblePostsCount) {
+      if (allPosts.length > visiblePostsCount && document.body.classList.contains("page-template-news-hub")) {
         showMoreButton.style.display = 'block';
         showMoreButton.addEventListener('click', () => {
           visiblePostsCount += 6; // Load 6 more posts
@@ -98,7 +102,9 @@ function fetchPosts(order) {
 // Function to display posts
 function displayPosts(numberOfPosts) {
   // Clear existing posts before rendering
-  newsCardsDiv.innerHTML = '';
+  if (document.body.classList.contains("page-template-news-hub")) {
+    newsCardsDiv.innerHTML = '';
+  }
 
   // Loop through each post and dynamically generate the HTML
   allPosts.slice(0, numberOfPosts).forEach(post => {
@@ -119,6 +125,8 @@ function displayPosts(numberOfPosts) {
     const newsCardDiv = document.createElement('div');
     newsCardDiv.classList.add('news-hub-card');
     newsCardDiv.style.backgroundImage = `url(${thumbnailUrl})`;
+
+    newsCardDiv.addEventListener("click", function(){ window.location.href = permalink });
 
     newsCardDiv.innerHTML = `
       <div class="titre">
@@ -232,6 +240,9 @@ function initializeMarquee() {
   } else if (document.body.classList.contains("home")) {
     createMarqueeContainer("bandeDons");
     rotateMarquee(marqueeContainers);
+  } else if (document.body.classList.contains("post-template-news-article")) {
+    createMarqueeContainer("prochainArticle");
+    rotateMarquee(marqueeContainers);
   } else {
     //empty on purpose
   }
@@ -309,7 +320,7 @@ function rotateMarquee(containers) {
 }
 
 //-- GSAP 404--
-if (document.body.classList.contains("pageDons")) {
+if (document.body.classList.contains("error404")) {
   gsap
     .timeline()
     .from(".bande_devant", { x: "-15000", ease: "power.inOut" })

@@ -16,9 +16,31 @@ if (have_posts()):
 
         <!-- Hero -->
         <div class="hero-nouvelle">
-            <div class="fond"></div>
+            <div class="fond">
+                <div class="emoji"> <?php
+                // Get the post object
+                global $post;
+
+                // Get the categories for the post
+                $categories = get_the_category($post->ID);
+
+                if (!empty($categories)) {
+                    $category_name = esc_html($categories[0]->name);
+
+                    // Check if the category is 'lettres ouvertes'
+                    if ($category_name == 'Lettres ouvertes') {
+                        echo '✉️ ';
+                    } else if ($category_name == 'Communiqués') {
+                        echo '🎤 ';
+                    } else if ($category_name == 'Revue Droits et libertés') {
+                        echo '📖 ';
+                    } else if ($category_name == 'Nouvelles') {
+                        echo '📰';
+                    }
+                }
+                ?></div>
+            </div>
             <div class="contenu">
-                <img class="nouvelle-dessin" src="./assets/images/dessin_lettre.png" />
                 <p><?// get the post object
                         global $post;
 
@@ -33,8 +55,32 @@ if (have_posts()):
                 </h2>
                 <img class="img-nouvelle" src=<?php the_post_thumbnail_url(); ?> />
                 <div class="btns-nouvelle">
-                    <a>Nouvelle précédente</a>
-                    <a>Nouvelle suivante</a>
+                    <?php
+                    // Nouvelle précédente
+                    $prev_post = get_previous_post();
+
+                    if ($prev_post):
+                        $prev_post_url = get_permalink($prev_post->ID);
+                        ?>
+                        <a href="<?php echo esc_url($prev_post_url); ?>">
+                            Nouvelle précédente
+                        </a>
+                    <?php else: ?>
+                        <!-- Lien vide si aucunes autres nouvelles -->
+                        <a href="#" class="disabled-link" aria-disabled="true">
+                        </a>
+                    <?php endif; ?>
+                    <?php
+                    // Nouvelle suivante
+                    $next_post = get_next_post();
+
+                    if ($next_post):
+                        $next_post_url = get_permalink($next_post->ID);
+                        ?>
+                        <a href="<?php echo esc_url($next_post_url); ?>">
+                            Nouvelle suivante
+                        </a>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
@@ -44,10 +90,59 @@ if (have_posts()):
         </div>
         </main>
 
-        <!-- Bandeau articles similaires -->
-        <div class="bande articles">
-            <img src="./assets/images/banniere-nouvelle.png" class="bande_dons" alt="bande_dons" />
+        <!-- Bande prochain article -->
+        <?php
+        // Nouvelle précédente
+        $next_post = get_next_post();
+
+        if ($next_post):
+            ?>
+            <div class="bande-prochain-article">
+                <div class="contenant_bande_dons avant marquee" id="prochainArticle">
+                    <span>prochain article * prochain article * prochain article
+                        *</span>
+                </div>
+                <div class="contenant_bande_dons derriere marquee" id="bandeDons"></div>
+            </div>
+        <?php else: ?>
+            <!-- Lien vide si aucunes autres nouvelles -->
+        <?php endif; ?>
+
+        <div class="news-hub-cards next-post">
+            <?php
+            // Get the next post in the same category or order
+            $next_post = get_next_post();
+
+            if ($next_post):
+                // Get the URL and other necessary details for the next post
+                $next_post_url = get_permalink($next_post->ID);
+                $next_post_title = get_the_title($next_post->ID);
+                $next_post_thumbnail_url = get_the_post_thumbnail_url($next_post->ID, 'full'); // Change 'full' to any image size you prefer
+                $next_post_date = get_the_date('', $next_post->ID);
+                $next_post_category = get_the_category($next_post->ID);
+
+                // Get the first category's name if available
+                $next_post_category_name = !empty($next_post_category) ? esc_html($next_post_category[0]->name) : '';
+                ?>
+                <div class="news-hub-card" style="background-image: url(<?php echo esc_url($next_post_thumbnail_url); ?>)"
+                    data-url="<?php echo esc_url($next_post_url); ?>">
+                    <div class="titre">
+                        <p><span><?php echo $next_post_category_name; ?></span></p>
+                        <h3><?php echo esc_html($next_post_title); ?></h3>
+                    </div>
+                    <div class="details">
+                        <p><?php echo esc_html($next_post_date); ?></p> <!-- Format date -->
+                    </div>
+                </div>
+                <script>
+                    document.querySelector(".news-hub-card").addEventListener("click", function () {
+                        const postUrl = this.getAttribute('data-url');
+                        window.location.href = postUrl;
+                    });
+                </script>
+            <?php endif; ?>
         </div>
+
 
     <?php endwhile;
     wp_reset_postdata(); // Fermeture de la boucle

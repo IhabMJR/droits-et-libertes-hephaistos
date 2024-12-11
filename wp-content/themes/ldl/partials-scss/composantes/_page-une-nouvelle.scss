@@ -14,9 +14,9 @@
   @include mixins.phone {
     height: 80vh;
   }
-  @media screen and (orientation: landscape) and (max-height: 1000px) {   
+  @media screen and (orientation: landscape) and (max-height: 1000px) {
     height: 125vh;
-}
+  }
 }
 
 .hero-nouvelle .fond {
@@ -24,6 +24,18 @@
   width: 100%;
   position: absolute;
   background-color: #d3d3d3;
+  .emoji {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 100%;
+    text-align: center;
+    background-color: variables.$rouge;
+  }
   @include mixins.phone {
     height: 50vh;
   }
@@ -46,11 +58,11 @@
 
   a {
     @include mixins.phone {
-        font-size: 18px;
-      }
-      @media screen and (min-width: mixins.$phone) and (max-width: 1025px) {   
-          font-size: 22px;
-      }
+      font-size: 18px;
+    }
+    @media screen and (min-width: mixins.$phone) and (max-width: 1025px) {
+      font-size: 22px;
+    }
   }
 }
 
@@ -62,7 +74,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  @include mixins.phone {    
+  @include mixins.phone {
     width: 100vw;
     padding: 0 15px;
   }
@@ -71,13 +83,13 @@
     font-weight: 600;
     letter-spacing: -2px;
     @include mixins.phone {
+      font-size: 20px;
+    }
+    @media screen and (min-width: mixins.$phone) and (max-width: 1025px) {
+      font-size: 38px;
+    }
+    @media screen and (max-height: 1000px) {
       font-size: 28px;
-    }
-    @media screen and (min-width: mixins.$phone) and (max-width: 1025px) {   
-        font-size: 38px;
-    }
-    @media screen and (max-height: 1000px) {   
-        font-size: 32px;
     }
   }
 
@@ -87,11 +99,11 @@
     @include mixins.phone {
       font-size: 18px;
     }
-    @media screen and (min-width: mixins.$phone) and (max-width: 1025px) {   
-        font-size: 22px;
+    @media screen and (min-width: mixins.$phone) and (max-width: 1025px) {
+      font-size: 22px;
     }
-    @media screen and (max-height: 1000px) {   
-        font-size: 18px;
+    @media screen and (max-height: 1000px) {
+      font-size: 18px;
     }
   }
 
@@ -102,12 +114,11 @@
     margin-top: 10px;
     width: 100%;
     @include mixins.tablet {
-        height: 45vh;
-      }
+      height: 45vh;
+    }
     @include mixins.phone {
       height: 30vh;
     }
-
   }
 
   .nouvelle-dessin {
@@ -116,8 +127,8 @@
     top: -25vh;
     right: -10vw;
     @include mixins.phone {
-        width: 250px;
-      }
+      width: 250px;
+    }
   }
 
   .btns-nouvelle {
@@ -141,6 +152,25 @@
       }
     }
   }
+}
+
+.next-post {
+  max-width: 1550px;
+  width: 90vw;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.post-template-news-article {
+  overflow-x: hidden;
+}
+
+#prochainArticle {
+  text-transform: lowercase;
+}
+
+.bande-prochain-article {
+  margin-top: 150px;
 }
 
 .btns-nouvelle a:hover {
