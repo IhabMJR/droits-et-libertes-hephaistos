@@ -356,13 +356,19 @@
   display: flex;
   justify-content: center;
   align-items: start;
-  margin-top: 500px;
+  margin-top: 20vw;
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .overall-container {
     display: flex;
     flex-direction: column;
     margin-top: 50vw;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 880px) {
+  .overall-container {
+    display: flex;
+    margin-top: 60vw;
   }
 }
 
