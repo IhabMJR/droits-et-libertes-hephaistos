@@ -345,21 +345,26 @@ closeButton.addEventListener('click', function () {
 //-- Modal equipe --//
 const modalEquipe = document.querySelector(".modal_equipe");
 const membresEquipe = document.querySelectorAll(".membre_equipe.laurence, .membre_equipe.karina, .membre_equipe.elisabeth, .membre_equipe.lynda");
-
 const modalBtnFermer = document.querySelector(".modal_equipe_btn");
 
 function showModal() {
-  modalEquipe.style.display = "flex";
+  if (modalEquipe) {
+    modalEquipe.style.display = "flex";
+  }
 }
-
-membresEquipe.forEach(membre => {
-  membre.addEventListener("click", () => showModal());
-});
 
 function noModal() {
-  modalEquipe.style.display = "none";
+  if (modalEquipe) {
+    modalEquipe.style.display = "none";
+  }
 }
 
-if (document.body.classList.contains("page-template-team")) {
+if (membresEquipe.length > 0) {
+  membresEquipe.forEach(membre => {
+    membre.addEventListener("click", () => showModal());
+  });
+}
+
+if (document.body.classList.contains("page-template-team") && modalBtnFermer) {
   modalBtnFermer.addEventListener("click", () => noModal());
 }

@@ -9,6 +9,22 @@ get_header(); // Affiche header.php ?>
 <!-- Section hero -->
 <?php get_template_part('partials/hero'); ?>
 
+<!-- modal -->
+<div class="modal_equipe">
+    <div class="modal_equipe_fond">
+        <h3 class="modal_equipe_fond_titre">Lorem Ipsum</h3>
+        <p class="modal_equipe_fond_texte">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur faucibus purus, quis iaculis
+            nisl sollicitudin non. Quisque ultrices ornare leo, volutpat aliquet magna ullamcorper quis.
+            Pellentesque id venenatis tellus. Nulla vel lectus lacinia, fringilla sapien id, mollis lorem. Fusce nec
+            mauris magna. Aenean tristique finibus neque ut scelerisque. Nam tristique massa quis libero porta
+            imperdiet. Mauris sapien nibh, vulputate quis venenatis vitae, laoreet quis sem. Aenean porta diam sit
+            amet nisl feugiat, nec fermentum odio mollis.
+        </p>
+    </div>
+    <button class="modal_equipe_btn">Fermer</button>
+</div>
+
 <!-- Section equipe -->
 <div class="container_equipe">
     <h1 class="titre_equipe">Notre équipe</h1>
@@ -29,59 +45,32 @@ get_header(); // Affiche header.php ?>
     <div class="swiper equipe">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper equipe">
+        <?php
+            $members = new WP_Query([
+                'post_type' => 'member',
+                'posts_per_page' => -1,
+            ]);
+            // Loop Through Posts
+            if ($members->have_posts()):
+              while ($members->have_posts()): $members->the_post(); ?>
             <!-- Slides -->
             <div class="swiper-slide">
-                <div class="membre_equipe laurence">
+                <div class="membre_equipe" style="background-image: url(<?php the_field('member_image'); ?>)">
                     <div class="membre_equipe_nom">
-                        <p><span>Laurence Guénette</span></p>
+                        <p><span><?php the_field('member_title'); ?></span></p>
                         <h3>
-                            Coordonnatrice
+                            <?php the_field('member_role'); ?>
                         </h3>
                     </div>
                     <div class="membre_equipe_details">
-                        <p>514 849-7717, poste 3223</p>
+                        <p><?php the_field('member_details'); ?></p>
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide">
-                <div class="membre_equipe karina">
-                    <div class="membre_equipe_nom">
-                        <p><span>Karina Toupin</span></p>
-                        <h3>
-                            Responsable de l'administration et des finances
-                        </h3>
-                    </div>
-                    <div class="membre_equipe_details">
-                        <p>514 849-7717, poste 3221</p>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="membre_equipe elisabeth">
-                    <div class="membre_equipe_nom">
-                        <p><span>Elisabeth Dupuis</span></p>
-                        <h3>
-                            Responsable des communications
-                        </h3>
-                    </div>
-                    <div class="membre_equipe_details">
-                        <p>514 849-7717, poste 3224</p>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="membre_equipe lynda">
-                    <div class="membre_equipe_nom">
-                        <p><span>Lynda Khelil</span></p>
-                        <h3>
-                            Responsable de dossiers politiques
-                        </h3>
-                    </div>
-                    <div class="membre_equipe_details">
-                        <p>514 849-7717, poste 3222</p>
-                    </div>
-                </div>
-            </div>
+            <?php
+            endwhile;
+            endif;
+            ?>
         </div>
     </div>
 </div>
