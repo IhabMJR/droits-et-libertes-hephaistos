@@ -4,29 +4,30 @@
 @use "sass:color";
  
 .footer {
-    background-color: #0f0f0f;
-    border: solid #0f0f0f;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    width: 100vw;
-    max-width: 100%;
-    height: 100%;
+  background-color: #0f0f0f;
+  border: solid #0f0f0f;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  max-height: 100%;
+  position: relative;
+  @include mixins.phone {
+    margin: auto;
     position: relative;
-    @include mixins.phone {
-      margin: auto;
-      position: relative;
-    }
   }
+}
  
   .overall-container{
     display: flex;
     justify-content: center;
     align-items: start;
-    margin-top: 5vw;
+    margin-top: 500px;
     @include mixins.phone {
       display: flex;
       flex-direction: column;
-      margin: auto;
+      margin-top: 50vw;
     }
   }
  
@@ -238,8 +239,8 @@
     @include mixins.phone {
       width: 50px;
       position: absolute;
-      top: 60px;
-      left: 5vw;
+      top: 800px;
+      left: 100px;
     }
  
   }
@@ -248,8 +249,8 @@
     @include mixins.phone {
       width: 50px;
       position: absolute;
-      top: 130px;
-      left: 5vw;
+      top: 800px;
+      left: 200px;
     }
   }
  
@@ -257,8 +258,8 @@
     @include mixins.phone {
       width: 50px;
       position: absolute;
-      top: 200px;
-      left: 5vw;
+      top: 800px;
+      left: 300px;
     }
   }
  
@@ -266,8 +267,8 @@
     @include mixins.phone {
       width: 50px;
       position: absolute;
-      top: 280px;
-      left: 5vw;
+      top: 900px;
+      left: 150px;
     }
   }
  
@@ -275,8 +276,8 @@
     @include mixins.phone {
       width: 50px;
       position: absolute;
-      top: 360px;
-      left: 5vw;
+      top: 900px;
+      left: 250px;
     }
   }
   .text-copyright {
@@ -284,7 +285,7 @@
     margin-top: 50px;
       @include mixins.phone {
         font-size: 12px;
-        margin: 20px 140px;
+        margin: 20px 150px;
       }
     @include mixins.text-footer;
     @include mixins.tablet {
@@ -360,3 +361,26 @@
   margin: 0 auto;
   padding: 20px 0;
 }
+
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-size: 1.5rem;
+}
+
+section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  font-size: 3rem;
+  font-family: 'Poppins', sans-serif;
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+

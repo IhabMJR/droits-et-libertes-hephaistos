@@ -16,11 +16,14 @@
     />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="style.css" />
-    <script src="./main.js"></script>
   </head>
 
   <body class="pageAccueil">
+    <div id="scroll-animate">
+    <div id="scroll-animate-main">
+      <div class="wrapper-parallax">
     <header>
       <!-- bande -->
       <div class="bande_projet">
@@ -405,7 +408,9 @@
       </div>
 
       <!-- Section partenaire -->
-      <h2 class="partenaire_sous_titre">Partenaire</h2>
+  
+      <h2 class="partenaire_sous_titre">Partenaire</h2>    
+      <section class="parallax parallax--featured">
       <div class="contenu_partenaire">
         <!-- Swiper -->
         <div class="swiper-partenaire">
@@ -454,6 +459,7 @@
           </div>
         </div>
       </div>
+      </section>
     </main>
     <!--
     <div>
@@ -471,6 +477,7 @@
       </p>
     </div>-->
     <!-- bas de page-->
+    <section class="parallax parallax--footer">
     <footer class="footer">
       <div class="overall-container">
         <div class="grid-2 contenu-footer">
@@ -505,7 +512,20 @@
   <img src="./assets/images/iclmg-csilc.jpg" class="logo-partenaire partenaire5"> -->
       </p>
     </footer>
-
+    <section>
+  </div>
+</div>
+      <script>
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.utils.toArray('section').forEach((section, i) => {
+        ScrollTrigger.create({
+        trigger: section,
+        start: "top top",
+        pin: true,
+        pinSpacing: false
+        });
+      });
+      </script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
