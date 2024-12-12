@@ -6,32 +6,32 @@ Template Post Type: lutte
 
 get_header();
 
-if (have_posts()) : 
-    while (have_posts()) : the_post(); 
-?>
+if (have_posts()):
+  while (have_posts()):
+    the_post();
+    ?>
 
-<section class="section_une_lutte">
-        <article class="article_lutte">
-          <img
-            class="image_une_lutte"
-            src="<?php the_field('lutte-image'); ?>"
-          />
-          <h2 class="titre_une_lutte">
-            <?php the_field('lutte-title'); ?>
-          </h2>
-          <p class="description_une_lutte">
-            <?php the_field('lutte-description'); ?>
-          </p>
-        </article>
+    <div class="hero-nouvelle">
+      <div class="fond"></div>
+      <div class="contenu">
+        <h2>
+          <?php the_title(); ?>
+        </h2>
+        <img class="img-nouvelle" src=<?php the_post_thumbnail_url(); ?> />
+        <p>
+          <?php the_field('lutte-description'); ?>
+        </p>
+      </div>
+    </div>
 
-        <article class="article_lutte_text">
-            <?php the_field('lutte-article'); ?>
-            <a href="<?php echo esc_url(home_url('/index.php/luttes'));?>" class="btn_une_lutte Retour_lutte">Retour</a>
-        </article>
-</section>
+    <div class="contenu-nouvelle">
+      <?php the_field('lutte-article'); ?>
+      <br/><a href=<?php echo esc_url(home_url('/luttes')); ?>><button class="toutes-nouvelles">Retour</button></a>
+    </div>
+    </main>
 
-<?php
-endwhile;
+    <?php
+  endwhile;
 endif;
 get_footer();
 ?>
