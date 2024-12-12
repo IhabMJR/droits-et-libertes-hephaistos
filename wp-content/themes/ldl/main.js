@@ -355,14 +355,24 @@ closeButton.addEventListener('click', function () {
 
 //-- Modal equipe --//
 const modalEquipe = document.querySelector(".modal_equipe");
-const membresEquipe = document.querySelectorAll(".membre_equipe.laurence, .membre_equipe.karina, .membre_equipe.elisabeth, .membre_equipe.lynda");
+const membresEquipe = document.querySelectorAll(".membre_equipe");
 const modalBtnFermer = document.querySelector(".modal_equipe_btn");
 
-function showModal() {
+function showModal(membre) {
   if (modalEquipe) {
+    const title = membre.dataset.memberTitle || "Titre par défaut";
+    const description = membre.dataset.memberDescription || "Description par défaut";
+
+    document.querySelector('.modal_equipe_fond_titre').textContent = title;
+    document.querySelector('.modal_equipe_fond_texte').textContent = description;
+    
     modalEquipe.style.display = "flex";
   }
 }
+
+membresEquipe.forEach(membre => {
+  membre.addEventListener("click", () => showModal(membre));
+});
 
 function noModal() {
   if (modalEquipe) {
@@ -370,12 +380,5 @@ function noModal() {
   }
 }
 
-if (membresEquipe.length > 0) {
-  membresEquipe.forEach(membre => {
-    membre.addEventListener("click", () => showModal());
-  });
-}
+modalBtnFermer.addEventListener("click", () => noModal());
 
-if (document.body.classList.contains("page-template-team") && modalBtnFermer) {
-  modalBtnFermer.addEventListener("click", () => noModal());
-}

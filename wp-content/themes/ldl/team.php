@@ -6,14 +6,11 @@
 
 get_header(); // Affiche header.php ?>
 
-<!-- Section hero -->
-<?php get_template_part('partials/hero'); ?>
-
 <!-- modal -->
 <div class="modal_equipe">
     <div class="modal_equipe_fond">
-        <h3 class="modal_equipe_fond_titre">Lorem Ipsum</h3>
-        <p class="modal_equipe_fond_texte">
+        <h3 class="modal_equipe_fond_titre" data-member-title="memberTitle">Lorem Ipsum</h3>
+        <p class="modal_equipe_fond_texte" data-member-description="memberDescription">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur faucibus purus, quis iaculis
             nisl sollicitudin non. Quisque ultrices ornare leo, volutpat aliquet magna ullamcorper quis.
             Pellentesque id venenatis tellus. Nulla vel lectus lacinia, fringilla sapien id, mollis lorem. Fusce nec
@@ -24,6 +21,9 @@ get_header(); // Affiche header.php ?>
     </div>
     <button class="modal_equipe_btn">Fermer</button>
 </div>
+
+<!-- Section hero -->
+<?php get_template_part('partials/hero'); ?>
 
 <!-- Section equipe -->
 <div class="container_equipe">
@@ -55,15 +55,10 @@ get_header(); // Affiche header.php ?>
               while ($members->have_posts()): $members->the_post(); ?>
             <!-- Slides -->
             <div class="swiper-slide">
-                <div class="membre_equipe" style="background-image: url(<?php the_field('member_image'); ?>)">
+                <div class="membre_equipe" style="background-image: url(<?php the_field('member_image'); ?>)" data-member-title="<?php the_field('member_title'); ?>" data-member-description="<?php the_field('member_description'); ?>">
                     <div class="membre_equipe_nom">
                         <p><span><?php the_field('member_title'); ?></span></p>
-                        <h3>
-                            <?php the_field('member_role'); ?>
-                        </h3>
-                    </div>
-                    <div class="membre_equipe_details">
-                        <p><?php the_field('member_details'); ?></p>
+                        <h3><?php the_field('member_role'); ?></h3>
                     </div>
                 </div>
             </div>
