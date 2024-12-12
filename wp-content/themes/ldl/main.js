@@ -27,8 +27,8 @@ const swiper = new Swiper(".swiper-hero", {
 
 //--- Fetch API nouvelles ---/
 const newsCardsDiv = document.querySelector(".news-hub-cards");
-const postsApiUrl = '/wordpress_ldl/wp-json/wp/v2/posts?per_page=20';
-const categoriesApiUrl = '/wordpress_ldl/wp-json/wp/v2/categories';
+const postsApiUrl = '/wp-json/wp/v2/posts?per_page=20';
+const categoriesApiUrl = '/wp-json/wp/v2/categories';
 
 let categoriesMap = {};
 let allPosts = [];
@@ -62,8 +62,8 @@ fetch(categoriesApiUrl)
 
 // Function to fetch and display posts based on order
 function fetchPosts(order) {
-  // Modify the posts API URL to include order parameters
-  const apiUrl = `${postsApiUrl}&orderby=date&order=${order}`;
+  // Modify the posts API URL to include order parameters and the `_embed` parameter
+  const apiUrl = `${postsApiUrl}&orderby=date&order=${order}&_embed`;  // Add '_embed' here
 
   fetch(apiUrl)
     .then((response) => {
@@ -77,7 +77,6 @@ function fetchPosts(order) {
 
       // Initially display the first set of posts
       displayPosts(visiblePostsCount);
-      
 
       // Create a "Show More" button if there are more posts to load
       const showMoreButton = document.querySelector('.link_nouvelles');
@@ -111,9 +110,15 @@ function displayPosts(numberOfPosts) {
     // Get post details
     const title = post.title.rendered;
     const permalink = post.link;
-    const thumbnailUrl = post.featured_media ? post._embedded['wp:featuredmedia'][0].source_url : '';
+    let thumbnailUrl = ''; // Placeholder for thumbnail URL
     const postDate = post.date; // Date of the post
     const categories = post.categories || []; // Array of category IDs
+
+    // Check if featured media exists and get the image URL
+    if (post._embedded && post._embedded['wp:featuredmedia']) {
+      const featuredMedia = post._embedded['wp:featuredmedia'][0];
+      thumbnailUrl = featuredMedia.source_url; // Get the URL of the featured image
+    }
 
     // Get category names from categoriesMap
     const categoryNames = categories
@@ -124,9 +129,11 @@ function displayPosts(numberOfPosts) {
     // Create a new div for each post and populate it with data
     const newsCardDiv = document.createElement('div');
     newsCardDiv.classList.add('news-hub-card');
-    newsCardDiv.style.backgroundImage = `url(${thumbnailUrl})`;
+    if (thumbnailUrl) {
+      newsCardDiv.style.backgroundImage = `url(${thumbnailUrl})`;
+    }
 
-    newsCardDiv.addEventListener("click", function(){ window.location.href = permalink });
+    newsCardDiv.addEventListener("click", function () { window.location.href = permalink });
 
     newsCardDiv.innerHTML = `
       <div class="titre">
@@ -365,7 +372,7 @@ function showModal(membre) {
 
     document.querySelector('.modal_equipe_fond_titre').textContent = title;
     document.querySelector('.modal_equipe_fond_texte').textContent = description;
-    
+
     modalEquipe.style.display = "flex";
   }
 }
