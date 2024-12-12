@@ -46,7 +46,6 @@
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/hamburger_menu.png"
 						class="toggler-icon" />
 				</button>
-
 				<a class="navbar-brand" class="nav-link"
 					href="<?php echo esc_url(home_url('/')); // Lien vers la page d'accueil ?>">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/ldl-logo.png" />

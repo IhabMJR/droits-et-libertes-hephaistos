@@ -35,7 +35,7 @@
 .carte.swiper-slide:hover {
   cursor: pointer;
   box-shadow: none;
-  transform: scale(1.005);
+  transform: scale(1.05);
 }
 
 .actualites {
@@ -122,6 +122,15 @@
         margin: 30px;
         position: absolute;
     }
+      &:nth-child(1) {
+        background-image: url("./assets/images/nouvelle_armes_israel.png");
+      }
+      &:nth-child(2) {
+        background-image: url("./assets/images/nouvelle_armes_israel.png");
+      }
+      &:nth-child(3) {
+        background-image: url("./assets/images/nouvelle_armes_israel.png");
+      }
       &:hover {
         filter: none;
         cursor: pointer;
@@ -140,6 +149,16 @@
   border-radius: 40px;
   transition: box-shadow 0.5s;
   &:hover {
-    box-shadow: 0 0 18px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
   }
+}
+
+.swiper_nouvelle{
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  display: block;
 }

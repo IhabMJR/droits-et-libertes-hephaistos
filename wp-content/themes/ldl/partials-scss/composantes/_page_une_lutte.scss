@@ -2,45 +2,6 @@
 @use "../variables";
 @use "sass:color";
  
-
-.hero-lutte {
-  width: 100vw;
-  height: 100vh;
-  max-width: 100%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-  @include mixins.phone {
-    height: 80vh;
-  }
-  @media screen and (orientation: landscape) and (max-height: 1000px) {   
-    height: 125vh;
-}
-}
-
-.btns-lutte {
-  display: flex;
-  width: 100%;
-  margin-top: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
-  color: variables.$rouge;
-  font-size: 20px;
-    @include mixins.phone {
-      font-size: 12px;
-    }
-}   
-
-.btns-lutte_02 {
-  margin-left: auto;
-}
-
-.btns-lutte :hover {
-      color: #000;
-      cursor: pointer;
-    }
-
 .body_une_lutte {
     display: flex;
     justify-content: center;
@@ -52,12 +13,12 @@
     margin: 200px auto;
 }
  
-/*.article_lutte {
+.article_lutte {
     border-bottom: 2px solid black;
-}*/
+}
  
 .article_lutte_text {
-margin: 40px 80px;
+margin-top: 50px;
 }
  
 .section_une_lutte {
@@ -95,18 +56,12 @@ margin: 40px 80px;
 }
  
 .image_une_lutte {
+    object-fit: cover;
     filter: grayscale(100%);
     border-radius: 70px;
-    height: 50vh;
-    object-fit: cover;
-    margin-top: 10px;
+    max-height: 700px;
+    margin-top: 20px;
     width: 100%;
-    @include mixins.tablet {
-        height: 45vh;
-      }
-    @include mixins.phone {
-      height: 30vh;
-    }
 }
  
 .text_unelutte {

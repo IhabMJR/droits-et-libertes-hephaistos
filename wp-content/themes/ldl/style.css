@@ -81,7 +81,7 @@ Version: 1.0
   }
 }
 .revue .btn-revue:hover {
-  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 0 8px rgb(0, 0, 0));
 }
 
 .swiper-hero {
@@ -346,7 +346,8 @@ Version: 1.0
   border-top-right-radius: 50px;
   width: 100vw;
   max-width: 100%;
-  height: 100%;
+  height: 100vh;
+  max-height: 100%;
   position: relative;
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
@@ -360,13 +361,19 @@ Version: 1.0
   display: flex;
   justify-content: center;
   align-items: start;
-  margin-top: 5vw;
+  margin-top: 20vw;
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .overall-container {
     display: flex;
     flex-direction: column;
-    margin: auto;
+    margin-top: 50vw;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 880px) {
+  .overall-container {
+    display: flex;
+    margin-top: 60vw;
   }
 }
 
@@ -627,8 +634,8 @@ Version: 1.0
   .icon1 {
     width: 50px;
     position: absolute;
-    top: 60px;
-    left: 5vw;
+    top: 800px;
+    left: 100px;
   }
 }
 
@@ -636,8 +643,8 @@ Version: 1.0
   .icon2 {
     width: 50px;
     position: absolute;
-    top: 130px;
-    left: 5vw;
+    top: 800px;
+    left: 200px;
   }
 }
 
@@ -645,8 +652,8 @@ Version: 1.0
   .icon3 {
     width: 50px;
     position: absolute;
-    top: 200px;
-    left: 5vw;
+    top: 800px;
+    left: 300px;
   }
 }
 
@@ -654,8 +661,8 @@ Version: 1.0
   .icon4 {
     width: 50px;
     position: absolute;
-    top: 280px;
-    left: 5vw;
+    top: 900px;
+    left: 150px;
   }
 }
 
@@ -663,8 +670,8 @@ Version: 1.0
   .icon5 {
     width: 50px;
     position: absolute;
-    top: 360px;
-    left: 5vw;
+    top: 900px;
+    left: 250px;
   }
 }
 
@@ -678,7 +685,7 @@ Version: 1.0
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .text-copyright {
     font-size: 12px;
-    margin: 20px 140px;
+    margin: 20px 150px;
   }
 }
 @media only screen and (min-width: 500px) and (max-width: 880px) {
@@ -688,6 +695,32 @@ Version: 1.0
 }
 
 /* section des partenaire*/
+.partenaire_sous_titre {
+  font-family: "Tex Gyre Adventor Bold";
+  font-weight: bold;
+  font-size: 48px;
+  color: #000;
+  text-align: left;
+  position: relative;
+  display: block;
+  width: 500px;
+  margin-left: 70px;
+}
+@media only screen and (min-width: 500px) and (max-width: 880px) {
+  .partenaire_sous_titre {
+    text-align: center;
+    width: 300px;
+    margin: auto;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .partenaire_sous_titre {
+    text-align: center;
+    width: 300px;
+    margin: auto;
+  }
+}
+
 .contenu_partenaire {
   display: flex;
   overflow-x: hidden;
@@ -745,6 +778,25 @@ Version: 1.0
   padding: 20px 0;
 }
 
+body {
+  margin: 0;
+  height: 100vh;
+  font-size: 1.5rem;
+}
+
+section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 3rem;
+  font-family: "Poppins", sans-serif;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /*--- Importation des partials ---*/
 .contenant {
   overflow-x: hidden;
@@ -781,7 +833,7 @@ Version: 1.0
 .carte.swiper-slide:hover {
   cursor: pointer;
   box-shadow: none;
-  transform: scale(1.005);
+  transform: scale(1.05);
 }
 
 .actualites {
@@ -888,6 +940,15 @@ Version: 1.0
   margin: 30px;
   position: absolute;
 }
+.actualites__cartes .carte:nth-child(1) {
+  background-image: url("./assets/images/nouvelle_armes_israel.png");
+}
+.actualites__cartes .carte:nth-child(2) {
+  background-image: url("./assets/images/nouvelle_armes_israel.png");
+}
+.actualites__cartes .carte:nth-child(3) {
+  background-image: url("./assets/images/nouvelle_armes_israel.png");
+}
 .actualites__cartes .carte:hover {
   filter: none;
   cursor: pointer;
@@ -907,7 +968,17 @@ Version: 1.0
   transition: box-shadow 0.5s;
 }
 .toutes-nouvelles:hover {
-  box-shadow: 0 0 18px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 20px rgb(0, 0, 0);
+}
+
+.swiper_nouvelle {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  display: block;
 }
 
 .img_lutte {
@@ -1095,7 +1166,7 @@ Version: 1.0
   }
 }
 .btn-next:hover {
-  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 0 8px rgb(0, 0, 0));
 }
 
 .btn-right {
@@ -1132,6 +1203,7 @@ Version: 1.0
   position: relative;
   display: block;
   margin-left: 25px;
+  margin-top: 100px;
   width: auto;
 }
 @media only screen and (min-width: 500px) and (max-width: 880px) {
@@ -1156,7 +1228,6 @@ Version: 1.0
   position: relative;
   display: block;
   width: 500px;
-  margin-bottom: 100px;
   margin-left: 25px;
 }
 @media only screen and (min-width: 500px) and (max-width: 880px) {
@@ -1448,6 +1519,18 @@ Version: 1.0
   position: absolute;
   background-color: #d3d3d3;
 }
+.hero-nouvelle .fond .emoji {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 25px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 100%;
+  text-align: center;
+  background-color: #B80820;
+}
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .hero-nouvelle .fond {
     height: 50vh;
@@ -1508,7 +1591,7 @@ Version: 1.0
 }
 @media only screen and (min-width: 0) and (max-width: 500px) {
   .hero-nouvelle .contenu h2 {
-    font-size: 28px;
+    font-size: 20px;
   }
 }
 @media screen and (min-width: 500px) and (max-width: 1025px) {
@@ -1518,7 +1601,7 @@ Version: 1.0
 }
 @media screen and (max-height: 1000px) {
   .hero-nouvelle .contenu h2 {
-    font-size: 32px;
+    font-size: 28px;
   }
 }
 .hero-nouvelle .contenu p {
@@ -1594,6 +1677,25 @@ Version: 1.0
 .hero-nouvelle .contenu .btns-nouvelle a:hover {
   color: #000;
   cursor: pointer;
+}
+
+.next-post {
+  max-width: 1550px;
+  width: 90vw;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.post-template-news-article {
+  overflow-x: hidden;
+}
+
+#prochainArticle {
+  text-transform: lowercase;
+}
+
+.bande-prochain-article {
+  margin-top: 150px;
 }
 
 .btns-nouvelle a:hover {
@@ -1802,50 +1904,6 @@ Version: 1.0
   width: 900px;
 }
 
-.hero-lutte {
-  width: 100vw;
-  height: 100vh;
-  max-width: 100%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-}
-@media only screen and (min-width: 0) and (max-width: 500px) {
-  .hero-lutte {
-    height: 80vh;
-  }
-}
-@media screen and (orientation: landscape) and (max-height: 1000px) {
-  .hero-lutte {
-    height: 125vh;
-  }
-}
-
-.btns-lutte {
-  display: flex;
-  width: 100%;
-  margin-top: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
-  color: #B80820;
-  font-size: 20px;
-}
-@media only screen and (min-width: 0) and (max-width: 500px) {
-  .btns-lutte {
-    font-size: 12px;
-  }
-}
-
-.btns-lutte_02 {
-  margin-left: auto;
-}
-
-.btns-lutte :hover {
-  color: #000;
-  cursor: pointer;
-}
-
 .body_une_lutte {
   display: flex;
   justify-content: center;
@@ -1857,11 +1915,12 @@ Version: 1.0
   margin: 200px auto;
 }
 
-/*.article_lutte {
-    border-bottom: 2px solid black;
-}*/
+.article_lutte {
+  border-bottom: 2px solid black;
+}
+
 .article_lutte_text {
-  margin: 40px 80px;
+  margin-top: 50px;
 }
 
 @media screen and (max-width: 1500px) {
@@ -1907,23 +1966,13 @@ Version: 1.0
 }
 
 .image_une_lutte {
-  filter: grayscale(100%);
-  border-radius: 70px;
-  height: 50vh;
   -o-object-fit: cover;
      object-fit: cover;
-  margin-top: 10px;
+  filter: grayscale(100%);
+  border-radius: 70px;
+  max-height: 700px;
+  margin-top: 20px;
   width: 100%;
-}
-@media only screen and (min-width: 500px) and (max-width: 880px) {
-  .image_une_lutte {
-    height: 45vh;
-  }
-}
-@media only screen and (min-width: 0) and (max-width: 500px) {
-  .image_une_lutte {
-    height: 30vh;
-  }
 }
 
 .text_unelutte {
@@ -2223,7 +2272,8 @@ Version: 1.0
   margin: 0 auto 100px auto;
 }
 .container_nous_joindre .sous_titre_nous_joindre {
-  font-family: "Tex Gyre Adventor Regular";
+  font-family: "Tex Gyre Adventor Bold";
+  font-weight: bold;
   font-size: 48px;
   color: #000;
   text-align: left;
@@ -2247,10 +2297,43 @@ Version: 1.0
   width: 85vw;
   margin-bottom: 80px;
 }
+.container_nous_joindre .image_coordonner {
+  position: absolute;
+  width: 1200px;
+  bottom: 300px;
+  right: -800px;
+  opacity: 50%;
+}
+@media only screen and (min-width: 500px) and (max-width: 880px) {
+  .container_nous_joindre .image_coordonner {
+    width: 800px;
+    bottom: 550px;
+    right: -300px;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  .container_nous_joindre .image_coordonner {
+    display: none;
+  }
+}
 
 form {
-  display: block;
-  width: 100%;
+  display: flex;
+  width: 90vw;
+  flex-wrap: wrap;
+  -moz-column-gap: 80px;
+       column-gap: 80px;
+}
+form .formulaire {
+  width: 70vw;
+  max-width: 600px;
+  min-width: 600px;
+}
+form textarea {
+  width: 70vw;
+  max-width: 1360px;
+  min-width: 600px;
+  margin-left: 0px;
 }
 form .form_text {
   font-size: 25px;
@@ -2587,7 +2670,7 @@ body:has(.bande_devant) {
 }
 
 .close-btn:hover {
-  color: red;
+  color: #B80820;
 }
 
 /*--- Importation des fonts ---*/

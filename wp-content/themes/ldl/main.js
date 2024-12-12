@@ -388,4 +388,3 @@ function noModal() {
 }
 
 modalBtnFermer.addEventListener("click", () => noModal());
-
