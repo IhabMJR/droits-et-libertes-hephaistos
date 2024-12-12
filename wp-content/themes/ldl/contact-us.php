@@ -23,15 +23,23 @@ get_header(); // Affiche header.php ?>
         </p>
     </div>
     <h2 class="sous_titre_nous_joindre">Contactez-nous</h2>
-    <div class="wrapper_nous_joindre">
-        <form action="mailto:info@liguedesdroits.ca" method="post" enctype="text/plain">
-            <p class="form_text">Nom:</p>
-            <input type="text" name="nom"><br><br>
-            <p class="form_text">Courriel:</p>
-            <input type="text" name="courriel"><br><br>
-            <p class="form_text">Message:</p>
-            <input type="text" name="message" size="50"><br><br>
-            <input class="btn_nous_joindre" type="submit" value="Send">
+        <div class="wrapper_nous_joindre">
+            <form action="mailto:info@liguedesdroits.ca" method="post" enctype="text/plain">    
+            <div class="form_goupe_1">
+                <p class="form_text">Nom:</p>
+                <input  class="formulaire" type="text" name="nom" size="50">
+            </div>
+            <br>
+            <div class="form_goupe_2">
+                <p class="form_text">Courriel:</p>
+                <input  class="formulaire" type="text" name="courriel" size="50">
+            </div>
+            <br>
+            <div class="form_goupe_3">
+                <p class="form_text">Message:</p>
+                <textarea type="text" name="message"  rows="6" cols="130vw"></textarea><br><br>
+                <input class="btn_nous_joindre" type="submit" value="Send">
+            </div>
         </form>
     </div>
 </div>

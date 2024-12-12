@@ -41,11 +41,41 @@
 		<!-- Navbar -->
 		<nav id="navbar1" class="navbar navbar-dark navbar-expand-xl fixed-top">
 			<div class="container-fluid">
-				<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav"
-					aria-controls="mainNav" aria-expanded="false" aria-label="Affichage/masquage de la navigation">
-					<img src="<?php bloginfo('template_url'); ?>/assets/images/hamburger_menu.png"
-						class="toggler-icon" />
-				</button>
+			<button
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Affichage/masquage de la navigation"
+          >
+            <svg
+              viewBox="0 0 12 20"
+              class="hamburger"
+              height="100px"
+              width="100px"
+            >
+              <path
+                class="upper"
+                d="M10,2 L2,2"
+                style="fill: none; stroke: white; stroke-linecap: round"
+              />
+              <path
+                class="middle"
+                d="M2,5 L10,5"
+                style="fill: none; stroke: white; stroke-linecap: round"
+              />
+              <path
+                class="lower"
+                d="M10,8 L2,8"
+                style="fill: none; stroke: white; stroke-linecap: round"
+              />
+            </svg>
+            <!--<img
+              src="./assets/images/hamburger_menu.png"
+              class="toggler-icon"
+            />-->
+          </button>
 				<a class="navbar-brand" class="nav-link"
 					href="<?php echo esc_url(home_url('/')); // Lien vers la page d'accueil ?>">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/ldl-logo.png" />

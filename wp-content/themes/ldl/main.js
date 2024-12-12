@@ -374,6 +374,7 @@ function showModal(membre) {
     document.querySelector('.modal_equipe_fond_texte').textContent = description;
 
     modalEquipe.style.display = "flex";
+    modalBtnFermer.addEventListener("click", () => noModal());
   }
 }
 
@@ -387,4 +388,31 @@ function noModal() {
   }
 }
 
-modalBtnFermer.addEventListener("click", () => noModal());
+//-- burger --//
+//-- https://codepen.io/forrestlonganecker/pen/XWrdXGq --//
+
+var upper = document.getElementsByClassName('upper')[0];
+var middle = document.getElementsByClassName('middle')[0];
+var lower = document.getElementsByClassName('lower')[0];
+
+var tl = gsap.timeline({paused: true, reversed: true});
+
+tl
+.to(upper, {duration: 0.5, attr: {d: "M8,2 L2,8"}, x: 1, ease: "power2.inOut"}, 'start')
+.to(middle, {duration: 0.5, autoAlpha: 0}, 'start')
+.to(lower, {duration: 0.5, attr: {d: "M8,8 L2,2"}, x: 1, ease: "power2.inOut"}, 'start');
+
+document.querySelector('.hamburger').addEventListener('click', function(){
+tl.reversed() ? tl.play() : tl.reverse();
+});
+
+// Parallax footer
+gsap.registerPlugin(ScrollTrigger);
+gsap.utils.toArray('section').forEach((section, i) => {
+  ScrollTrigger.create({
+    trigger: section,
+    start: "top top",
+    pin: true,
+    pinSpacing: false
+  });
+});
